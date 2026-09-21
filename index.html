@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="<meta name="google-site-verification" content="-OlOhcAekKVzXF6X494mley37-r1pzD9wf0jLFTHAf0" />">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="google-site-verification" content="-OlOhcAekKVzXF6X494mley37-r1pzD9wf0jLFTHAf0" />
 
 <title>AR Security and Service (Pvt) Ltd.</title>
 
@@ -19,7 +21,6 @@ color:#241b1d;
 line-height:1.6
 }
 
-/* ===== HEADER ===== */
 header{
 position:absolute;
 top:0;
@@ -86,7 +87,6 @@ color:white;
 font-size:10px
 }
 
-/* ===== DESKTOP MENU ===== */
 nav{
 display:flex;
 align-items:center
@@ -104,7 +104,6 @@ nav a:hover{
 color:#f5d36a
 }
 
-/* ===== MOBILE MENU BUTTON ===== */
 .menu-btn{
 display:none;
 background:#681c2e;
@@ -117,7 +116,6 @@ font-size:22px;
 cursor:pointer
 }
 
-/* ===== MOBILE MENU ===== */
 .mobile-menu{
 position:fixed;
 top:0;
@@ -128,7 +126,8 @@ background:#681c2e;
 z-index:2000;
 padding:25px;
 transition:.35s ease;
-box-shadow:-8px 0 30px rgba(0,0,0,.35)
+box-shadow:-8px 0 30px rgba(0,0,0,.35);
+overflow-y:auto
 }
 
 .mobile-menu.open{
@@ -164,7 +163,6 @@ width:28px;
 color:#f5d36a
 }
 
-/* ===== QUICK MENU ===== */
 .quick-btn{
 position:fixed;
 right:18px;
@@ -210,7 +208,6 @@ border:1px solid #f5d36a;
 box-shadow:0 4px 15px rgba(0,0,0,.25)
 }
 
-/* ===== HERO ===== */
 .hero{
 position:relative;
 height:100vh;
@@ -226,7 +223,9 @@ opacity:0;
 transition:opacity 1s ease
 }
 
-.slide.active{opacity:1}
+.slide.active{
+opacity:1
+}
 
 .slide img{
 width:100%;
@@ -319,10 +318,13 @@ background:transparent;
 cursor:pointer
 }
 
-.dot.active{background:#f5d36a}
+.dot.active{
+background:#f5d36a
+}
 
-/* ===== SECTIONS ===== */
-section{padding:90px 7%}
+section{
+padding:90px 7%
+}
 
 .section-title{
 text-align:center;
@@ -343,9 +345,10 @@ color:#681c2e;
 margin:10px 0 15px
 }
 
-.section-title p{color:#5f5557}
+.section-title p{
+color:#5f5557
+}
 
-/* ===== FEATURES ===== */
 .feature{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -400,17 +403,22 @@ font-size:17px;
 margin-bottom:18px
 }
 
-/* ===== ABOUT ===== */
 .about{
 background:#681c2e;
 color:white
 }
 
-.about .section-title h2{color:#f5d36a}
-.about .section-title p{color:#f4e8e9}
+.about .section-title h2{
+color:#f5d36a
+}
 
-/* ===== SERVICES ===== */
-.services{background:#f7f3f0}
+.about .section-title p{
+color:#f4e8e9
+}
+
+.services{
+background:#f7f3f0
+}
 
 .service-grid{
 display:grid;
@@ -426,7 +434,9 @@ box-shadow:0 10px 30px rgba(50,20,25,.1);
 transition:.3s
 }
 
-.service-card:hover{transform:translateY(-8px)}
+.service-card:hover{
+transform:translateY(-8px)
+}
 
 .service-card img{
 width:100%;
@@ -434,16 +444,19 @@ height:220px;
 object-fit:cover
 }
 
-.service-card-content{padding:25px}
+.service-card-content{
+padding:25px
+}
 
 .service-card h3{
 color:#681c2e;
 margin-bottom:10px
 }
 
-.service-card p{color:#62595b}
+.service-card p{
+color:#62595b
+}
 
-/* ===== STATEMENT ===== */
 .statement{
 background:
 linear-gradient(rgba(70,12,25,.87),rgba(70,12,25,.87)),
@@ -466,7 +479,6 @@ margin:auto;
 font-size:20px
 }
 
-/* ===== WHY ===== */
 .why-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -492,7 +504,6 @@ color:#681c2e;
 margin-bottom:10px
 }
 
-/* ===== CONTACT ===== */
 .contact{
 background:#681c2e;
 color:white
@@ -511,7 +522,9 @@ color:#f5d36a;
 margin-bottom:20px
 }
 
-.contact p{color:#f3e6e8}
+.contact p{
+color:#f3e6e8
+}
 
 .contact-item{
 display:flex;
@@ -544,7 +557,6 @@ text-decoration:none;
 font-size:17px
 }
 
-/* ===== FOOTER ===== */
 footer{
 background:#26070f;
 color:#d9cdd0;
@@ -553,23 +565,31 @@ padding:28px 15px;
 font-size:13px
 }
 
-footer strong{color:#f5d36a}
+footer strong{
+color:#f5d36a
+}
 
-/* ===== RESPONSIVE ===== */
 @media(max-width:900px){
 
 header{
 padding:11px 4%
 }
 
-nav{display:none}
+nav{
+display:none
+}
 
 .menu-btn{
 display:block
 }
 
-.brand-text strong{font-size:12px}
-.brand-text span{font-size:8px}
+.brand-text strong{
+font-size:12px
+}
+
+.brand-text span{
+font-size:8px
+}
 
 .logo-shield{
 width:57px;
@@ -581,7 +601,9 @@ width:48px;
 height:58px
 }
 
-.logo-ar{font-size:19px}
+.logo-ar{
+font-size:19px
+}
 
 .hero{
 min-height:650px
@@ -607,9 +629,13 @@ direction:ltr;
 gap:30px
 }
 
-.feature-image{height:360px}
+.feature-image{
+height:360px
+}
 
-.feature-text h2{font-size:34px}
+.feature-text h2{
+font-size:34px
+}
 
 .service-grid,
 .why-grid{
@@ -620,7 +646,9 @@ grid-template-columns:1fr
 grid-template-columns:1fr
 }
 
-.statement h2{font-size:35px}
+.statement h2{
+font-size:35px
+}
 
 section{
 padding:70px 5%
@@ -629,7 +657,9 @@ padding:70px 5%
 
 @media(max-width:500px){
 
-.hero-logo{top:92px}
+.hero-logo{
+top:92px
+}
 
 .hero-content h1{
 font-size:35px
@@ -640,15 +670,19 @@ width:42px;
 height:42px
 }
 
-.prev{left:12px}
-.next{right:12px}
+.prev{
+left:12px
+}
+
+.next{
+right:12px
+}
 }
 </style>
 </head>
 
 <body>
 
-<!-- ===== HEADER ===== -->
 <header>
 
 <div class="logo-area">
@@ -682,8 +716,6 @@ height:42px
 
 </header>
 
-
-<!-- ===== MOBILE MENU ===== -->
 <div class="mobile-menu" id="mobileMenu">
 
 <button class="close-btn" onclick="closeMenu()">
@@ -716,35 +748,27 @@ height:42px
 <i class="fa-solid fa-address-book"></i> Contact
 </a>
 
-<!-- TELETAK -->
 <a href="tel:+8801575053421">
 <i class="fa-solid fa-phone"></i> Teletalk: +880 1575053421
 </a>
 
-<!-- BANGLALINK -->
 <a href="tel:+8801980440825">
 <i class="fa-solid fa-phone"></i> Banglalink: +880 1980440825
 </a>
 
-<!-- WHATSAPP -->
 <a href="https://wa.me/8801980440825" target="_blank">
 <i class="fa-brands fa-whatsapp"></i> WhatsApp
 </a>
 
-<!-- TELEGRAM -->
 <a href="https://t.me/+8801980440825" target="_blank">
 <i class="fa-brands fa-telegram"></i> Telegram
 </a>
 
-<!-- VIBER -->
 <a href="viber://chat?number=%2B8801980440825">
 <i class="fa-brands fa-viber"></i> Viber
 </a>
 
 </div>
-
-
-<!-- ===== QUICK THREE-DOT BUTTON ===== -->
 
 <button class="quick-btn" onclick="toggleQuick()">
 <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -752,35 +776,27 @@ height:42px
 
 <div class="quick-menu" id="quickMenu">
 
-<!-- TELETAK -->
 <a href="tel:+8801575053421" title="Teletalk">
 <i class="fa-solid fa-phone"></i>
 </a>
 
-<!-- BANGLALINK -->
 <a href="tel:+8801980440825" title="Banglalink">
 <i class="fa-solid fa-phone"></i>
 </a>
 
-<!-- WHATSAPP -->
 <a href="https://wa.me/8801980440825" target="_blank" title="WhatsApp">
 <i class="fa-brands fa-whatsapp"></i>
 </a>
 
-<!-- TELEGRAM -->
 <a href="https://t.me/+8801980440825" target="_blank" title="Telegram">
 <i class="fa-brands fa-telegram"></i>
 </a>
 
-<!-- VIBER -->
 <a href="viber://chat?number=%2B8801980440825" title="Viber">
 <i class="fa-brands fa-viber"></i>
 </a>
 
 </div>
-
-
-<!-- ===== HERO SLIDER ===== -->
 
 <section class="hero" id="home">
 
@@ -854,9 +870,6 @@ responsibility and care.
 
 </section>
 
-
-<!-- ===== FEATURES / GALLERY ===== -->
-
 <section id="gallery">
 
 <div class="feature">
@@ -887,7 +900,6 @@ important places.
 </div>
 </div>
 
-
 <div class="feature reverse">
 
 <div class="feature-image">
@@ -914,7 +926,6 @@ people can work, live and operate with greater confidence.
 </div>
 </div>
 
-
 <div class="feature">
 
 <div class="feature-image">
@@ -939,9 +950,6 @@ to us.
 
 </section>
 
-
-<!-- ===== ABOUT ===== -->
-
 <section class="about" id="about">
 
 <div class="section-title">
@@ -959,9 +967,6 @@ and respect for every client and every property.
 </div>
 
 </section>
-
-
-<!-- ===== SERVICES ===== -->
 
 <section class="services" id="services">
 
@@ -994,7 +999,6 @@ property and important premises.
 
 </div>
 
-
 <div class="service-card">
 
 <img src="https://images.pexels.com/photos/38702227/pexels-photo-38702227.jpeg?auto=compress&cs=tinysrgb&w=1000">
@@ -1008,7 +1012,6 @@ facilities.
 </div>
 
 </div>
-
 
 <div class="service-card">
 
@@ -1024,7 +1027,6 @@ and communities.
 
 </div>
 
-
 <div class="service-card">
 
 <img src="https://images.pexels.com/photos/15482700/pexels-photo-15482700.jpeg?auto=compress&cs=tinysrgb&w=1000">
@@ -1039,7 +1041,6 @@ important premises.
 
 </div>
 
-
 <div class="service-card">
 
 <img src="https://images.pexels.com/photos/31282368/pexels-photo-31282368.jpeg?auto=compress&cs=tinysrgb&w=1000">
@@ -1053,7 +1054,6 @@ occasions.
 </div>
 
 </div>
-
 
 <div class="service-card">
 
@@ -1073,9 +1073,6 @@ client and property.
 
 </section>
 
-
-<!-- ===== STATEMENT ===== -->
-
 <section class="statement">
 
 <h2>WE PROTECT WHAT MATTERS</h2>
@@ -1088,9 +1085,6 @@ properties.
 </p>
 
 </section>
-
-
-<!-- ===== WHY US ===== -->
 
 <section id="why">
 
@@ -1133,9 +1127,6 @@ and facilities.
 
 </section>
 
-
-<!-- ===== CONTACT ===== -->
-
 <section class="contact" id="contact">
 
 <div class="contact-grid">
@@ -1152,10 +1143,8 @@ AR Security and Service today.
 
 </div>
 
-
 <div>
 
-<!-- TELETAK -->
 <div class="contact-item">
 
 <i class="fa-solid fa-phone"></i>
@@ -1167,8 +1156,6 @@ AR Security and Service today.
 
 </div>
 
-
-<!-- BANGLALINK -->
 <div class="contact-item">
 
 <i class="fa-solid fa-phone"></i>
@@ -1180,8 +1167,6 @@ AR Security and Service today.
 
 </div>
 
-
-<!-- WHATSAPP -->
 <div class="contact-item">
 
 <i class="fa-brands fa-whatsapp"></i>
@@ -1195,8 +1180,6 @@ AR Security and Service today.
 
 </div>
 
-
-<!-- TELEGRAM -->
 <div class="contact-item">
 
 <i class="fa-brands fa-telegram"></i>
@@ -1210,8 +1193,6 @@ AR Security and Service today.
 
 </div>
 
-
-<!-- VIBER -->
 <div class="contact-item">
 
 <i class="fa-brands fa-viber"></i>
@@ -1225,68 +1206,23 @@ AR Security and Service today.
 
 </div>
 
-
-<!-- EMAIL -->
-<div class="contact-item">
-
-<i class="fa-solid fa-envelope"></i>
-
-<div>
-<strong>EMAIL</strong>
-<a href="mailto:abirhossen159156@gmail.com">
-abirhossen159156@gmail.com
-</a>
 </div>
 
-</div>
-
-</div>
 </div>
 
 </section>
 
-
-<!-- ===== FOOTER ===== -->
-
 <footer>
 
-<strong>AR Security and Service (Pvt) Ltd.</strong>
-
-<br>
-
-Your Safety, Our Responsibility
-
-<br><br>
-
+<strong>AR Security and Service (Pvt) Ltd.</strong><br>
+Professional Security Support • Responsibility • Care<br>
 © 2026 AR Security and Service. All Rights Reserved.
 
 </footer>
 
-
 <script>
 
-/* ===== MOBILE MENU ===== */
-
-function openMenu(){
-document.getElementById("mobileMenu").classList.add("open");
-}
-
-function closeMenu(){
-document.getElementById("mobileMenu").classList.remove("open");
-}
-
-
-/* ===== QUICK MENU ===== */
-
-function toggleQuick(){
-document.getElementById("quickMenu").classList.toggle("show");
-}
-
-
-/* ===== SLIDER ===== */
-
 let currentSlide = 0;
-
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
 
@@ -1300,13 +1236,16 @@ if(index < 0){
 index = slides.length - 1;
 }
 
-slides.forEach((slide,i)=>{
-slide.classList.toggle("active",i === index);
+slides.forEach(slide => {
+slide.classList.remove("active");
 });
 
-dots.forEach((dot,i)=>{
-dot.classList.toggle("active",i === index);
+dots.forEach(dot => {
+dot.classList.remove("active");
 });
+
+slides[index].classList.add("active");
+dots[index].classList.add("active");
 
 currentSlide = index;
 }
@@ -1319,36 +1258,21 @@ function goToSlide(index){
 showSlide(index);
 }
 
-
-/* ===== AUTO SLIDER ===== */
-
-setInterval(()=>{
+setInterval(function(){
 changeSlide(1);
 },5000);
 
-
-/* ===== MOBILE SWIPE ===== */
-
-let touchStartX = 0;
-let touchEndX = 0;
-
-const hero = document.querySelector(".hero");
-
-hero.addEventListener("touchstart",(e)=>{
-touchStartX = e.changedTouches[0].screenX;
-});
-
-hero.addEventListener("touchend",(e)=>{
-touchEndX = e.changedTouches[0].screenX;
-
-if(touchEndX < touchStartX - 50){
-changeSlide(1);
+function openMenu(){
+document.getElementById("mobileMenu").classList.add("open");
 }
 
-if(touchEndX > touchStartX + 50){
-changeSlide(-1);
+function closeMenu(){
+document.getElementById("mobileMenu").classList.remove("open");
 }
-});
+
+function toggleQuick(){
+document.getElementById("quickMenu").classList.toggle("show");
+}
 
 </script>
 
