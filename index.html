@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Google Search Console Verification -->
 <meta name="google-site-verification" content="-OlOhcAekKVzXF6X494mley37-r1pzD9wf0jLFTHAf0" />
 
 <title>AR Security and Service (Pvt) Ltd.</title>
 
+<!-- Font Awesome -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 
 /* =========================
-   RESET
+   BASIC
 ========================= */
 
 *{
@@ -37,7 +37,6 @@ line-height:1.6;
 a{
 text-decoration:none;
 }
-
 
 /* =========================
    HEADER
@@ -60,7 +59,6 @@ align-items:center;
 justify-content:space-between;
 }
 
-
 /* =========================
    LOGO
 ========================= */
@@ -71,11 +69,11 @@ align-items:center;
 gap:13px;
 }
 
+/* BIG LOGO */
 .logo-shield{
 width:76px;
 height:88px;
 background:linear-gradient(145deg,#f5d36a,#b88619);
-
 clip-path:polygon(
 50% 0%,
 92% 13%,
@@ -88,13 +86,10 @@ clip-path:polygon(
 8% 56%,
 8% 13%
 );
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 box-shadow:0 7px 22px rgba(0,0,0,.35);
-
 flex-shrink:0;
 }
 
@@ -102,7 +97,6 @@ flex-shrink:0;
 width:65px;
 height:77px;
 background:#681c2e;
-
 clip-path:polygon(
 50% 0%,
 92% 13%,
@@ -115,12 +109,10 @@ clip-path:polygon(
 8% 56%,
 8% 13%
 );
-
 display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
-
 color:#f5d36a;
 }
 
@@ -153,9 +145,8 @@ font-weight:bold;
 margin-top:2px;
 }
 
-
 /* =========================
-   NAVIGATION
+   DESKTOP NAV
 ========================= */
 
 nav{
@@ -175,7 +166,6 @@ nav a:hover{
 color:#f5d36a;
 }
 
-
 /* =========================
    MOBILE BUTTON
 ========================= */
@@ -191,7 +181,6 @@ height:44px;
 border-radius:8px;
 cursor:pointer;
 }
-
 
 /* =========================
    MOBILE MENU
@@ -245,7 +234,6 @@ font-size:28px;
 cursor:pointer;
 }
 
-
 /* =========================
    HERO
 ========================= */
@@ -297,9 +285,6 @@ width:90%;
 color:white;
 }
 
-
-/* HERO LOGO */
-
 .hero-logo{
 display:flex;
 justify-content:center;
@@ -324,7 +309,6 @@ font-size:39px;
 font-size:11px;
 }
 
-
 .slide-content h2{
 font-size:42px;
 margin-bottom:10px;
@@ -337,9 +321,6 @@ font-size:18px;
 max-width:750px;
 margin:auto;
 }
-
-
-/* HERO BUTTONS */
 
 .hero-buttons{
 margin-top:25px;
@@ -366,9 +347,6 @@ border:2px solid #f5d36a;
 color:#f5d36a;
 }
 
-
-/* SLIDER ARROWS */
-
 .slider-arrow{
 position:absolute;
 top:50%;
@@ -392,9 +370,6 @@ left:20px;
 right:20px;
 }
 
-
-/* DOTS */
-
 .dots{
 position:absolute;
 bottom:25px;
@@ -416,7 +391,6 @@ cursor:pointer;
 .dot.active{
 background:#f5d36a;
 }
-
 
 /* =========================
    SECTIONS
@@ -450,7 +424,6 @@ background:#f5d36a;
 margin:12px auto;
 }
 
-
 /* =========================
    FEATURES
 ========================= */
@@ -479,7 +452,6 @@ margin-bottom:15px;
 color:#681c2e;
 margin-bottom:8px;
 }
-
 
 /* =========================
    ABOUT
@@ -523,7 +495,6 @@ color:#f5d36a;
 margin-right:8px;
 }
 
-
 /* =========================
    SERVICES
 ========================= */
@@ -558,7 +529,6 @@ color:#681c2e;
 margin-bottom:10px;
 }
 
-
 /* =========================
    STATEMENT
 ========================= */
@@ -580,7 +550,6 @@ max-width:800px;
 margin:auto;
 font-size:17px;
 }
-
 
 /* =========================
    WHY US
@@ -614,7 +583,6 @@ margin-bottom:12px;
 font-size:18px;
 color:#681c2e;
 }
-
 
 /* =========================
    CONTACT
@@ -660,14 +628,12 @@ justify-content:center;
 border-radius:50%;
 background:#f5d36a;
 color:#681c2e;
-flex-shrink:0;
 }
 
 .contact-item a{
 color:white;
 font-weight:bold;
 }
-
 
 /* =========================
    FOOTER
@@ -684,10 +650,9 @@ footer strong{
 color:#f5d36a;
 }
 
-
-/* ==================================================
-   QUICK THREE-DOT BUTTON
-================================================== */
+/* =========================
+   QUICK THREE DOT BUTTON
+========================= */
 
 .quick-btn{
 position:fixed;
@@ -699,15 +664,12 @@ width:58px;
 height:58px;
 
 border-radius:50%;
-
 border:2px solid #f5d36a;
 
 background:#681c2e;
-
 color:#f5d36a;
 
 font-size:25px;
-
 cursor:pointer;
 
 display:flex;
@@ -717,11 +679,6 @@ justify-content:center;
 box-shadow:0 6px 20px rgba(0,0,0,.4);
 }
 
-
-/* ==================================================
-   QUICK MENU
-================================================== */
-
 .quick-menu{
 position:fixed;
 right:18px;
@@ -730,106 +687,41 @@ z-index:1499;
 
 display:none;
 flex-direction:column;
-
 gap:10px;
-
-/* Important */
-align-items:flex-end;
 }
 
 .quick-menu.show{
 display:flex;
 }
 
-
-/* ==================================================
-   QUICK MENU ITEMS
-   নম্বর এক লাইনে থাকবে
-================================================== */
-
 .quick-menu a{
-
-width:auto;
-
-min-width:190px;
-
+width:48px;
 height:48px;
 
-padding:0 15px;
-
-border-radius:25px;
+border-radius:50%;
 
 display:flex;
-
 align-items:center;
-
-justify-content:flex-start;
-
-gap:10px;
+justify-content:center;
 
 color:white;
-
 text-decoration:none;
 
-font-size:16px;
-
-font-weight:bold;
+font-size:21px;
 
 background:#681c2e;
-
 border:2px solid #f5d36a;
 
 box-shadow:0 4px 15px rgba(0,0,0,.3);
 
 transition:.2s;
-
-white-space:nowrap;
-
-overflow:hidden;
-
-flex-shrink:0;
 }
-
-
-/* QUICK ICON */
-
-.quick-menu a i{
-
-width:24px;
-
-min-width:24px;
-
-height:24px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-margin:0;
-
-padding:0;
-
-font-size:20px;
-
-line-height:1;
-
-flex-shrink:0;
-}
-
-
-/* HOVER */
 
 .quick-menu a:hover{
-
-transform:scale(1.04);
-
+transform:scale(1.1);
 background:#f5d36a;
-
 color:#681c2e;
 }
-
 
 /* =========================
    RESPONSIVE
@@ -842,17 +734,17 @@ padding:8px 12px;
 }
 
 .logo-shield{
-width:70px;
-height:82px;
+width:68px;
+height:80px;
 }
 
 .logo-inner{
-width:59px;
-height:72px;
+width:58px;
+height:70px;
 }
 
 .logo-ar{
-font-size:26px;
+font-size:25px;
 }
 
 .logo-small{
@@ -907,11 +799,6 @@ grid-template-columns:1fr;
 
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
 @media(max-width:600px){
 
 .logo-area{
@@ -926,10 +813,6 @@ height:82px;
 .logo-inner{
 width:59px;
 height:72px;
-}
-
-.logo-ar{
-font-size:26px;
 }
 
 .brand-text h1{
@@ -981,9 +864,6 @@ padding:55px 15px;
 font-size:27px;
 }
 
-
-/* QUICK BUTTON */
-
 .quick-btn{
 width:56px;
 height:56px;
@@ -991,284 +871,156 @@ right:15px;
 bottom:18px;
 }
 
-
-/* QUICK MENU */
-
 .quick-menu{
 right:15px;
 bottom:83px;
-
-gap:8px;
-}
-
-
-/* QUICK MENU ITEMS */
-
-.quick-menu a{
-
-min-width:205px;
-
-height:46px;
-
-padding:0 13px;
-
-font-size:15px;
-
-gap:9px;
-
-white-space:nowrap;
-}
-
-.quick-menu a i{
-font-size:19px;
 }
 
 }
 
-
-/* VERY SMALL PHONES */
-
-@media(max-width:360px){
-
-.quick-menu a{
-
-min-width:195px;
-
-font-size:14px;
-
-padding:0 11px;
-
-}
-
-.quick-menu a i{
-
-font-size:18px;
-
-}
-
-}
+/* =========================
+   END CSS
+========================= */
 
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- ==================================================
+<!-- =========================
      HEADER
-================================================== -->
+========================= -->
 
 <header>
 
 <div class="navbar">
 
-
 <div class="logo-area">
-
 
 <div class="logo-shield">
 
 <div class="logo-inner">
-
-<div class="logo-ar">
-AR
-</div>
-
-<div class="logo-small">
-SECURITY
+<div class="logo-ar">AR</div>
+<div class="logo-small">SECURITY</div>
 </div>
 
 </div>
-
-</div>
-
 
 <div class="brand-text">
 
-<h1>
-AR SECURITY SERVICE
-</h1>
+<h1>AR SECURITY SERVICE</h1>
 
-<p>
-AR Security and Service (Pvt) Ltd.
-</p>
+<p>AR Security and Service (Pvt) Ltd.</p>
 
 </div>
 
-
 </div>
-
 
 <nav>
 
 <a href="#home">Home</a>
-
 <a href="#about">About</a>
-
 <a href="#services">Services</a>
-
 <a href="#gallery">Gallery</a>
-
 <a href="#why">Why Us</a>
-
 <a href="#contact">Contact</a>
 
 </nav>
 
-
-<button
-class="menu-btn"
-onclick="openMenu()">
-
+<button class="menu-btn" onclick="openMenu()">
 <i class="fa-solid fa-bars"></i>
-
 </button>
-
 
 </div>
 
 </header>
 
 
-<!-- ==================================================
+<!-- =========================
      MOBILE MENU
-================================================== -->
+========================= -->
 
-<div
-class="mobile-menu"
-id="mobileMenu">
+<div class="mobile-menu" id="mobileMenu">
 
-
-<button
-class="close-btn"
-onclick="closeMenu()">
-
+<button class="close-btn" onclick="closeMenu()">
 <i class="fa-solid fa-xmark"></i>
-
 </button>
 
-
-<h3>
-AR SECURITY MENU
-</h3>
-
+<h3>AR SECURITY MENU</h3>
 
 <a href="#home" onclick="closeMenu()">
-<i class="fa-solid fa-house"></i>
-Home
+<i class="fa-solid fa-house"></i> Home
 </a>
-
 
 <a href="#about" onclick="closeMenu()">
-<i class="fa-solid fa-building"></i>
-About Us
+<i class="fa-solid fa-building"></i> About Us
 </a>
-
 
 <a href="#services" onclick="closeMenu()">
-<i class="fa-solid fa-shield-halved"></i>
-Services
+<i class="fa-solid fa-shield-halved"></i> Services
 </a>
-
 
 <a href="#gallery" onclick="closeMenu()">
-<i class="fa-solid fa-images"></i>
-Gallery
+<i class="fa-solid fa-images"></i> Gallery
 </a>
-
 
 <a href="#why" onclick="closeMenu()">
-<i class="fa-solid fa-star"></i>
-Why Choose Us
+<i class="fa-solid fa-star"></i> Why Choose Us
 </a>
-
 
 <a href="#contact" onclick="closeMenu()">
-<i class="fa-solid fa-address-book"></i>
-Contact
+<i class="fa-solid fa-address-book"></i> Contact
 </a>
-
 
 <a href="tel:+8801575053421">
 <i class="fa-solid fa-phone"></i>
 Teletalk: +880 1575053421
 </a>
 
-
 <a href="tel:+8801980440825">
 <i class="fa-solid fa-phone"></i>
 Banglalink: +880 1980440825
 </a>
 
-
-<a
-href="https://wa.me/8801980440825"
-target="_blank">
-
+<a href="https://wa.me/8801980440825" target="_blank">
 <i class="fa-brands fa-whatsapp"></i>
 WhatsApp
-
 </a>
 
-
-<a
-href="https://t.me/+8801980440825"
-target="_blank">
-
+<a href="https://t.me/+8801980440825" target="_blank">
 <i class="fa-brands fa-telegram"></i>
 Telegram
-
 </a>
 
-
-<a
-href="viber://chat?number=%2B8801980440825">
-
+<a href="viber://chat?number=%2B8801980440825">
 <i class="fa-brands fa-viber"></i>
 Viber
-
 </a>
-
 
 </div>
 
 
-<!-- ==================================================
+<!-- =========================
      HERO
-================================================== -->
+========================= -->
 
-<section
-class="hero"
-id="home">
-
+<section class="hero" id="home">
 
 <div class="slides">
 
-
-<div
-class="slide active"
+<div class="slide active"
 style="background-image:url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1600&q=80');">
-
 
 <div class="slide-content">
 
-
 <div class="hero-logo">
-
 
 <div class="logo-shield">
 
 <div class="logo-inner">
 
-<div class="logo-ar">
-AR
-</div>
-
-<div class="logo-small">
-SECURITY
-</div>
+<div class="logo-ar">AR</div>
+<div class="logo-small">SECURITY</div>
 
 </div>
 
@@ -1276,63 +1028,40 @@ SECURITY
 
 </div>
 
-
-<h2>
-Professional Security Service
-</h2>
-
+<h2>Professional Security Service</h2>
 
 <p>
 Reliable security solutions for residential,
 commercial and industrial clients.
 </p>
 
-
 <div class="hero-buttons">
 
-
-<a
-href="#contact"
-class="btn btn-gold">
-
+<a href="#contact" class="btn btn-gold">
 Contact Us
-
 </a>
 
-
-<a
-href="#services"
-class="btn btn-outline">
-
+<a href="#services" class="btn btn-outline">
 Our Services
-
 </a>
 
-
-</div>
-
-
 </div>
 
 </div>
 
+</div>
 
 
-<div
-class="slide"
+<div class="slide"
 style="background-image:url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1600&q=80');">
-
 
 <div class="slide-content">
 
-<h2>
-Trained Security Personnel
-</h2>
+<h2>Trained Security Personnel</h2>
 
 <p>
-Professional and disciplined security
-personnel for your valuable property
-and organization.
+Professional and disciplined security personnel
+for your valuable property and organization.
 </p>
 
 </div>
@@ -1340,17 +1069,12 @@ and organization.
 </div>
 
 
-
-<div
-class="slide"
+<div class="slide"
 style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80');">
-
 
 <div class="slide-content">
 
-<h2>
-Corporate Security Solutions
-</h2>
+<h2>Corporate Security Solutions</h2>
 
 <p>
 Complete security management for offices,
@@ -1362,17 +1086,12 @@ factories, institutions and businesses.
 </div>
 
 
-
-<div
-class="slide"
+<div class="slide"
 style="background-image:url('https://images.unsplash.com/photo-1557862921-37829c790f19?auto=format&fit=crop&w=1600&q=80');">
-
 
 <div class="slide-content">
 
-<h2>
-Safety & Protection
-</h2>
+<h2>Safety & Protection</h2>
 
 <p>
 Your safety and protection are our priority.
@@ -1383,17 +1102,12 @@ Your safety and protection are our priority.
 </div>
 
 
-
-<div
-class="slide"
+<div class="slide"
 style="background-image:url('https://images.unsplash.com/photo-1504306660847-8a7a0d7f1c8d?auto=format&fit=crop&w=1600&q=80');">
-
 
 <div class="slide-content">
 
-<h2>
-24/7 Security Support
-</h2>
+<h2>24/7 Security Support</h2>
 
 <p>
 Dedicated security support for peace of mind.
@@ -1403,76 +1117,42 @@ Dedicated security support for peace of mind.
 
 </div>
 
-
 </div>
 
 
-<button
-class="slider-arrow prev"
-onclick="changeSlide(-1)">
-
+<button class="slider-arrow prev" onclick="changeSlide(-1)">
 <i class="fa-solid fa-chevron-left"></i>
-
 </button>
 
-
-<button
-class="slider-arrow next"
-onclick="changeSlide(1)">
-
+<button class="slider-arrow next" onclick="changeSlide(1)">
 <i class="fa-solid fa-chevron-right"></i>
-
 </button>
 
 
 <div class="dots">
 
-<span
-class="dot active"
-onclick="goSlide(0)">
-</span>
-
-<span
-class="dot"
-onclick="goSlide(1)">
-</span>
-
-<span
-class="dot"
-onclick="goSlide(2)">
-</span>
-
-<span
-class="dot"
-onclick="goSlide(3)">
-</span>
-
-<span
-class="dot"
-onclick="goSlide(4)">
-</span>
+<span class="dot active" onclick="goSlide(0)"></span>
+<span class="dot" onclick="goSlide(1)"></span>
+<span class="dot" onclick="goSlide(2)"></span>
+<span class="dot" onclick="goSlide(3)"></span>
+<span class="dot" onclick="goSlide(4)"></span>
 
 </div>
-
 
 </section>
 
 
-<!-- ==================================================
+<!-- =========================
      FEATURES
-================================================== -->
+========================= -->
 
 <section>
 
 <div class="container">
 
-
 <div class="section-title">
 
-<h2>
-Our Commitment
-</h2>
-
+<h2>Our Commitment</h2>
 <span></span>
 
 </div>
@@ -1480,14 +1160,11 @@ Our Commitment
 
 <div class="features">
 
-
 <div class="feature-card">
 
 <i class="fa-solid fa-shield-halved"></i>
 
-<h3>
-Security First
-</h3>
+<h3>Security First</h3>
 
 <p>
 We focus on protecting people,
@@ -1501,9 +1178,7 @@ property and business assets.
 
 <i class="fa-solid fa-user-shield"></i>
 
-<h3>
-Professional Guards
-</h3>
+<h3>Professional Guards</h3>
 
 <p>
 Disciplined and responsible security
@@ -1517,9 +1192,7 @@ personnel for different environments.
 
 <i class="fa-solid fa-clock"></i>
 
-<h3>
-24/7 Support
-</h3>
+<h3>24/7 Support</h3>
 
 <p>
 Security support designed to provide
@@ -1528,7 +1201,6 @@ continuous protection.
 
 </div>
 
-
 </div>
 
 </div>
@@ -1536,24 +1208,17 @@ continuous protection.
 </section>
 
 
-<!-- ==================================================
+<!-- =========================
      ABOUT
-================================================== -->
+========================= -->
 
-<section
-class="about"
-id="about">
-
+<section class="about" id="about">
 
 <div class="container">
 
-
 <div class="section-title">
 
-<h2>
-About Us
-</h2>
-
+<h2>About Us</h2>
 <span></span>
 
 </div>
@@ -1561,16 +1226,11 @@ About Us
 
 <div class="about-grid">
 
-
 <div>
 
-<h3
-style="color:#681c2e;font-size:30px;margin-bottom:15px;">
-
+<h3 style="color:#681c2e;font-size:30px;margin-bottom:15px;">
 AR Security and Service
-
 </h3>
-
 
 <p>
 AR Security and Service (Pvt) Ltd. is committed
@@ -1579,68 +1239,50 @@ services for individuals, businesses, institutions
 and organizations.
 </p>
 
-
 <p style="margin-top:15px;">
-
 Our goal is to provide disciplined security
 personnel and practical security solutions
 according to our clients' requirements.
-
 </p>
-
 
 </div>
 
 
 <div class="about-box">
 
-
-<h3>
-Our Mission
-</h3>
-
+<h3>Our Mission</h3>
 
 <p>
-
 To provide dependable security services with
 discipline, responsibility, professionalism and
 respect for our clients.
-
 </p>
 
-
 <ul class="about-list">
-
 
 <li>
 <i class="fa-solid fa-check"></i>
 Professional service
 </li>
 
-
 <li>
 <i class="fa-solid fa-check"></i>
 Responsible personnel
 </li>
-
 
 <li>
 <i class="fa-solid fa-check"></i>
 Client-focused solutions
 </li>
 
-
 <li>
 <i class="fa-solid fa-check"></i>
 Security awareness
 </li>
 
-
 </ul>
 
-
 </div>
-
 
 </div>
 
@@ -1649,23 +1291,17 @@ Security awareness
 </section>
 
 
-<!-- ==================================================
+<!-- =========================
      GALLERY
-================================================== -->
+========================= -->
 
-<section
-id="gallery">
-
+<section id="gallery">
 
 <div class="container">
 
-
 <div class="section-title">
 
-<h2>
-Security Services
-</h2>
-
+<h2>Security Services</h2>
 <span></span>
 
 </div>
@@ -1673,14 +1309,11 @@ Security Services
 
 <div class="features">
 
-
 <div class="feature-card">
 
 <i class="fa-solid fa-building-shield"></i>
 
-<h3>
-Building Security
-</h3>
+<h3>Building Security</h3>
 
 <p>
 Security services for residential
@@ -1694,9 +1327,7 @@ and commercial buildings.
 
 <i class="fa-solid fa-industry"></i>
 
-<h3>
-Industrial Security
-</h3>
+<h3>Industrial Security</h3>
 
 <p>
 Security support for factories,
@@ -1710,9 +1341,7 @@ warehouses and industrial sites.
 
 <i class="fa-solid fa-business-time"></i>
 
-<h3>
-Corporate Security
-</h3>
+<h3>Corporate Security</h3>
 
 <p>
 Security solutions for offices,
@@ -1721,7 +1350,6 @@ organizations and businesses.
 
 </div>
 
-
 </div>
 
 </div>
@@ -1729,24 +1357,17 @@ organizations and businesses.
 </section>
 
 
-<!-- ==================================================
+<!-- =========================
      SERVICES
-================================================== -->
+========================= -->
 
-<section
-id="services"
-style="background:#f2ece3;">
-
+<section id="services" style="background:#f2ece3;">
 
 <div class="container">
 
-
 <div class="section-title">
 
-<h2>
-Our Services
-</h2>
-
+<h2>Our Services</h2>
 <span></span>
 
 </div>
@@ -1759,9 +1380,7 @@ Our Services
 
 <i class="fa-solid fa-user-shield"></i>
 
-<h3>
-Security Guard
-</h3>
+<h3>Security Guard</h3>
 
 <p>
 Professional security guards for
@@ -1775,9 +1394,7 @@ offices, homes, factories and businesses.
 
 <i class="fa-solid fa-building-shield"></i>
 
-<h3>
-Corporate Security
-</h3>
+<h3>Corporate Security</h3>
 
 <p>
 Security personnel and solutions
@@ -1791,9 +1408,7 @@ for corporate environments.
 
 <i class="fa-solid fa-industry"></i>
 
-<h3>
-Industrial Security
-</h3>
+<h3>Industrial Security</h3>
 
 <p>
 Security support for industrial
@@ -1807,9 +1422,7 @@ facilities and factories.
 
 <i class="fa-solid fa-house"></i>
 
-<h3>
-Residential Security
-</h3>
+<h3>Residential Security</h3>
 
 <p>
 Security solutions for residential
@@ -1823,9 +1436,7 @@ buildings and communities.
 
 <i class="fa-solid fa-calendar-check"></i>
 
-<h3>
-Event Security
-</h3>
+<h3>Event Security</h3>
 
 <p>
 Security support for events,
@@ -1839,9 +1450,7 @@ programs and special occasions.
 
 <i class="fa-solid fa-shield"></i>
 
-<h3>
-Customized Security
-</h3>
+<h3>Customized Security</h3>
 
 <p>
 Security solutions according to
@@ -1858,51 +1467,37 @@ specific client requirements.
 </section>
 
 
-<!-- ==================================================
+<!-- =========================
      STATEMENT
-================================================== -->
+========================= -->
 
-<section
-class="statement">
-
+<section class="statement">
 
 <div class="container">
 
-
-<h2>
-Your Safety. Our Responsibility.
-</h2>
-
+<h2>Your Safety. Our Responsibility.</h2>
 
 <p>
 We believe that professional security is built
 on discipline, responsibility and trust.
 </p>
 
-
 </div>
 
 </section>
 
 
-<!-- ==================================================
+<!-- =========================
      WHY US
-================================================== -->
+========================= -->
 
-<section
-class="why"
-id="why">
-
+<section class="why" id="why">
 
 <div class="container">
 
-
 <div class="section-title">
 
-<h2>
-Why Choose Us
-</h2>
-
+<h2>Why Choose Us</h2>
 <span></span>
 
 </div>
@@ -1915,9 +1510,7 @@ Why Choose Us
 
 <i class="fa-solid fa-user-tie"></i>
 
-<h3>
-Professional
-</h3>
+<h3>Professional</h3>
 
 </div>
 
@@ -1926,9 +1519,7 @@ Professional
 
 <i class="fa-solid fa-clock"></i>
 
-<h3>
-Reliable
-</h3>
+<h3>Reliable</h3>
 
 </div>
 
@@ -1937,9 +1528,7 @@ Reliable
 
 <i class="fa-solid fa-shield-halved"></i>
 
-<h3>
-Security Focused
-</h3>
+<h3>Security Focused</h3>
 
 </div>
 
@@ -1948,9 +1537,7 @@ Security Focused
 
 <i class="fa-solid fa-handshake"></i>
 
-<h3>
-Client Care
-</h3>
+<h3>Client Care</h3>
 
 </div>
 
@@ -1962,24 +1549,17 @@ Client Care
 </section>
 
 
-<!-- ==================================================
+<!-- =========================
      CONTACT
-================================================== -->
+========================= -->
 
-<section
-class="contact"
-id="contact">
-
+<section class="contact" id="contact">
 
 <div class="container">
 
-
 <div class="section-title">
 
-<h2>
-Contact Us
-</h2>
-
+<h2>Contact Us</h2>
 <span></span>
 
 </div>
@@ -1990,20 +1570,14 @@ Contact Us
 
 <div class="contact-box">
 
-
-<h3>
-Get In Touch
-</h3>
-
+<h3>Get In Touch</h3>
 
 <div class="contact-item">
 
 <i class="fa-solid fa-phone"></i>
 
 <a href="tel:+8801575053421">
-
 +880 1575053421
-
 </a>
 
 </div>
@@ -2014,9 +1588,7 @@ Get In Touch
 <i class="fa-solid fa-phone"></i>
 
 <a href="tel:+8801980440825">
-
 +880 1980440825
-
 </a>
 
 </div>
@@ -2026,12 +1598,8 @@ Get In Touch
 
 <i class="fa-brands fa-whatsapp"></i>
 
-<a
-href="https://wa.me/8801980440825"
-target="_blank">
-
+<a href="https://wa.me/8801980440825" target="_blank">
 WhatsApp
-
 </a>
 
 </div>
@@ -2041,12 +1609,8 @@ WhatsApp
 
 <i class="fa-brands fa-telegram"></i>
 
-<a
-href="https://t.me/+8801980440825"
-target="_blank">
-
+<a href="https://t.me/+8801980440825" target="_blank">
 Telegram
-
 </a>
 
 </div>
@@ -2056,56 +1620,37 @@ Telegram
 
 <i class="fa-brands fa-viber"></i>
 
-<a
-href="viber://chat?number=%2B8801980440825">
-
+<a href="viber://chat?number=%2B8801980440825">
 Viber
-
 </a>
 
 </div>
-
 
 </div>
 
 
 <div>
 
-
-<h3
-style="color:#681c2e;font-size:27px;margin-bottom:15px;">
-
+<h3 style="color:#681c2e;font-size:27px;margin-bottom:15px;">
 AR Security and Service (Pvt) Ltd.
-
 </h3>
 
-
 <p>
-
 For security service requirements,
 please contact us using the phone numbers
 or messaging services provided.
-
 </p>
-
 
 <div style="margin-top:25px;">
 
-
-<a
-href="tel:+8801575053421"
+<a href="tel:+8801575053421"
 class="btn btn-gold"
 style="background:#681c2e;color:#f5d36a;">
-
 <i class="fa-solid fa-phone"></i>
-
 Call Now
-
 </a>
 
-
 </div>
-
 
 </div>
 
@@ -2117,156 +1662,99 @@ Call Now
 </section>
 
 
-<!-- ==================================================
+<!-- =========================
      FOOTER
-================================================== -->
+========================= -->
 
 <footer>
 
 <p>
-
-© 2026
-<strong>
-AR Security and Service (Pvt) Ltd.
-</strong>
-
+© 2026 <strong>AR Security and Service (Pvt) Ltd.</strong>
 </p>
 
-
-<p
-style="margin-top:5px;font-size:13px;">
-
+<p style="margin-top:5px;font-size:13px;">
 Professional Security Service
-
 </p>
 
 </footer>
 
 
-<!-- ==================================================
-     QUICK BUTTON + MENU
-================================================== -->
+<!-- =========================
+     QUICK THREE DOT BUTTON
+========================= -->
 
-<button
-class="quick-btn"
-onclick="toggleQuick()"
-aria-label="Quick Contact">
+<button class="quick-btn" onclick="toggleQuick()">
 
 <i class="fa-solid fa-ellipsis-vertical"></i>
 
 </button>
 
 
-<div
-class="quick-menu"
-id="quickMenu">
+<div class="quick-menu" id="quickMenu">
 
-
-<!-- TELE TALK -->
-
-<a
-href="tel:+8801575053421"
+<a href="tel:+8801575053421"
 title="Teletalk">
 
 <i class="fa-solid fa-phone"></i>
 
-<span>
-+880 1575053421
-</span>
-
 </a>
 
 
-<!-- BANGLALINK -->
-
-<a
-href="tel:+8801980440825"
+<a href="tel:+8801980440825"
 title="Banglalink">
 
 <i class="fa-solid fa-phone"></i>
 
-<span>
-+880 1980440825
-</span>
-
 </a>
 
 
-<!-- WHATSAPP -->
-
-<a
-href="https://wa.me/8801980440825"
+<a href="https://wa.me/8801980440825"
 target="_blank"
 title="WhatsApp">
 
 <i class="fa-brands fa-whatsapp"></i>
 
-<span>
-WhatsApp
-</span>
-
 </a>
 
 
-<!-- TELEGRAM -->
-
-<a
-href="https://t.me/+8801980440825"
+<a href="https://t.me/+8801980440825"
 target="_blank"
 title="Telegram">
 
 <i class="fa-brands fa-telegram"></i>
 
-<span>
-Telegram
-</span>
-
 </a>
 
 
-<!-- VIBER -->
-
-<a
-href="viber://chat?number=%2B8801980440825"
+<a href="viber://chat?number=%2B8801980440825"
 title="Viber">
 
 <i class="fa-brands fa-viber"></i>
 
-<span>
-Viber
-</span>
-
 </a>
-
 
 </div>
 
 
-<!-- ==================================================
+<!-- =========================
      JAVASCRIPT
-================================================== -->
+========================= -->
 
 <script>
-
 
 /* MOBILE MENU */
 
 function openMenu(){
 
-document
-.getElementById("mobileMenu")
-.classList
-.add("show");
+document.getElementById("mobileMenu")
+.classList.add("show");
 
 }
 
-
 function closeMenu(){
 
-document
-.getElementById("mobileMenu")
-.classList
-.remove("show");
+document.getElementById("mobileMenu")
+.classList.remove("show");
 
 }
 
@@ -2275,10 +1763,8 @@ document
 
 function toggleQuick(){
 
-document
-.getElementById("quickMenu")
-.classList
-.toggle("show");
+document.getElementById("quickMenu")
+.classList.toggle("show");
 
 }
 
@@ -2297,55 +1783,39 @@ document.querySelectorAll(".dot");
 function showSlide(index){
 
 if(index >= slides.length){
-
 currentSlide = 0;
-
 }
 
 else if(index < 0){
-
 currentSlide = slides.length - 1;
-
 }
 
 else{
-
 currentSlide = index;
-
 }
 
 
 slides.forEach(function(slide){
-
 slide.classList.remove("active");
-
 });
 
-
 dots.forEach(function(dot){
-
 dot.classList.remove("active");
-
 });
 
 
 slides[currentSlide]
-.classList
-.add("active");
-
+.classList.add("active");
 
 dots[currentSlide]
-.classList
-.add("active");
+.classList.add("active");
 
 }
 
 
 function changeSlide(direction){
 
-showSlide(
-currentSlide + direction
-);
+showSlide(currentSlide + direction);
 
 }
 
@@ -2367,7 +1837,5 @@ changeSlide(1);
 
 </script>
 
-
 </body>
-
 </html>
