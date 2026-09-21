@@ -1,840 +1,928 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>AR Security and Service (Pvt) Ltd.</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f7fa;
-      color: #17202a;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #071a2b;
-      color: white;
-      padding: 18px 6%;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.25);
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-box {
-      width: 52px;
-      height: 52px;
-      border: 3px solid #27a9e1;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 18px;
-      font-weight: bold;
-      color: #27a9e1;
-    }
-
-    .logo-text h2 {
-      font-size: 17px;
-      letter-spacing: 1px;
-    }
-
-    .logo-text p {
-      font-size: 11px;
-      color: #b9c9d6;
-      letter-spacing: 1px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 18px;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #27a9e1;
-    }
-
-    .hero {
-      min-height: 650px;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(rgba(3,17,30,0.72), rgba(3,17,30,0.78)),
-        url("https://images.pexels.com/photos/35562107/pexels-photo-35562107.jpeg?auto=compress&cs=tinysrgb&w=1600")
-        center/cover no-repeat;
-      color: white;
-      padding: 80px 7%;
-    }
-
-    .hero-content {
-      max-width: 760px;
-    }
-
-    .hero h1 {
-      font-size: 52px;
-      line-height: 1.15;
-      margin-bottom: 22px;
-    }
-
-    .hero h1 span {
-      color: #27a9e1;
-    }
-
-    .hero p {
-      font-size: 19px;
-      color: #e1e9ef;
-      margin-bottom: 30px;
-      max-width: 650px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #27a9e1;
-      color: white;
-      padding: 13px 25px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-right: 10px;
-    }
-
-    .btn:hover {
-      background: #1688bb;
-    }
-
-    .btn-dark {
-      background: transparent;
-      border: 1px solid white;
-    }
-
-    section {
-      padding: 75px 7%;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-title h2 {
-      font-size: 35px;
-      color: #071a2b;
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      color: #65727e;
-    }
-
-    .highlight {
-      background: white;
-    }
-
-    .highlight-box {
-      max-width: 1150px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .highlight-image {
-      width: 100%;
-      height: 390px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    }
-
-    .highlight-text h2 {
-      font-size: 36px;
-      color: #071a2b;
-      margin-bottom: 18px;
-    }
-
-    .highlight-text p {
-      color: #596773;
-      margin-bottom: 15px;
-    }
-
-    .about {
-      background: #eef3f7;
-    }
-
-    .about-box {
-      max-width: 1000px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .about-box p {
-      font-size: 17px;
-      color: #56636e;
-    }
-
-    .services {
-      background: white;
-    }
-
-    .service-grid {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .service-card {
-      background: #f7f9fb;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
-
-    .service-card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.14);
-    }
-
-    .service-card img {
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-    }
-
-    .service-content {
-      padding: 22px;
-    }
-
-    .service-content h3 {
-      color: #071a2b;
-      margin-bottom: 10px;
-      font-size: 21px;
-    }
-
-    .service-content p {
-      color: #687681;
-      font-size: 14px;
-    }
-
-    .banner {
-      min-height: 420px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background:
-        linear-gradient(rgba(4,19,33,0.72), rgba(4,19,33,0.72)),
-        url("https://images.pexels.com/photos/31282368/pexels-photo-31282368.jpeg?auto=compress&cs=tinysrgb&w=1600")
-        center/cover no-repeat;
-      color: white;
-    }
-
-    .banner h2 {
-      font-size: 46px;
-      margin-bottom: 15px;
-    }
-
-    .banner p {
-      font-size: 19px;
-      letter-spacing: 2px;
-    }
-
-    .why {
-      background: #eef3f7;
-    }
-
-    .why-grid {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .why-card {
-      background: white;
-      padding: 30px;
-      text-align: center;
-      border-radius: 10px;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.07);
-    }
-
-    .why-card .icon {
-      font-size: 38px;
-      margin-bottom: 12px;
-    }
-
-    .why-card h3 {
-      margin-bottom: 10px;
-      color: #071a2b;
-    }
-
-    .why-card p {
-      color: #687681;
-      font-size: 14px;
-    }
-
-    .contact {
-      background: #071a2b;
-      color: white;
-    }
-
-    .contact .section-title h2 {
-      color: white;
-    }
-
-    .contact .section-title p {
-      color: #b9c9d6;
-    }
-
-    .contact-grid {
-      max-width: 1000px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .contact-card {
-      background: #102b42;
-      padding: 30px 20px;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .contact-card h3 {
-      color: #27a9e1;
-      margin-bottom: 10px;
-    }
-
-    .contact-card a {
-      color: white;
-      text-decoration: none;
-      word-break: break-word;
-    }
-
-    footer {
-      background: #04111d;
-      color: #9fb0bd;
-      text-align: center;
-      padding: 25px 15px;
-      font-size: 13px;
-    }
-
-    @media (max-width: 850px) {
-
-      .nav {
-        flex-direction: column;
-      }
-
-      nav a {
-        margin: 0 6px;
-        font-size: 12px;
-      }
-
-      .hero {
-        min-height: 570px;
-      }
-
-      .hero h1 {
-        font-size: 38px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .highlight-box {
-        grid-template-columns: 1fr;
-      }
-
-      .service-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 550px) {
-
-      section {
-        padding: 55px 5%;
-      }
-
-      .service-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .banner h2 {
-        font-size: 34px;
-      }
-
-      .highlight-text h2 {
-        font-size: 29px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AR Security and Service (Pvt) Ltd.</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f4f7fa;
+color:#17202a;
+line-height:1.6;
+}
+
+header{
+background:#071a2b;
+color:white;
+padding:16px 6%;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 3px 15px rgba(0,0,0,.25);
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+/* PREMIUM AR LOGO */
+
+.logo-box{
+width:58px;
+height:58px;
+background:linear-gradient(145deg,#d4af37,#f5d76e);
+color:#071a2b;
+border:2px solid #f5d76e;
+border-radius:14px 14px 18px 18px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:19px;
+font-weight:900;
+letter-spacing:1px;
+box-shadow:0 4px 14px rgba(212,175,55,.35);
+position:relative;
+}
+
+.logo-box:after{
+content:"◆";
+position:absolute;
+bottom:-9px;
+font-size:11px;
+color:#d4af37;
+}
+
+.logo-text h2{
+font-size:17px;
+letter-spacing:1px;
+}
+
+.logo-text p{
+font-size:11px;
+color:#c5d0d9;
+letter-spacing:1px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:18px;
+font-size:14px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#d4af37;
+}
+
+/* HERO */
+
+.hero{
+min-height:650px;
+display:flex;
+align-items:center;
+
+background:
+linear-gradient(rgba(3,17,30,.72),rgba(3,17,30,.80)),
+url("https://images.pexels.com/photos/35562107/pexels-photo-35562107.jpeg?auto=compress&cs=tinysrgb&w=1600")
+center/cover no-repeat;
+
+color:white;
+padding:80px 7%;
+}
+
+.hero-content{
+max-width:760px;
+}
+
+.hero h1{
+font-size:52px;
+line-height:1.15;
+margin-bottom:22px;
+}
+
+.hero h1 span{
+color:#d4af37;
+}
+
+.hero p{
+font-size:19px;
+color:#e1e9ef;
+margin-bottom:30px;
+max-width:650px;
+}
+
+.btn{
+display:inline-block;
+background:#d4af37;
+color:#071a2b;
+padding:13px 25px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+margin-right:10px;
+}
+
+.btn:hover{
+background:#f5d76e;
+}
+
+.btn-dark{
+background:transparent;
+color:white;
+border:1px solid white;
+}
+
+/* SECTIONS */
+
+section{
+padding:75px 7%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:45px;
+}
+
+.section-title h2{
+font-size:35px;
+color:#071a2b;
+margin-bottom:10px;
+}
+
+.section-title p{
+color:#65727e;
+}
+
+/* HIGHLIGHT */
+
+.highlight{
+background:white;
+}
+
+.highlight-box{
+max-width:1150px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.highlight-image{
+width:100%;
+height:390px;
+object-fit:cover;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.highlight-text h2{
+font-size:36px;
+color:#071a2b;
+margin-bottom:18px;
+}
+
+.highlight-text p{
+color:#596773;
+margin-bottom:15px;
+}
+
+/* ABOUT */
+
+.about{
+background:#eef3f7;
+}
+
+.about-box{
+max-width:1000px;
+margin:auto;
+text-align:center;
+}
+
+.about-box p{
+font-size:17px;
+color:#56636e;
+}
+
+/* SERVICES */
+
+.services{
+background:white;
+}
+
+.service-grid{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.service-card{
+background:#f7f9fb;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 6px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.service-card:hover{
+transform:translateY(-7px);
+box-shadow:0 12px 28px rgba(0,0,0,.14);
+}
+
+.service-card img{
+width:100%;
+height:210px;
+object-fit:cover;
+}
+
+.service-content{
+padding:22px;
+}
+
+.service-content h3{
+color:#071a2b;
+margin-bottom:10px;
+font-size:21px;
+}
+
+.service-content p{
+color:#687681;
+font-size:14px;
+}
+
+/* BANNER */
+
+.banner{
+min-height:420px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+background:
+linear-gradient(rgba(4,19,33,.72),rgba(4,19,33,.72)),
+url("https://images.pexels.com/photos/31282368/pexels-photo-31282368.jpeg?auto=compress&cs=tinysrgb&w=1600")
+center/cover no-repeat;
+
+color:white;
+}
+
+.banner h2{
+font-size:46px;
+margin-bottom:15px;
+}
+
+.banner p{
+font-size:19px;
+letter-spacing:2px;
+}
+
+/* WHY */
+
+.why{
+background:#eef3f7;
+}
+
+.why-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.why-card{
+background:white;
+padding:30px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 5px 18px rgba(0,0,0,.07);
+}
+
+.why-card .icon{
+font-size:38px;
+margin-bottom:12px;
+}
+
+.why-card h3{
+margin-bottom:10px;
+color:#071a2b;
+}
+
+.why-card p{
+color:#687681;
+font-size:14px;
+}
+
+/* CONTACT */
+
+.contact{
+background:#071a2b;
+color:white;
+}
+
+.contact .section-title h2{
+color:white;
+}
+
+.contact .section-title p{
+color:#b9c9d6;
+}
+
+.contact-grid{
+max-width:1000px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.contact-card{
+background:#102b42;
+padding:30px 20px;
+border-radius:10px;
+text-align:center;
+}
+
+.contact-card h3{
+color:#d4af37;
+margin-bottom:10px;
+}
+
+.contact-card a{
+color:white;
+text-decoration:none;
+word-break:break-word;
+}
+
+/* FOOTER */
+
+footer{
+background:#04111d;
+color:#9fb0bd;
+text-align:center;
+padding:25px 15px;
+font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+.nav{
+flex-direction:column;
+}
+
+nav a{
+margin:0 6px;
+font-size:12px;
+}
+
+.hero{
+min-height:570px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.highlight-box{
+grid-template-columns:1fr;
+}
+
+.service-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.why-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:550px){
+
+section{
+padding:55px 5%;
+}
+
+.service-grid{
+grid-template-columns:1fr;
+}
+
+.why-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.banner h2{
+font-size:34px;
+}
+
+.highlight-text h2{
+font-size:29px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="nav">
+<!-- HEADER -->
 
-      <div class="logo">
-        <div class="logo-box">AR</div>
+<header>
 
-        <div class="logo-text">
-          <h2>AR (ABIR) SECURITY SERVICE</h2>
-          <p>Professional Security & Service</p>
-        </div>
-      </div>
+<div class="nav">
 
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#why">Why Us</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<div class="logo">
 
-    </div>
-  </header>
+<div class="logo-box">
+AR
+</div>
 
+<div class="logo-text">
 
-  <!-- HERO -->
-  <section class="hero" id="home">
+<h2>AR (ABIR) SECURITY SERVICE</h2>
 
-    <div class="hero-content">
+<p>Professional Security & Service</p>
 
-      <h1>
-        Your Safety,<br>
-        <span>Our Responsibility.</span>
-      </h1>
+</div>
 
-      <p>
-        AR Security and Service (Pvt) Ltd. provides professional,
-        disciplined and reliable security services for businesses,
-        organizations, residential properties and events.
-      </p>
+</div>
 
-      <a class="btn" href="#contact">Contact Us</a>
-      <a class="btn btn-dark" href="#services">Our Services</a>
+<nav>
 
-    </div>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#why">Why Us</a>
+<a href="#contact">Contact</a>
 
-  </section>
+</nav>
 
+</div>
 
-  <!-- PROFESSIONAL SECURITY -->
-  <section class="highlight">
+</header>
 
-    <div class="highlight-box">
 
-      <img
-        class="highlight-image"
-        src="https://images.pexels.com/photos/12304330/pexels-photo-12304330.jpeg?auto=compress&cs=tinysrgb&w=1200"
-        alt="Professional Security Guard">
+<!-- HERO -->
 
-      <div class="highlight-text">
+<section class="hero" id="home">
 
-        <h2>Professional Security You Can Trust</h2>
+<div class="hero-content">
 
-        <p>
-          Security requires discipline, responsibility, alertness
-          and professionalism.
-        </p>
+<h1>
+Your Safety,<br>
+<span>Our Responsibility.</span>
+</h1>
 
-        <p>
-          Our focus is to provide dependable security personnel
-          and professional service according to the requirements
-          of our clients.
-        </p>
+<p>
+AR Security and Service (Pvt) Ltd. provides professional,
+disciplined and reliable security services for businesses,
+organizations, residential properties and events.
+</p>
 
-        <p>
-          We believe in responsibility, proper conduct and
-          professional service at every level.
-        </p>
+<a class="btn" href="#contact">Contact Us</a>
 
-        <a class="btn" href="#contact">Talk With Us</a>
+<a class="btn btn-dark" href="#services">
+Our Services
+</a>
 
-      </div>
+</div>
 
-    </div>
+</section>
 
-  </section>
 
+<!-- PROFESSIONAL SECURITY -->
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
+<section class="highlight">
 
-    <div class="section-title">
-      <h2>About AR Security</h2>
-      <p>Professional service with responsibility and discipline</p>
-    </div>
+<div class="highlight-box">
 
-    <div class="about-box">
+<img
+class="highlight-image"
+src="https://images.pexels.com/photos/12304330/pexels-photo-12304330.jpeg?auto=compress&cs=tinysrgb&w=1200"
+alt="Professional Security Guard">
 
-      <p>
-        <strong>AR Security and Service (Pvt) Ltd.</strong> is a
-        professional security and service company committed to
-        providing dependable security personnel and service solutions.
-      </p>
+<div class="highlight-text">
 
-      <br>
+<h2>Professional Security You Can Trust</h2>
 
-      <p>
-        Our objective is to support clients with disciplined,
-        responsible and professional security services while
-        maintaining a high standard of conduct.
-      </p>
+<p>
+Security requires discipline, responsibility, alertness
+and professionalism.
+</p>
 
-    </div>
+<p>
+Our focus is to provide dependable security personnel
+and professional service according to the requirements
+of our clients.
+</p>
 
-  </section>
+<p>
+We believe in responsibility, proper conduct and
+professional service at every level.
+</p>
 
+<a class="btn" href="#contact">
+Talk With Us
+</a>
 
-  <!-- SERVICES -->
-  <section class="services" id="services">
+</div>
 
-    <div class="section-title">
-      <h2>Our Services</h2>
-      <p>Professional security solutions for different requirements</p>
-    </div>
+</div>
 
+</section>
 
-    <div class="service-grid">
 
-      <!-- SERVICE 1 -->
-      <div class="service-card">
+<!-- ABOUT -->
 
-        <img
-          src="https://images.pexels.com/photos/8285775/pexels-photo-8285775.jpeg?auto=compress&cs=tinysrgb&w=900"
-          alt="Security Guard Service">
+<section class="about" id="about">
 
-        <div class="service-content">
+<div class="section-title">
 
-          <h3>Security Guard Service</h3>
+<h2>About AR Security</h2>
 
-          <p>
-            Professional and disciplined security personnel
-            for organizations, offices and properties.
-          </p>
+<p>
+Professional service with responsibility and discipline
+</p>
 
-        </div>
+</div>
 
-      </div>
+<div class="about-box">
 
+<p>
+<strong>AR Security and Service (Pvt) Ltd.</strong>
+is a professional security and service company committed
+to providing dependable security personnel and service solutions.
+</p>
 
-      <!-- SERVICE 2 -->
-      <div class="service-card">
+<br>
 
-        <img
-          src="https://images.pexels.com/photos/38702227/pexels-photo-38702227.jpeg?auto=compress&cs=tinysrgb&w=900"
-          alt="Corporate Security">
+<p>
+Our objective is to support clients with disciplined,
+responsible and professional security services while
+maintaining a high standard of conduct.
+</p>
 
-        <div class="service-content">
+</div>
 
-          <h3>Corporate Security</h3>
+</section>
 
-          <p>
-            Security support designed for corporate offices,
-            commercial spaces and business environments.
-          </p>
 
-        </div>
+<!-- SERVICES -->
 
-      </div>
+<section class="services" id="services">
 
+<div class="section-title">
 
-      <!-- SERVICE 3 -->
-      <div class="service-card">
+<h2>Our Services</h2>
 
-        <img
-          src="https://images.pexels.com/photos/31516776/pexels-photo-31516776.jpeg?auto=compress&cs=tinysrgb&w=900"
-          alt="Residential Security">
+<p>
+Professional security solutions for different requirements
+</p>
 
-        <div class="service-content">
+</div>
 
-          <h3>Residential Security</h3>
 
-          <p>
-            Reliable security personnel for residential
-            buildings and private properties.
-          </p>
+<div class="service-grid">
 
-        </div>
 
-      </div>
+<div class="service-card">
 
+<img
+src="https://images.pexels.com/photos/8285775/pexels-photo-8285775.jpeg?auto=compress&cs=tinysrgb&w=900"
+alt="Security Guard Service">
 
-      <!-- SERVICE 4 -->
-      <div class="service-card">
+<div class="service-content">
 
-        <img
-          src="https://images.pexels.com/photos/15482700/pexels-photo-15482700.jpeg?auto=compress&cs=tinysrgb&w=900"
-          alt="Access Control">
+<h3>Security Guard Service</h3>
 
-        <div class="service-content">
+<p>
+Professional and disciplined security personnel
+for organizations, offices and properties.
+</p>
 
-          <h3>Access Control</h3>
+</div>
 
-          <p>
-            Professional personnel support for controlled
-            entry and visitor management.
-          </p>
+</div>
 
-        </div>
 
-      </div>
+<div class="service-card">
 
+<img
+src="https://images.pexels.com/photos/38702227/pexels-photo-38702227.jpeg?auto=compress&cs=tinysrgb&w=900"
+alt="Corporate Security">
 
-      <!-- SERVICE 5 -->
-      <div class="service-card">
+<div class="service-content">
 
-        <img
-          src="https://images.pexels.com/photos/12304330/pexels-photo-12304330.jpeg?auto=compress&cs=tinysrgb&w=900"
-          alt="Event Security">
+<h3>Corporate Security</h3>
 
-        <div class="service-content">
+<p>
+Security support designed for corporate offices,
+commercial spaces and business environments.
+</p>
 
-          <h3>Event Security</h3>
+</div>
 
-          <p>
-            Organized security personnel for events,
-            gatherings and special occasions.
-          </p>
+</div>
 
-        </div>
 
-      </div>
+<div class="service-card">
 
+<img
+src="https://images.pexels.com/photos/31516776/pexels-photo-31516776.jpeg?auto=compress&cs=tinysrgb&w=900"
+alt="Residential Security">
 
-      <!-- SERVICE 6 -->
-      <div class="service-card">
+<div class="service-content">
 
-        <img
-          src="https://images.pexels.com/photos/31282368/pexels-photo-31282368.jpeg?auto=compress&cs=tinysrgb&w=900"
-          alt="Security Support">
+<h3>Residential Security</h3>
 
-        <div class="service-content">
+<p>
+Reliable security personnel for residential
+buildings and private properties.
+</p>
 
-          <h3>Security Support</h3>
+</div>
 
-          <p>
-            Flexible security support based on the specific
-            requirements of clients and organizations.
-          </p>
+</div>
 
-        </div>
 
-      </div>
+<div class="service-card">
 
-    </div>
+<img
+src="https://images.pexels.com/photos/15482700/pexels-photo-15482700.jpeg?auto=compress&cs=tinysrgb&w=900"
+alt="Access Control">
 
-  </section>
+<div class="service-content">
 
+<h3>Access Control</h3>
 
-  <!-- SECURITY BANNER -->
-  <section class="banner">
+<p>
+Professional personnel support for controlled
+entry and visitor management.
+</p>
 
-    <div>
+</div>
 
-      <h2>SECURITY • DISCIPLINE • RESPONSIBILITY</h2>
+</div>
 
-      <p>
-        PROFESSIONAL SERVICE. DEPENDABLE SUPPORT.
-      </p>
 
-    </div>
+<div class="service-card">
 
-  </section>
+<img
+src="https://images.pexels.com/photos/12304330/pexels-photo-12304330.jpeg?auto=compress&cs=tinysrgb&w=900"
+alt="Event Security">
 
+<div class="service-content">
 
-  <!-- WHY US -->
-  <section class="why" id="why">
+<h3>Event Security</h3>
 
-    <div class="section-title">
+<p>
+Organized security personnel for events,
+gatherings and special occasions.
+</p>
 
-      <h2>Why Choose AR Security?</h2>
+</div>
 
-      <p>
-        Our service is built around professionalism and responsibility.
-      </p>
+</div>
 
-    </div>
 
+<div class="service-card">
 
-    <div class="why-grid">
+<img
+src="https://images.pexels.com/photos/31282368/pexels-photo-31282368.jpeg?auto=compress&cs=tinysrgb&w=900"
+alt="Security Support">
 
-      <div class="why-card">
+<div class="service-content">
 
-        <div class="icon">🛡️</div>
+<h3>Security Support</h3>
 
-        <h3>Professional</h3>
+<p>
+Flexible security support based on the specific
+requirements of clients and organizations.
+</p>
 
-        <p>
-          Professional approach and responsible service
-          for every assignment.
-        </p>
+</div>
 
-      </div>
+</div>
 
 
-      <div class="why-card">
+</div>
 
-        <div class="icon">👮</div>
+</section>
 
-        <h3>Disciplined Personnel</h3>
 
-        <p>
-          Focus on discipline, alertness and proper conduct.
-        </p>
+<!-- SECURITY BANNER -->
 
-      </div>
+<section class="banner">
 
+<div>
 
-      <div class="why-card">
+<h2>
+SECURITY • DISCIPLINE • RESPONSIBILITY
+</h2>
 
-        <div class="icon">🤝</div>
+<p>
+PROFESSIONAL SERVICE. DEPENDABLE SUPPORT.
+</p>
 
-        <h3>Reliable Support</h3>
+</div>
 
-        <p>
-          Dedicated service and support based on client requirements.
-        </p>
+</section>
 
-      </div>
 
-    </div>
+<!-- WHY US -->
 
-  </section>
+<section class="why" id="why">
 
+<div class="section-title">
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
+<h2>Why Choose AR Security?</h2>
 
-    <div class="section-title">
+<p>
+Our service is built around professionalism and responsibility.
+</p>
 
-      <h2>Contact Us</h2>
+</div>
 
-      <p>
-        Contact AR Security and Service (Pvt) Ltd.
-      </p>
 
-    </div>
+<div class="why-grid">
 
 
-    <div class="contact-grid">
+<div class="why-card">
 
-      <div class="contact-card">
+<div class="icon">🛡️</div>
 
-        <h3>Phone</h3>
+<h3>Professional</h3>
 
-        <p>
-          <a href="tel:01575053421">
-            01575053421
-          </a>
-        </p>
+<p>
+Professional approach and responsible service
+for every assignment.
+</p>
 
-        <p>
-          <a href="tel:01980440825">
-            01980440825
-          </a>
-        </p>
+</div>
 
-      </div>
 
+<div class="why-card">
 
-      <div class="contact-card">
+<div class="icon">👮</div>
 
-        <h3>WhatsApp</h3>
+<h3>Disciplined Personnel</h3>
 
-        <p>
-          <a
-            href="https://wa.me/8801980440825"
-            target="_blank"
-          >
-            01980440825
-          </a>
-        </p>
+<p>
+Focus on discipline, alertness and proper conduct.
+</p>
 
-      </div>
+</div>
 
 
-      <div class="contact-card">
+<div class="why-card">
 
-        <h3>Email</h3>
+<div class="icon">🤝</div>
 
-        <p>
-          <a href="mailto:abirhossen159156@gmail.com">
-            abirhossen159156@gmail.com
-          </a>
-        </p>
+<h3>Reliable Support</h3>
 
-      </div>
+<p>
+Dedicated service and support based on client requirements.
+</p>
 
-    </div>
+</div>
 
-  </section>
 
+</div>
 
-  <!-- FOOTER -->
-  <footer>
+</section>
 
-    <p>
-      © 2026 AR Security and Service (Pvt) Ltd. All Rights Reserved.
-    </p>
 
-    <p>
-      Professional Security & Service
-    </p>
+<!-- CONTACT -->
 
-  </footer>
+<section class="contact" id="contact">
+
+<div class="section-title">
+
+<h2>Contact Us</h2>
+
+<p>
+Contact AR Security and Service (Pvt) Ltd.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<h3>Phone</h3>
+
+<p>
+<a href="tel:01575053421">
+01575053421
+</a>
+</p>
+
+<p>
+<a href="tel:01980440825">
+01980440825
+</a>
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>WhatsApp</h3>
+
+<p>
+
+<a
+href="https://wa.me/8801980440825"
+target="_blank">
+
+01980440825
+
+</a>
+
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>Email</h3>
+
+<p>
+
+<a href="mailto:abirhossen159156@gmail.com">
+
+abirhossen159156@gmail.com
+
+</a>
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 AR Security and Service (Pvt) Ltd. All Rights Reserved.
+</p>
+
+<p>
+Professional Security & Service
+</p>
+
+</footer>
+
 
 </body>
 </html>
