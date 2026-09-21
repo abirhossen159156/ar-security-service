@@ -130,7 +130,8 @@ background:#681c2e;
 z-index:2000;
 padding:25px;
 transition:.35s ease;
-box-shadow:-8px 0 30px rgba(0,0,0,.35)
+box-shadow:-8px 0 30px rgba(0,0,0,.35);
+overflow-y:auto
 }
 
 .mobile-menu.open{
@@ -200,10 +201,10 @@ display:flex
 }
 
 .quick-menu a{
-width:200px;
-min-width:200px;
-height:45px;
-padding:0 13px;
+width:205px;
+min-width:205px;
+min-height:45px;
+padding:7px 13px;
 border-radius:25px;
 display:flex;
 align-items:center;
@@ -225,6 +226,48 @@ width:24px;
 min-width:24px;
 text-align:center;
 font-size:19px
+}
+
+/* ===== QUICK ADDRESS ===== */
+
+.quick-address{
+width:280px;
+background:#681c2e;
+border:1px solid #f5d36a;
+border-radius:15px;
+padding:12px 14px;
+color:white;
+box-shadow:0 4px 15px rgba(0,0,0,.25);
+font-size:13px;
+line-height:1.45
+}
+
+.quick-address strong{
+display:block;
+color:#f5d36a;
+font-size:12px;
+margin-bottom:4px
+}
+
+.quick-address a{
+display:inline;
+width:auto;
+min-width:0;
+min-height:0;
+padding:0;
+border:0;
+box-shadow:none;
+border-radius:0;
+background:none;
+font-size:13px;
+font-weight:normal;
+white-space:normal;
+color:white;
+text-decoration:none
+}
+
+.quick-address a:hover{
+color:#f5d36a
 }
 
 /* ===== HERO ===== */
@@ -561,6 +604,65 @@ text-decoration:none;
 font-size:17px
 }
 
+.contact-item a:hover{
+color:#f5d36a
+}
+
+/* ===== MAP ===== */
+
+.map-link{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+margin-top:18px;
+padding:15px 20px;
+border:1px solid #f5d36a;
+border-radius:12px;
+background:rgba(255,255,255,.08);
+color:white;
+text-decoration:none;
+font-weight:bold
+}
+
+.map-link i{
+color:#f5d36a;
+font-size:22px
+}
+
+.map-link:hover{
+background:#f5d36a;
+color:#681c2e
+}
+
+.map-link:hover i{
+color:#681c2e
+}
+
+/* ===== FOOTER ADDRESS ===== */
+
+.footer-address{
+max-width:850px;
+margin:0 auto 15px;
+padding:12px 15px;
+border-top:1px solid rgba(245,211,106,.3);
+border-bottom:1px solid rgba(245,211,106,.3);
+line-height:1.6
+}
+
+.footer-address strong{
+color:#f5d36a
+}
+
+.footer-address a{
+color:white;
+text-decoration:none
+}
+
+.footer-address a:hover{
+color:#f5d36a
+}
+
 /* ===== FOOTER ===== */
 footer{
 background:#26070f;
@@ -676,7 +778,7 @@ gap:8px
 .quick-menu a{
 width:205px;
 min-width:205px;
-height:46px;
+min-height:46px;
 font-size:14px;
 padding:0 12px;
 gap:9px;
@@ -687,6 +789,31 @@ white-space:nowrap
 font-size:18px
 }
 
+.quick-address{
+width:285px;
+font-size:12px;
+padding:11px 13px
+}
+
+.quick-address a{
+font-size:12px
+}
+
+}
+
+/* ===== OFFICE ADDRESS TEXT ===== */
+
+.office-address{
+line-height:1.6
+}
+
+.office-address a{
+color:white;
+text-decoration:none
+}
+
+.office-address a:hover{
+color:#f5d36a
 }
 </style>
 </head>
@@ -769,11 +896,11 @@ font-size:18px
 <i class="fa-solid fa-phone"></i> Banglalink: +880 1980440825
 </a>
 
-<a href="https://wa.me/8801980440825" target="_blank">
+<a href="https://wa.me/8801980440825" target="_blank" rel="noopener">
 <i class="fa-brands fa-whatsapp"></i> WhatsApp
 </a>
 
-<a href="https://t.me/+8801980440825" target="_blank">
+<a href="https://t.me/+8801980440825" target="_blank" rel="noopener">
 <i class="fa-brands fa-telegram"></i> Telegram
 </a>
 
@@ -781,12 +908,17 @@ font-size:18px
 <i class="fa-brands fa-viber"></i> Viber
 </a>
 
+<a href="https://www.google.com/maps/search/?api=1&query=House%20SE%28D%29%2C%20Crystal%20Palace%2C%20Gulshan%20Avenue%2C%20Road%2022%2C%20Dhaka-1212%2C%20Bangladesh"
+target="_blank" rel="noopener">
+<i class="fa-solid fa-location-dot"></i> Office Address
+</a>
+
 </div>
 
 
 <!-- ===== QUICK THREE-DOT BUTTON ===== -->
 
-<button class="quick-btn" onclick="toggleQuick()">
+<button class="quick-btn" onclick="toggleQuick()" aria-label="Quick Contact">
 <i class="fa-solid fa-ellipsis-vertical"></i>
 </button>
 
@@ -802,12 +934,12 @@ font-size:18px
 <span>+880 1980440825</span>
 </a>
 
-<a href="https://wa.me/8801980440825" target="_blank" title="WhatsApp">
+<a href="https://wa.me/8801980440825" target="_blank" rel="noopener" title="WhatsApp">
 <i class="fa-brands fa-whatsapp"></i>
 <span>WhatsApp</span>
 </a>
 
-<a href="https://t.me/+8801980440825" target="_blank" title="Telegram">
+<a href="https://t.me/+8801980440825" target="_blank" rel="noopener" title="Telegram">
 <i class="fa-brands fa-telegram"></i>
 <span>Telegram</span>
 </a>
@@ -816,6 +948,25 @@ font-size:18px
 <i class="fa-brands fa-viber"></i>
 <span>Viber</span>
 </a>
+
+<!-- ADDRESS BELOW QUICK ICON BAR -->
+
+<div class="quick-address">
+
+<strong>
+<i class="fa-solid fa-location-dot"></i>
+OFFICE ADDRESS
+</strong>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=House%20SE%28D%29%2C%20Crystal%20Palace%2C%20Gulshan%20Avenue%2C%20Road%2022%2C%20Dhaka-1212%2C%20Bangladesh"
+target="_blank"
+rel="noopener"
+>
+House SE(D), Crystal Palace, Gulshan Avenue, Road 22, Dhaka-1212, Bangladesh
+</a>
+
+</div>
 
 </div>
 
@@ -1228,7 +1379,7 @@ AR Security and Service today.
 
 <div>
 <strong>WHATSAPP</strong>
-<a href="https://wa.me/8801980440825" target="_blank">
+<a href="https://wa.me/8801980440825" target="_blank" rel="noopener">
 +880 1980440825
 </a>
 </div>
@@ -1243,7 +1394,7 @@ AR Security and Service today.
 
 <div>
 <strong>TELEGRAM</strong>
-<a href="https://t.me/+8801980440825" target="_blank">
+<a href="https://t.me/+8801980440825" target="_blank" rel="noopener">
 +880 1980440825
 </a>
 </div>
@@ -1280,7 +1431,42 @@ abirhossen159156@gmail.com
 
 </div>
 
+
+<!-- OFFICE ADDRESS -->
+<div class="contact-item">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<div class="office-address">
+
+<strong>OFFICE ADDRESS</strong>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=House%20SE%28D%29%2C%20Crystal%20Palace%2C%20Gulshan%20Avenue%2C%20Road%2022%2C%20Dhaka-1212%2C%20Bangladesh"
+target="_blank"
+rel="noopener"
+>
+House SE(D), Crystal Palace, Gulshan Avenue, Road 22, Dhaka-1212, Bangladesh
+</a>
+
 </div>
+
+</div>
+
+
+<!-- GOOGLE MAP -->
+<a
+class="map-link"
+href="https://www.google.com/maps/search/?api=1&query=House%20SE%28D%29%2C%20Crystal%20Palace%2C%20Gulshan%20Avenue%2C%20Road%2022%2C%20Dhaka-1212%2C%20Bangladesh"
+target="_blank"
+rel="noopener"
+>
+<i class="fa-solid fa-map-location-dot"></i>
+OPEN OFFICE LOCATION IN GOOGLE MAPS
+</a>
+
+</div>
+
 </div>
 
 </section>
@@ -1290,18 +1476,41 @@ abirhossen159156@gmail.com
 
 <footer>
 
-<strong>AR Security and Service (Pvt) Ltd.</strong>
+<div class="footer-address">
+
+<strong>
+<i class="fa-solid fa-location-dot"></i>
+OFFICE ADDRESS
+</strong>
 
 <br>
 
+<a
+href="https://www.google.com/maps/search/?api=1&query=House%20SE%28D%29%2C%20Crystal%20Palace%2C%20Gulshan%20Avenue%2C%20Road%2022%2C%20Dhaka-1212%2C%20Bangladesh"
+target="_blank"
+rel="noopener"
+>
+House SE(D), Crystal Palace, Gulshan Avenue, Road 22, Dhaka-1212, Bangladesh
+</a>
+
+</div>
+
+<p>
+<strong>AR Security and Service (Pvt) Ltd.</strong>
+</p>
+
+<p>
 Your Safety, Our Responsibility
+</p>
 
-<br><br>
-
+<p>
 © 2026 AR Security and Service. All Rights Reserved.
+</p>
 
 </footer>
 
+
+<!-- ===== JAVASCRIPT ===== -->
 
 <script>
 
@@ -1319,76 +1528,118 @@ document.getElementById("mobileMenu").classList.remove("open");
 /* ===== QUICK MENU ===== */
 
 function toggleQuick(){
-document.getElementById("quickMenu").classList.toggle("show");
+
+const menu=document.getElementById("quickMenu");
+
+menu.classList.toggle("show");
+
 }
+
+
+/* ===== CLOSE QUICK MENU WHEN CLICKING OUTSIDE ===== */
+
+document.addEventListener("click",function(event){
+
+const menu=document.getElementById("quickMenu");
+const button=document.querySelector(".quick-btn");
+
+if(
+menu.classList.contains("show") &&
+!menu.contains(event.target) &&
+!button.contains(event.target)
+){
+menu.classList.remove("show");
+}
+
+});
 
 
 /* ===== SLIDER ===== */
 
-let currentSlide = 0;
+let currentSlide=0;
 
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
+const slides=document.querySelectorAll(".slide");
+const dots=document.querySelectorAll(".dot");
 
 function showSlide(index){
 
-if(index >= slides.length){
-index = 0;
+if(index>=slides.length){
+index=0;
 }
 
-if(index < 0){
-index = slides.length - 1;
+if(index<0){
+index=slides.length-1;
 }
 
-slides.forEach((slide,i)=>{
-slide.classList.toggle("active",i === index);
+slides.forEach(function(slide){
+slide.classList.remove("active");
 });
 
-dots.forEach((dot,i)=>{
-dot.classList.toggle("active",i === index);
+dots.forEach(function(dot){
+dot.classList.remove("active");
 });
 
-currentSlide = index;
+slides[index].classList.add("active");
+dots[index].classList.add("active");
+
+currentSlide=index;
 }
+
 
 function changeSlide(direction){
-showSlide(currentSlide + direction);
+
+showSlide(currentSlide+direction);
+
 }
 
+
 function goToSlide(index){
+
 showSlide(index);
+
 }
 
 
 /* ===== AUTO SLIDER ===== */
 
-setInterval(()=>{
-changeSlide(1);
+setInterval(function(){
+
+showSlide(currentSlide+1);
+
 },5000);
 
 
-/* ===== MOBILE SWIPE ===== */
+/* ===== SWIPE SUPPORT ===== */
 
-let touchStartX = 0;
-let touchEndX = 0;
+let touchStartX=0;
+let touchEndX=0;
 
-const hero = document.querySelector(".hero");
+const hero=document.querySelector(".hero");
 
-hero.addEventListener("touchstart",(e)=>{
-touchStartX = e.changedTouches[0].screenX;
-});
+hero.addEventListener("touchstart",function(event){
 
-hero.addEventListener("touchend",(e)=>{
-touchEndX = e.changedTouches[0].screenX;
+touchStartX=event.changedTouches[0].screenX;
 
-if(touchEndX < touchStartX - 50){
+},{passive:true});
+
+
+hero.addEventListener("touchend",function(event){
+
+touchEndX=event.changedTouches[0].screenX;
+
+if(touchEndX<touchStartX-50){
+
 changeSlide(1);
+
 }
 
-if(touchEndX > touchStartX + 50){
+if(touchEndX>touchStartX+50){
+
 changeSlide(-1);
+
 }
-});
+
+},{passive:true});
 
 </script>
 
