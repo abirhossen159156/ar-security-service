@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="google-site-verification" content="-OlOhcAekKVzXF6X494mley37-r1pzD9wf0jLFTHAf0" />
+
 <title>AR Security and Service (Pvt) Ltd.</title>
 
 <link rel="stylesheet"
@@ -165,6 +167,7 @@ color:#f5d36a
 }
 
 /* ===== QUICK MENU ===== */
+
 .quick-btn{
 position:fixed;
 right:18px;
@@ -188,7 +191,8 @@ bottom:82px;
 z-index:1499;
 display:none;
 flex-direction:column;
-gap:9px
+gap:9px;
+align-items:flex-end
 }
 
 .quick-menu.show{
@@ -196,18 +200,31 @@ display:flex
 }
 
 .quick-menu a{
-width:45px;
+width:200px;
+min-width:200px;
 height:45px;
-border-radius:50%;
+padding:0 13px;
+border-radius:25px;
 display:flex;
 align-items:center;
-justify-content:center;
+justify-content:flex-start;
+gap:10px;
 color:white;
 text-decoration:none;
-font-size:20px;
+font-size:15px;
+font-weight:bold;
 background:#681c2e;
 border:1px solid #f5d36a;
-box-shadow:0 4px 15px rgba(0,0,0,.25)
+box-shadow:0 4px 15px rgba(0,0,0,.25);
+white-space:nowrap;
+overflow:hidden
+}
+
+.quick-menu a i{
+width:24px;
+min-width:24px;
+text-align:center;
+font-size:19px
 }
 
 /* ===== HERO ===== */
@@ -642,6 +659,34 @@ height:42px
 
 .prev{left:12px}
 .next{right:12px}
+
+/* QUICK MENU MOBILE */
+
+.quick-btn{
+right:15px;
+bottom:18px
+}
+
+.quick-menu{
+right:15px;
+bottom:78px;
+gap:8px
+}
+
+.quick-menu a{
+width:205px;
+min-width:205px;
+height:46px;
+font-size:14px;
+padding:0 12px;
+gap:9px;
+white-space:nowrap
+}
+
+.quick-menu a i{
+font-size:18px
+}
+
 }
 </style>
 </head>
@@ -716,27 +761,22 @@ height:42px
 <i class="fa-solid fa-address-book"></i> Contact
 </a>
 
-<!-- TELETAK -->
 <a href="tel:+8801575053421">
 <i class="fa-solid fa-phone"></i> Teletalk: +880 1575053421
 </a>
 
-<!-- BANGLALINK -->
 <a href="tel:+8801980440825">
 <i class="fa-solid fa-phone"></i> Banglalink: +880 1980440825
 </a>
 
-<!-- WHATSAPP -->
 <a href="https://wa.me/8801980440825" target="_blank">
 <i class="fa-brands fa-whatsapp"></i> WhatsApp
 </a>
 
-<!-- TELEGRAM -->
 <a href="https://t.me/+8801980440825" target="_blank">
 <i class="fa-brands fa-telegram"></i> Telegram
 </a>
 
-<!-- VIBER -->
 <a href="viber://chat?number=%2B8801980440825">
 <i class="fa-brands fa-viber"></i> Viber
 </a>
@@ -752,29 +792,29 @@ height:42px
 
 <div class="quick-menu" id="quickMenu">
 
-<!-- TELETAK -->
 <a href="tel:+8801575053421" title="Teletalk">
 <i class="fa-solid fa-phone"></i>
+<span>+880 1575053421</span>
 </a>
 
-<!-- BANGLALINK -->
 <a href="tel:+8801980440825" title="Banglalink">
 <i class="fa-solid fa-phone"></i>
+<span>+880 1980440825</span>
 </a>
 
-<!-- WHATSAPP -->
 <a href="https://wa.me/8801980440825" target="_blank" title="WhatsApp">
 <i class="fa-brands fa-whatsapp"></i>
+<span>WhatsApp</span>
 </a>
 
-<!-- TELEGRAM -->
 <a href="https://t.me/+8801980440825" target="_blank" title="Telegram">
 <i class="fa-brands fa-telegram"></i>
+<span>Telegram</span>
 </a>
 
-<!-- VIBER -->
 <a href="viber://chat?number=%2B8801980440825" title="Viber">
 <i class="fa-brands fa-viber"></i>
+<span>Viber</span>
 </a>
 
 </div>
