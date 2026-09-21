@@ -12,8 +12,17 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box
+}
+
+html{
+scroll-behavior:smooth
+}
+
 body{
 font-family:Arial,Helvetica,sans-serif;
 background:#f7f3f0;
@@ -21,7 +30,9 @@ color:#241b1d;
 line-height:1.6
 }
 
+
 /* ===== HEADER ===== */
+
 header{
 position:absolute;
 top:0;
@@ -88,7 +99,9 @@ color:white;
 font-size:10px
 }
 
+
 /* ===== DESKTOP MENU ===== */
+
 nav{
 display:flex;
 align-items:center
@@ -106,7 +119,9 @@ nav a:hover{
 color:#f5d36a
 }
 
+
 /* ===== MOBILE MENU BUTTON ===== */
+
 .menu-btn{
 display:none;
 background:#681c2e;
@@ -119,7 +134,9 @@ font-size:22px;
 cursor:pointer
 }
 
+
 /* ===== MOBILE MENU ===== */
+
 .mobile-menu{
 position:fixed;
 top:0;
@@ -166,6 +183,7 @@ border-bottom:1px solid rgba(255,255,255,.1)
 width:28px;
 color:#f5d36a
 }
+
 
 /* ===== QUICK MENU ===== */
 
@@ -228,6 +246,7 @@ text-align:center;
 font-size:19px
 }
 
+
 /* ===== QUICK ADDRESS ===== */
 
 .quick-address{
@@ -270,7 +289,9 @@ text-decoration:none
 color:#f5d36a
 }
 
+
 /* ===== HERO ===== */
+
 .hero{
 position:relative;
 height:100vh;
@@ -286,7 +307,9 @@ opacity:0;
 transition:opacity 1s ease
 }
 
-.slide.active{opacity:1}
+.slide.active{
+opacity:1
+}
 
 .slide img{
 width:100%;
@@ -357,8 +380,13 @@ cursor:pointer;
 font-size:20px
 }
 
-.prev{left:25px}
-.next{right:25px}
+.prev{
+left:25px
+}
+
+.next{
+right:25px
+}
 
 .dots{
 position:absolute;
@@ -379,10 +407,16 @@ background:transparent;
 cursor:pointer
 }
 
-.dot.active{background:#f5d36a}
+.dot.active{
+background:#f5d36a
+}
+
 
 /* ===== SECTIONS ===== */
-section{padding:90px 7%}
+
+section{
+padding:90px 7%
+}
 
 .section-title{
 text-align:center;
@@ -403,9 +437,13 @@ color:#681c2e;
 margin:10px 0 15px
 }
 
-.section-title p{color:#5f5557}
+.section-title p{
+color:#5f5557
+}
+
 
 /* ===== FEATURES ===== */
+
 .feature{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -460,17 +498,28 @@ font-size:17px;
 margin-bottom:18px
 }
 
+
 /* ===== ABOUT ===== */
+
 .about{
 background:#681c2e;
 color:white
 }
 
-.about .section-title h2{color:#f5d36a}
-.about .section-title p{color:#f4e8e9}
+.about .section-title h2{
+color:#f5d36a
+}
+
+.about .section-title p{
+color:#f4e8e9
+}
+
 
 /* ===== SERVICES ===== */
-.services{background:#f7f3f0}
+
+.services{
+background:#f7f3f0
+}
 
 .service-grid{
 display:grid;
@@ -486,7 +535,9 @@ box-shadow:0 10px 30px rgba(50,20,25,.1);
 transition:.3s
 }
 
-.service-card:hover{transform:translateY(-8px)}
+.service-card:hover{
+transform:translateY(-8px)
+}
 
 .service-card img{
 width:100%;
@@ -494,16 +545,22 @@ height:220px;
 object-fit:cover
 }
 
-.service-card-content{padding:25px}
+.service-card-content{
+padding:25px
+}
 
 .service-card h3{
 color:#681c2e;
 margin-bottom:10px
 }
 
-.service-card p{color:#62595b}
+.service-card p{
+color:#62595b
+}
+
 
 /* ===== STATEMENT ===== */
+
 .statement{
 background:
 linear-gradient(rgba(70,12,25,.87),rgba(70,12,25,.87)),
@@ -526,7 +583,9 @@ margin:auto;
 font-size:20px
 }
 
+
 /* ===== WHY ===== */
+
 .why-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -552,7 +611,170 @@ color:#681c2e;
 margin-bottom:10px
 }
 
+
+/* =========================================================
+   ===== JOIN / HIRE SECTION =====
+   ========================================================= */
+
+.recruit-section{
+background:#f7f3f0;
+text-align:center;
+padding:90px 7%
+}
+
+.recruit-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px
+}
+
+.recruit-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+padding:16px 28px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+font-size:16px;
+cursor:pointer;
+border:2px solid #f5d36a;
+background:#681c2e;
+color:white;
+transition:.3s
+}
+
+.recruit-btn:hover{
+background:#f5d36a;
+color:#681c2e;
+transform:translateY(-3px)
+}
+
+.recruit-btn.client{
+background:#f5d36a;
+color:#681c2e
+}
+
+.recruit-btn.client:hover{
+background:#681c2e;
+color:white
+}
+
+
+/* ===== FORM BOX ===== */
+
+.form-area{
+display:none;
+max-width:900px;
+margin:35px auto 0;
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 35px rgba(50,20,25,.12);
+text-align:left
+}
+
+.form-area.show{
+display:block
+}
+
+.form-area h3{
+color:#681c2e;
+font-size:28px;
+margin-bottom:8px
+}
+
+.form-note{
+color:#665b5d;
+font-size:13px;
+margin-bottom:22px
+}
+
+.close-form{
+float:right;
+border:0;
+background:none;
+color:#681c2e;
+font-size:25px;
+cursor:pointer
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px
+}
+
+.form-field{
+display:flex;
+flex-direction:column;
+gap:6px
+}
+
+.form-field.full{
+grid-column:1/-1
+}
+
+.form-field label{
+font-weight:bold;
+font-size:14px;
+color:#681c2e
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea{
+width:100%;
+padding:12px;
+border:1px solid #d7cfd1;
+border-radius:8px;
+font-size:15px;
+font-family:Arial,Helvetica,sans-serif
+}
+
+.form-field textarea{
+min-height:110px;
+resize:vertical
+}
+
+.form-field input[type="file"]{
+background:#faf8f8;
+padding:10px
+}
+
+.form-submit{
+margin-top:20px;
+width:100%;
+padding:14px;
+border:0;
+border-radius:9px;
+background:#681c2e;
+color:#f5d36a;
+font-size:16px;
+font-weight:bold;
+cursor:pointer
+}
+
+.form-submit:hover{
+background:#4c1221
+}
+
+.form-security-note{
+margin-top:15px;
+padding:12px;
+border-radius:8px;
+background:#f7f3f0;
+font-size:12px;
+color:#5f5557;
+line-height:1.5
+}
+
+
 /* ===== CONTACT ===== */
+
 .contact{
 background:#681c2e;
 color:white
@@ -571,7 +793,9 @@ color:#f5d36a;
 margin-bottom:20px
 }
 
-.contact p{color:#f3e6e8}
+.contact p{
+color:#f3e6e8
+}
 
 .contact-item{
 display:flex;
@@ -608,6 +832,7 @@ font-size:17px
 color:#f5d36a
 }
 
+
 /* ===== MAP ===== */
 
 .map-link{
@@ -639,6 +864,7 @@ color:#681c2e
 color:#681c2e
 }
 
+
 /* ===== FOOTER ADDRESS ===== */
 
 .footer-address{
@@ -663,7 +889,9 @@ text-decoration:none
 color:#f5d36a
 }
 
+
 /* ===== FOOTER ===== */
+
 footer{
 background:#26070f;
 color:#d9cdd0;
@@ -672,23 +900,50 @@ padding:28px 15px;
 font-size:13px
 }
 
-footer strong{color:#f5d36a}
+footer strong{
+color:#f5d36a
+}
+
+
+/* ===== OFFICE ADDRESS TEXT ===== */
+
+.office-address{
+line-height:1.6
+}
+
+.office-address a{
+color:white;
+text-decoration:none
+}
+
+.office-address a:hover{
+color:#f5d36a
+}
+
 
 /* ===== RESPONSIVE ===== */
+
 @media(max-width:900px){
 
 header{
 padding:11px 4%
 }
 
-nav{display:none}
+nav{
+display:none
+}
 
 .menu-btn{
 display:block
 }
 
-.brand-text strong{font-size:12px}
-.brand-text span{font-size:8px}
+.brand-text strong{
+font-size:12px
+}
+
+.brand-text span{
+font-size:8px
+}
 
 .logo-shield{
 width:57px;
@@ -700,7 +955,9 @@ width:48px;
 height:58px
 }
 
-.logo-ar{font-size:19px}
+.logo-ar{
+font-size:19px
+}
 
 .hero{
 min-height:650px
@@ -726,9 +983,13 @@ direction:ltr;
 gap:30px
 }
 
-.feature-image{height:360px}
+.feature-image{
+height:360px
+}
 
-.feature-text h2{font-size:34px}
+.feature-text h2{
+font-size:34px
+}
 
 .service-grid,
 .why-grid{
@@ -739,16 +1000,24 @@ grid-template-columns:1fr
 grid-template-columns:1fr
 }
 
-.statement h2{font-size:35px}
+.statement h2{
+font-size:35px
+}
 
 section{
 padding:70px 5%
 }
+
 }
 
-@media(max-width:500px){
 
-.hero-logo{top:92px}
+/* ===== SMALL MOBILE ===== */
+
+@media(max-width:600px){
+
+.hero-logo{
+top:92px
+}
 
 .hero-content h1{
 font-size:35px
@@ -759,10 +1028,36 @@ width:42px;
 height:42px
 }
 
-.prev{left:12px}
-.next{right:12px}
+.prev{
+left:12px
+}
 
-/* QUICK MENU MOBILE */
+.next{
+right:12px
+}
+
+.form-grid{
+grid-template-columns:1fr
+}
+
+.form-field.full{
+grid-column:auto
+}
+
+.form-area{
+padding:22px 17px
+}
+
+.recruit-btn{
+width:100%
+}
+
+}
+
+
+/* ===== QUICK MENU MOBILE ===== */
+
+@media(max-width:500px){
 
 .quick-btn{
 right:15px;
@@ -801,169 +1096,290 @@ font-size:12px
 
 }
 
-/* ===== OFFICE ADDRESS TEXT ===== */
-
-.office-address{
-line-height:1.6
-}
-
-.office-address a{
-color:white;
-text-decoration:none
-}
-
-.office-address a:hover{
-color:#f5d36a
-}
 </style>
 </head>
 
 <body>
 
-<!-- ===== HEADER ===== -->
+
+<!-- =========================================================
+     ===== HEADER =====
+     ========================================================= -->
+
 <header>
 
 <div class="logo-area">
 
 <div class="logo-shield">
+
 <div class="logo-inner">
-<div class="logo-ar">AR</div>
-<div class="logo-small">SECURITY</div>
+
+<div class="logo-ar">
+AR
 </div>
+
+<div class="logo-small">
+SECURITY
+</div>
+
+</div>
+
 </div>
 
 <div class="brand-text">
-<strong>AR (ABIR) SECURITY SERVICE</strong>
-<span>AR Security and Service (Pvt) Ltd.</span>
+
+<strong>
+AR (ABIR) SECURITY SERVICE
+</strong>
+
+<span>
+AR Security and Service (Pvt) Ltd.
+</span>
+
 </div>
 
 </div>
+
 
 <nav>
+
 <a href="#home">Home</a>
+
 <a href="#about">About</a>
+
 <a href="#services">Services</a>
+
 <a href="#gallery">Gallery</a>
+
 <a href="#why">Why Us</a>
+
+<a href="#join-hire">Join / Hire</a>
+
 <a href="#contact">Contact</a>
+
 </nav>
 
+
 <button class="menu-btn" onclick="openMenu()">
+
 <i class="fa-solid fa-bars"></i>
+
 </button>
 
 </header>
 
 
-<!-- ===== MOBILE MENU ===== -->
+<!-- =========================================================
+     ===== MOBILE MENU =====
+     ========================================================= -->
+
 <div class="mobile-menu" id="mobileMenu">
 
 <button class="close-btn" onclick="closeMenu()">
+
 <i class="fa-solid fa-xmark"></i>
+
 </button>
 
-<h3>AR SECURITY MENU</h3>
+<h3>
+AR SECURITY MENU
+</h3>
+
 
 <a href="#home" onclick="closeMenu()">
-<i class="fa-solid fa-house"></i> Home
+<i class="fa-solid fa-house"></i>
+Home
 </a>
+
 
 <a href="#about" onclick="closeMenu()">
-<i class="fa-solid fa-building"></i> About Us
+<i class="fa-solid fa-building"></i>
+About Us
 </a>
+
 
 <a href="#services" onclick="closeMenu()">
-<i class="fa-solid fa-shield-halved"></i> Services
+<i class="fa-solid fa-shield-halved"></i>
+Services
 </a>
+
 
 <a href="#gallery" onclick="closeMenu()">
-<i class="fa-solid fa-images"></i> Gallery
+<i class="fa-solid fa-images"></i>
+Gallery
 </a>
+
 
 <a href="#why" onclick="closeMenu()">
-<i class="fa-solid fa-star"></i> Why Choose Us
+<i class="fa-solid fa-star"></i>
+Why Choose Us
 </a>
+
+
+<a href="#join-hire" onclick="closeMenu()">
+<i class="fa-solid fa-users"></i>
+Join / Hire
+</a>
+
 
 <a href="#contact" onclick="closeMenu()">
-<i class="fa-solid fa-address-book"></i> Contact
+<i class="fa-solid fa-address-book"></i>
+Contact
 </a>
+
 
 <a href="tel:+8801575053421">
-<i class="fa-solid fa-phone"></i> Teletalk: +880 1575053421
+<i class="fa-solid fa-phone"></i>
+Teletalk: +880 1575053421
 </a>
+
 
 <a href="tel:+8801980440825">
-<i class="fa-solid fa-phone"></i> Banglalink: +880 1980440825
+<i class="fa-solid fa-phone"></i>
+Banglalink: +880 1980440825
 </a>
 
-<a href="https://wa.me/8801980440825" target="_blank" rel="noopener">
-<i class="fa-brands fa-whatsapp"></i> WhatsApp
+
+<a href="https://wa.me/8801980440825"
+target="_blank"
+rel="noopener">
+
+<i class="fa-brands fa-whatsapp"></i>
+WhatsApp
+
 </a>
 
-<a href="https://t.me/+8801980440825" target="_blank" rel="noopener">
-<i class="fa-brands fa-telegram"></i> Telegram
+
+<a href="https://t.me/+8801980440825"
+target="_blank"
+rel="noopener">
+
+<i class="fa-brands fa-telegram"></i>
+Telegram
+
 </a>
+
 
 <a href="viber://chat?number=%2B8801980440825">
-<i class="fa-brands fa-viber"></i> Viber
+
+<i class="fa-brands fa-viber"></i>
+Viber
+
 </a>
 
+
 <a href="https://www.google.com/maps/search/?api=1&query=House%20SE%28D%29%2C%20Crystal%20Palace%2C%20Gulshan%20Avenue%2C%20Road%2022%2C%20Dhaka-1212%2C%20Bangladesh"
-target="_blank" rel="noopener">
-<i class="fa-solid fa-location-dot"></i> Office Address
+target="_blank"
+rel="noopener">
+
+<i class="fa-solid fa-location-dot"></i>
+Office Address
+
 </a>
 
 </div>
 
 
-<!-- ===== QUICK THREE-DOT BUTTON ===== -->
+<!-- =========================================================
+     ===== QUICK THREE DOT MENU =====
+     ========================================================= -->
 
-<button class="quick-btn" onclick="toggleQuick()" aria-label="Quick Contact">
+<button class="quick-btn"
+onclick="toggleQuick()"
+aria-label="Quick Contact">
+
 <i class="fa-solid fa-ellipsis-vertical"></i>
+
 </button>
+
 
 <div class="quick-menu" id="quickMenu">
 
-<a href="tel:+8801575053421" title="Teletalk">
+
+<a href="tel:+8801575053421"
+title="Teletalk">
+
 <i class="fa-solid fa-phone"></i>
-<span>+880 1575053421</span>
+
+<span>
++880 1575053421
+</span>
+
 </a>
 
-<a href="tel:+8801980440825" title="Banglalink">
+
+<a href="tel:+8801980440825"
+title="Banglalink">
+
 <i class="fa-solid fa-phone"></i>
-<span>+880 1980440825</span>
+
+<span>
++880 1980440825
+</span>
+
 </a>
 
-<a href="https://wa.me/8801980440825" target="_blank" rel="noopener" title="WhatsApp">
+
+<a href="https://wa.me/8801980440825"
+target="_blank"
+rel="noopener"
+title="WhatsApp">
+
 <i class="fa-brands fa-whatsapp"></i>
-<span>WhatsApp</span>
+
+<span>
+WhatsApp
+</span>
+
 </a>
 
-<a href="https://t.me/+8801980440825" target="_blank" rel="noopener" title="Telegram">
+
+<a href="https://t.me/+8801980440825"
+target="_blank"
+rel="noopener"
+title="Telegram">
+
 <i class="fa-brands fa-telegram"></i>
-<span>Telegram</span>
+
+<span>
+Telegram
+</span>
+
 </a>
 
-<a href="viber://chat?number=%2B8801980440825" title="Viber">
+
+<a href="viber://chat?number=%2B8801980440825"
+title="Viber">
+
 <i class="fa-brands fa-viber"></i>
-<span>Viber</span>
+
+<span>
+Viber
+</span>
+
 </a>
 
-<!-- ADDRESS BELOW QUICK ICON BAR -->
 
 <div class="quick-address">
 
 <strong>
+
 <i class="fa-solid fa-location-dot"></i>
+
 OFFICE ADDRESS
+
 </strong>
+
 
 <a
 href="https://www.google.com/maps/search/?api=1&query=House%20SE%28D%29%2C%20Crystal%20Palace%2C%20Gulshan%20Avenue%2C%20Road%2022%2C%20Dhaka-1212%2C%20Bangladesh"
 target="_blank"
 rel="noopener"
 >
-House SE(D), Crystal Palace, Gulshan Avenue, Road 22, Dhaka-1212, Bangladesh
+
+House SE(D), Crystal Palace, Gulshan Avenue,
+Road 22, Dhaka-1212, Bangladesh
+
 </a>
 
 </div>
@@ -971,180 +1387,321 @@ House SE(D), Crystal Palace, Gulshan Avenue, Road 22, Dhaka-1212, Bangladesh
 </div>
 
 
-<!-- ===== HERO SLIDER ===== -->
+<!-- =========================================================
+     ===== HERO SLIDER =====
+     ========================================================= -->
 
 <section class="hero" id="home">
 
+
 <div class="slide active">
-<img src="https://images.pexels.com/photos/35562107/pexels-photo-35562107.jpeg?auto=compress&cs=tinysrgb&w=1800">
+
+<img
+src="https://images.pexels.com/photos/35562107/pexels-photo-35562107.jpeg?auto=compress&cs=tinysrgb&w=1800"
+alt="Security Service">
+
 </div>
 
-<div class="slide">
-<img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2000&q=90">
-</div>
 
 <div class="slide">
-<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2000&q=90">
+
+<img
+src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2000&q=90"
+alt="Professional Security">
+
 </div>
 
-<div class="slide">
-<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2000&q=90">
-</div>
 
 <div class="slide">
-<img src="https://images.pexels.com/photos/31282368/pexels-photo-31282368.jpeg?auto=compress&cs=tinysrgb&w=1800">
+
+<img
+src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2000&q=90"
+alt="Corporate Security">
+
 </div>
+
+
+<div class="slide">
+
+<img
+src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2000&q=90"
+alt="Property Security">
+
+</div>
+
+
+<div class="slide">
+
+<img
+src="https://images.pexels.com/photos/31282368/pexels-photo-31282368.jpeg?auto=compress&cs=tinysrgb&w=1800"
+alt="Security Team">
+
+</div>
+
 
 <div class="hero-logo">
 
-<div class="logo-shield" style="width:95px;height:110px">
+<div class="logo-shield"
+style="width:95px;height:110px">
 
-<div class="logo-inner" style="width:82px;height:96px">
+<div class="logo-inner"
+style="width:82px;height:96px">
 
-<div class="logo-ar" style="font-size:32px">AR</div>
-<div class="logo-small" style="font-size:9px">SECURITY</div>
+<div class="logo-ar"
+style="font-size:32px">
+
+AR
 
 </div>
+
+<div class="logo-small"
+style="font-size:9px">
+
+SECURITY
+
 </div>
+
 </div>
+
+</div>
+
+</div>
+
 
 <div class="hero-content">
 
-<div class="mini">AR SECURITY AND SERVICE</div>
+<div class="mini">
+AR SECURITY AND SERVICE
+</div>
+
 
 <h1>
+
 YOUR SAFETY,<br>
-<span>OUR RESPONSIBILITY</span>
+
+<span>
+OUR RESPONSIBILITY
+</span>
+
 </h1>
 
+
 <p>
+
 Professional security support for people, property,
 businesses and valuable places — with discipline,
 responsibility and care.
+
 </p>
 
 </div>
 
-<button class="slider-arrow prev" onclick="changeSlide(-1)">
+
+<button
+class="slider-arrow prev"
+onclick="changeSlide(-1)">
+
 <i class="fa-solid fa-chevron-left"></i>
+
 </button>
 
-<button class="slider-arrow next" onclick="changeSlide(1)">
+
+<button
+class="slider-arrow next"
+onclick="changeSlide(1)">
+
 <i class="fa-solid fa-chevron-right"></i>
+
 </button>
+
 
 <div class="dots">
 
-<span class="dot active" onclick="goToSlide(0)"></span>
-<span class="dot" onclick="goToSlide(1)"></span>
-<span class="dot" onclick="goToSlide(2)"></span>
-<span class="dot" onclick="goToSlide(3)"></span>
-<span class="dot" onclick="goToSlide(4)"></span>
+<span class="dot active"
+onclick="goToSlide(0)">
+</span>
+
+<span class="dot"
+onclick="goToSlide(1)">
+</span>
+
+<span class="dot"
+onclick="goToSlide(2)">
+</span>
+
+<span class="dot"
+onclick="goToSlide(3)">
+</span>
+
+<span class="dot"
+onclick="goToSlide(4)">
+</span>
 
 </div>
 
 </section>
 
 
-<!-- ===== FEATURES / GALLERY ===== -->
+<!-- =========================================================
+     ===== FEATURES / GALLERY =====
+     ========================================================= -->
 
 <section id="gallery">
+
 
 <div class="feature">
 
 <div class="feature-image">
-<img src="https://images.pexels.com/photos/12304330/pexels-photo-12304330.jpeg?auto=compress&cs=tinysrgb&w=1400">
+
+<img
+src="https://images.pexels.com/photos/12304330/pexels-photo-12304330.jpeg?auto=compress&cs=tinysrgb&w=1400"
+alt="Professional Protection">
+
 </div>
+
 
 <div class="feature-text">
 
-<span>PROFESSIONAL PROTECTION</span>
+<span>
+PROFESSIONAL PROTECTION
+</span>
 
-<h2>Protection That You Can Trust</h2>
+
+<h2>
+Protection That You Can Trust
+</h2>
+
 
 <p>
-Security is more than simply watching a place. It is about
-discipline, responsibility, awareness and protecting what
-matters to our clients.
+
+Security is more than simply watching a place.
+It is about discipline, responsibility, awareness
+and protecting what matters to our clients.
+
 </p>
 
+
 <p>
+
 AR Security and Service is committed to providing
 professional and dependable security support for
-organizations, businesses, residential properties and
-important places.
+organizations, businesses, residential properties
+and important places.
+
 </p>
 
 </div>
+
 </div>
 
 
 <div class="feature reverse">
 
 <div class="feature-image">
-<img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=90">
+
+<img
+src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=90"
+alt="Valuable Property Protection">
+
 </div>
+
 
 <div class="feature-text">
 
-<span>PROTECTING VALUABLE PLACES</span>
+<span>
+PROTECTING VALUABLE PLACES
+</span>
 
-<h2>Every Property Deserves Professional Protection</h2>
+
+<h2>
+Every Property Deserves Professional Protection
+</h2>
+
 
 <p>
+
 From large commercial spaces to industrial facilities
 and residential properties, every place deserves a
 responsible security approach.
+
 </p>
 
+
 <p>
+
 Our focus is to help create a secure environment where
 people can work, live and operate with greater confidence.
+
 </p>
 
 </div>
+
 </div>
 
 
 <div class="feature">
 
 <div class="feature-image">
-<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=90">
+
+<img
+src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=90"
+alt="Safety Responsibility Care">
+
 </div>
+
 
 <div class="feature-text">
 
-<span>SAFETY • RESPONSIBILITY • CARE</span>
+<span>
+SAFETY • RESPONSIBILITY • CARE
+</span>
 
-<h2>We Protect What Matters</h2>
+
+<h2>
+We Protect What Matters
+</h2>
+
 
 <p>
-A safe environment gives people confidence. Our services
-are built around responsible protection, professional
-discipline and careful attention to the places entrusted
-to us.
+
+A safe environment gives people confidence.
+Our services are built around responsible protection,
+professional discipline and careful attention to the
+places entrusted to us.
+
 </p>
 
 </div>
+
 </div>
 
 </section>
 
 
-<!-- ===== ABOUT ===== -->
+<!-- =========================================================
+     ===== ABOUT =====
+     ========================================================= -->
 
 <section class="about" id="about">
 
 <div class="section-title">
 
-<span>ABOUT OUR COMPANY</span>
+<span>
+ABOUT OUR COMPANY
+</span>
 
-<h2>Security With Responsibility</h2>
+
+<h2>
+Security With Responsibility
+</h2>
+
 
 <p>
-AR Security and Service (Pvt) Ltd. is committed to providing
-professional security support with discipline, responsibility
-and respect for every client and every property.
+
+AR Security and Service (Pvt) Ltd. is committed to
+providing professional security support with discipline,
+responsibility and respect for every client and every property.
+
 </p>
 
 </div>
@@ -1152,35 +1709,56 @@ and respect for every client and every property.
 </section>
 
 
-<!-- ===== SERVICES ===== -->
+<!-- =========================================================
+     ===== SERVICES =====
+     ========================================================= -->
 
 <section class="services" id="services">
 
 <div class="section-title">
 
-<span>OUR SERVICES</span>
+<span>
+OUR SERVICES
+</span>
 
-<h2>Professional Security Services</h2>
+
+<h2>
+Professional Security Services
+</h2>
+
 
 <p>
+
 Reliable security support designed for different types
 of properties, organizations and events.
+
 </p>
 
 </div>
+
 
 <div class="service-grid">
 
+
 <div class="service-card">
 
-<img src="https://images.pexels.com/photos/8285775/pexels-photo-8285775.jpeg?auto=compress&cs=tinysrgb&w=1000">
+<img
+src="https://images.pexels.com/photos/8285775/pexels-photo-8285775.jpeg?auto=compress&cs=tinysrgb&w=1000"
+alt="Security Guard Service">
 
 <div class="service-card-content">
-<h3>Security Guard Service</h3>
+
+<h3>
+Security Guard Service
+</h3>
+
 <p>
+
 Professional security personnel for protecting people,
 property and important premises.
+
 </p>
+
 </div>
 
 </div>
@@ -1188,14 +1766,23 @@ property and important premises.
 
 <div class="service-card">
 
-<img src="https://images.pexels.com/photos/38702227/pexels-photo-38702227.jpeg?auto=compress&cs=tinysrgb&w=1000">
+<img
+src="https://images.pexels.com/photos/38702227/pexels-photo-38702227.jpeg?auto=compress&cs=tinysrgb&w=1000"
+alt="Corporate Security">
 
 <div class="service-card-content">
-<h3>Corporate Security</h3>
+
+<h3>
+Corporate Security
+</h3>
+
 <p>
-Security support for offices, organizations and corporate
-facilities.
+
+Security support for offices, organizations and
+corporate facilities.
+
 </p>
+
 </div>
 
 </div>
@@ -1203,14 +1790,23 @@ facilities.
 
 <div class="service-card">
 
-<img src="https://images.pexels.com/photos/31516776/pexels-photo-31516776.jpeg?auto=compress&cs=tinysrgb&w=1000">
+<img
+src="https://images.pexels.com/photos/31516776/pexels-photo-31516776.jpeg?auto=compress&cs=tinysrgb&w=1000"
+alt="Residential Security">
 
 <div class="service-card-content">
-<h3>Residential Security</h3>
+
+<h3>
+Residential Security
+</h3>
+
 <p>
+
 Responsible security support for residential properties
 and communities.
+
 </p>
+
 </div>
 
 </div>
@@ -1218,14 +1814,23 @@ and communities.
 
 <div class="service-card">
 
-<img src="https://images.pexels.com/photos/15482700/pexels-photo-15482700.jpeg?auto=compress&cs=tinysrgb&w=1000">
+<img
+src="https://images.pexels.com/photos/15482700/pexels-photo-15482700.jpeg?auto=compress&cs=tinysrgb&w=1000"
+alt="Access Control">
 
 <div class="service-card-content">
-<h3>Access Control</h3>
+
+<h3>
+Access Control
+</h3>
+
 <p>
+
 Helping maintain controlled and organized access to
 important premises.
+
 </p>
+
 </div>
 
 </div>
@@ -1233,14 +1838,23 @@ important premises.
 
 <div class="service-card">
 
-<img src="https://images.pexels.com/photos/31282368/pexels-photo-31282368.jpeg?auto=compress&cs=tinysrgb&w=1000">
+<img
+src="https://images.pexels.com/photos/31282368/pexels-photo-31282368.jpeg?auto=compress&cs=tinysrgb&w=1000"
+alt="Event Security">
 
 <div class="service-card-content">
-<h3>Event Security</h3>
+
+<h3>
+Event Security
+</h3>
+
 <p>
+
 Security support for events, gatherings and important
 occasions.
+
 </p>
+
 </div>
 
 </div>
@@ -1248,97 +1862,863 @@ occasions.
 
 <div class="service-card">
 
-<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=90">
+<img
+src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=90"
+alt="Security Support">
 
 <div class="service-card-content">
-<h3>Security Support</h3>
+
+<h3>
+Security Support
+</h3>
+
 <p>
+
 Flexible security support based on the needs of each
 client and property.
+
 </p>
+
 </div>
 
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- ===== STATEMENT ===== -->
+<!-- =========================================================
+     ===== STATEMENT =====
+     ========================================================= -->
 
 <section class="statement">
 
-<h2>WE PROTECT WHAT MATTERS</h2>
+<h2>
+WE PROTECT WHAT MATTERS
+</h2>
+
 
 <p>
+
 Safety is not just a service. It is a responsibility.
 Our goal is to help create secure, disciplined and
 professional environments for people, businesses and
 properties.
+
 </p>
 
 </section>
 
 
-<!-- ===== WHY US ===== -->
+<!-- =========================================================
+     ===== WHY US =====
+     ========================================================= -->
 
 <section id="why">
 
 <div class="section-title">
 
-<span>WHY AR SECURITY</span>
+<span>
+WHY AR SECURITY
+</span>
 
-<h2>Built Around Responsibility</h2>
+
+<h2>
+Built Around Responsibility
+</h2>
 
 </div>
+
 
 <div class="why-grid">
 
+
 <div class="why-box">
+
 <i class="fa-solid fa-shield-halved"></i>
-<h3>Professional Approach</h3>
+
+<h3>
+Professional Approach
+</h3>
+
 <p>
+
 A disciplined and responsible approach to security service.
+
 </p>
+
 </div>
 
+
 <div class="why-box">
+
 <i class="fa-solid fa-user-shield"></i>
-<h3>Responsible Service</h3>
+
+<h3>
+Responsible Service
+</h3>
+
 <p>
+
 We understand the importance of protecting people and property.
+
 </p>
+
 </div>
 
+
 <div class="why-box">
+
 <i class="fa-solid fa-building-shield"></i>
-<h3>Property Protection</h3>
+
+<h3>
+Property Protection
+</h3>
+
 <p>
+
 Security support for different types of valuable premises
 and facilities.
+
 </p>
+
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- ===== CONTACT ===== -->
+<!-- =========================================================
+     ===== JOIN / HIRE =====
+     ========================================================= -->
+
+<section class="recruit-section" id="join-hire">
+
+
+<div class="section-title">
+
+<span>
+WORK WITH AR SECURITY
+</span>
+
+
+<h2>
+Join Our Security Team
+</h2>
+
+
+<p>
+
+Security professionals can apply to join our team,
+while companies and organizations can request
+security personnel.
+
+</p>
+
+</div>
+
+
+<div class="recruit-buttons">
+
+
+<button
+class="recruit-btn"
+onclick="showRecruitForm('guardForm')">
+
+<i class="fa-solid fa-user-shield"></i>
+
+Join as Security Guard
+
+</button>
+
+
+<button
+class="recruit-btn client"
+onclick="showRecruitForm('hireForm')">
+
+<i class="fa-solid fa-building"></i>
+
+Hire Security Guard
+
+</button>
+
+
+</div>
+
+
+<!-- =========================================================
+     ===== SECURITY GUARD APPLICATION FORM =====
+     ========================================================= -->
+
+<div class="form-area" id="guardForm">
+
+
+<button
+class="close-form"
+onclick="closeRecruitForms()"
+aria-label="Close">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+
+<h3>
+
+<i class="fa-solid fa-user-shield"></i>
+
+Security Guard Application
+
+</h3>
+
+
+<p class="form-note">
+
+Please provide accurate information. Applicants must meet
+the applicable legal and company requirements. Full NID
+details should only be provided later through a secure
+verification process.
+
+</p>
+
+
+<form
+action="https://formsubmit.co/abirhossen159156@gmail.com"
+method="POST"
+enctype="multipart/form-data"
+>
+
+
+<input
+type="hidden"
+name="_subject"
+value="New Security Guard Application - AR Security and Service"
+>
+
+
+<input
+type="hidden"
+name="_template"
+value="table"
+>
+
+
+<input
+type="hidden"
+name="_captcha"
+value="true"
+>
+
+
+<input
+type="hidden"
+name="form_type"
+value="Security Guard Application"
+>
+
+
+<input
+type="hidden"
+name="website"
+value="AR Security and Service (Pvt) Ltd."
+>
+
+
+<div class="form-grid">
+
+
+<div class="form-field">
+
+<label>
+Full Name *
+</label>
+
+<input
+type="text"
+name="full_name"
+placeholder="Enter full name"
+required
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Mobile Number *
+</label>
+
+<input
+type="tel"
+name="mobile"
+placeholder="+880..."
+required
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Email Address
+</label>
+
+<input
+type="email"
+name="email"
+placeholder="example@email.com"
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Age *
+</label>
+
+<input
+type="number"
+name="age"
+min="18"
+placeholder="18 or above"
+required
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+NID Last 4 Digits
+</label>
+
+<input
+type="text"
+name="nid_last4"
+maxlength="4"
+inputmode="numeric"
+placeholder="Last 4 digits"
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Preferred Duty Location
+</label>
+
+<input
+type="text"
+name="preferred_duty_location"
+placeholder="District / City"
+>
+
+</div>
+
+
+<div class="form-field full">
+
+<label>
+Current Address *
+</label>
+
+<textarea
+name="current_address"
+placeholder="Enter current address"
+required
+></textarea>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Previous Job / Company
+</label>
+
+<input
+type="text"
+name="previous_job"
+placeholder="Previous employer"
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Security Experience
+</label>
+
+<select name="security_experience">
+
+<option value="">
+Select experience
+</option>
+
+<option value="No Experience">
+No Experience
+</option>
+
+<option value="Less than 1 year">
+Less than 1 year
+</option>
+
+<option value="1-3 years">
+1-3 years
+</option>
+
+<option value="3-5 years">
+3-5 years
+</option>
+
+<option value="More than 5 years">
+More than 5 years
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Emergency Contact Person *
+</label>
+
+<input
+type="text"
+name="emergency_contact_name"
+placeholder="Name"
+required
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Emergency Contact Mobile *
+</label>
+
+<input
+type="tel"
+name="emergency_contact_mobile"
+placeholder="Mobile number"
+required
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Applicant Photo
+</label>
+
+<input
+type="file"
+name="applicant_photo"
+accept=".jpg,.jpeg,.png"
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+CV / Resume *
+</label>
+
+<input
+type="file"
+name="cv_resume"
+accept=".pdf,.doc,.docx"
+required
+>
+
+</div>
+
+
+<div class="form-field full">
+
+<label>
+Additional Information
+</label>
+
+<textarea
+name="additional_information"
+placeholder="Write any additional information..."
+></textarea>
+
+</div>
+
+
+</div>
+
+
+<div class="form-security-note">
+
+<strong>
+Privacy & Verification:
+</strong>
+
+Your submitted information is intended for recruitment
+and verification purposes. Do not enter your full NID number
+in this public form. If shortlisted, additional documents
+may be requested through an appropriate verification process.
+
+</div>
+
+
+<button
+class="form-submit"
+type="submit">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+Submit Security Guard Application
+
+</button>
+
+
+</form>
+
+</div>
+
+
+<!-- =========================================================
+     ===== COMPANY / BUILDING HIRING FORM =====
+     ========================================================= -->
+
+<div class="form-area" id="hireForm">
+
+
+<button
+class="close-form"
+onclick="closeRecruitForms()"
+aria-label="Close">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+
+<h3>
+
+<i class="fa-solid fa-building"></i>
+
+Hire Security Guard
+
+</h3>
+
+
+<p class="form-note">
+
+Companies, offices, buildings, organizations and other
+clients can submit their security manpower requirements here.
+
+</p>
+
+
+<form
+action="https://formsubmit.co/abirhossen159156@gmail.com"
+method="POST"
+>
+
+
+<input
+type="hidden"
+name="_subject"
+value="New Security Guard Hiring Request - AR Security and Service"
+>
+
+
+<input
+type="hidden"
+name="_template"
+value="table"
+>
+
+
+<input
+type="hidden"
+name="_captcha"
+value="true"
+>
+
+
+<input
+type="hidden"
+name="form_type"
+value="Security Guard Hiring Request"
+>
+
+
+<input
+type="hidden"
+name="website"
+value="AR Security and Service (Pvt) Ltd."
+>
+
+
+<div class="form-grid">
+
+
+<div class="form-field">
+
+<label>
+Company / Organization Name *
+</label>
+
+<input
+type="text"
+name="company_name"
+placeholder="Company / building name"
+required
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Contact Person *
+</label>
+
+<input
+type="text"
+name="contact_person"
+placeholder="Contact person's name"
+required
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Mobile Number *
+</label>
+
+<input
+type="tel"
+name="mobile"
+placeholder="+880..."
+required
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Email Address
+</label>
+
+<input
+type="email"
+name="client_email"
+placeholder="company@email.com"
+>
+
+</div>
+
+
+<div class="form-field full">
+
+<label>
+Company / Duty Location *
+</label>
+
+<textarea
+name="duty_location"
+placeholder="Full location where security personnel are required"
+required
+></textarea>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Number of Guards Required *
+</label>
+
+<input
+type="number"
+name="guards_required"
+min="1"
+placeholder="Example: 5"
+required
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Duty Type
+</label>
+
+<select name="duty_type">
+
+<option value="">
+Select Duty Type
+</option>
+
+<option value="Day Duty">
+Day Duty
+</option>
+
+<option value="Night Duty">
+Night Duty
+</option>
+
+<option value="Day and Night Duty">
+Day and Night Duty
+</option>
+
+<option value="24 Hour Security">
+24 Hour Security
+</option>
+
+<option value="Event Security">
+Event Security
+</option>
+
+<option value="Other">
+Other
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Expected Start Date
+</label>
+
+<input
+type="date"
+name="expected_start_date"
+>
+
+</div>
+
+
+<div class="form-field">
+
+<label>
+Required Experience
+</label>
+
+<input
+type="text"
+name="required_experience"
+placeholder="Example: Experienced guards"
+>
+
+</div>
+
+
+<div class="form-field full">
+
+<label>
+Additional Requirements
+</label>
+
+<textarea
+name="additional_requirements"
+placeholder="Describe your security requirements..."
+></textarea>
+
+</div>
+
+
+</div>
+
+
+<div class="form-security-note">
+
+<strong>
+Note:
+</strong>
+
+After receiving your request, an authorized representative
+of AR Security and Service can contact you to discuss
+manpower requirements, duty arrangements, service terms
+and other details.
+
+</div>
+
+
+<button
+class="form-submit"
+type="submit">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+Submit Hiring Request
+
+</button>
+
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     ===== CONTACT =====
+     ========================================================= -->
 
 <section class="contact" id="contact">
 
+
 <div class="contact-grid">
+
 
 <div>
 
-<h2>Let's Talk About Your Security Needs</h2>
+<h2>
+Let's Talk About Your Security Needs
+</h2>
+
 
 <p>
+
 If you need professional security support for your
 organization, business, property or event, contact
 AR Security and Service today.
+
 </p>
 
 </div>
@@ -1346,107 +2726,173 @@ AR Security and Service today.
 
 <div>
 
+
 <!-- TELETAK -->
+
 <div class="contact-item">
 
 <i class="fa-solid fa-phone"></i>
 
 <div>
-<strong>TELETAK</strong>
-<a href="tel:+8801575053421">+880 1575053421</a>
+
+<strong>
+TELETAK
+</strong>
+
+<a href="tel:+8801575053421">
+
++880 1575053421
+
+</a>
+
 </div>
 
 </div>
 
 
 <!-- BANGLALINK -->
+
 <div class="contact-item">
 
 <i class="fa-solid fa-phone"></i>
 
 <div>
-<strong>BANGLALINK</strong>
-<a href="tel:+8801980440825">+880 1980440825</a>
+
+<strong>
+BANGLALINK
+</strong>
+
+<a href="tel:+8801980440825">
+
++880 1980440825
+
+</a>
+
 </div>
 
 </div>
 
 
 <!-- WHATSAPP -->
+
 <div class="contact-item">
 
 <i class="fa-brands fa-whatsapp"></i>
 
 <div>
-<strong>WHATSAPP</strong>
-<a href="https://wa.me/8801980440825" target="_blank" rel="noopener">
+
+<strong>
+WHATSAPP
+</strong>
+
+<a
+href="https://wa.me/8801980440825"
+target="_blank"
+rel="noopener">
+
 +880 1980440825
+
 </a>
+
 </div>
 
 </div>
 
 
 <!-- TELEGRAM -->
+
 <div class="contact-item">
 
 <i class="fa-brands fa-telegram"></i>
 
 <div>
-<strong>TELEGRAM</strong>
-<a href="https://t.me/+8801980440825" target="_blank" rel="noopener">
+
+<strong>
+TELEGRAM
+</strong>
+
+<a
+href="https://t.me/+8801980440825"
+target="_blank"
+rel="noopener">
+
 +880 1980440825
+
 </a>
+
 </div>
 
 </div>
 
 
 <!-- VIBER -->
+
 <div class="contact-item">
 
 <i class="fa-brands fa-viber"></i>
 
 <div>
-<strong>VIBER</strong>
+
+<strong>
+VIBER
+</strong>
+
 <a href="viber://chat?number=%2B8801980440825">
+
 +880 1980440825
+
 </a>
+
 </div>
 
 </div>
 
 
 <!-- EMAIL -->
+
 <div class="contact-item">
 
 <i class="fa-solid fa-envelope"></i>
 
 <div>
-<strong>EMAIL</strong>
-<a href="mailto:abirhossen159156@gmail.com">
+
+<strong>
+EMAIL
+</strong>
+
+<a
+href="mailto:abirhossen159156@gmail.com">
+
 abirhossen159156@gmail.com
+
 </a>
+
 </div>
 
 </div>
 
 
 <!-- OFFICE ADDRESS -->
+
 <div class="contact-item">
 
 <i class="fa-solid fa-location-dot"></i>
 
 <div class="office-address">
 
-<strong>OFFICE ADDRESS</strong>
+<strong>
+OFFICE ADDRESS
+</strong>
 
 <a
 href="https://www.google.com/maps/search/?api=1&query=House%20SE%28D%29%2C%20Crystal%20Palace%2C%20Gulshan%20Avenue%2C%20Road%2022%2C%20Dhaka-1212%2C%20Bangladesh"
 target="_blank"
-rel="noopener"
->
-House SE(D), Crystal Palace, Gulshan Avenue, Road 22, Dhaka-1212, Bangladesh
+rel="noopener">
+
+House SE(D), Crystal Palace,
+Gulshan Avenue, Road 22,
+Dhaka-1212, Bangladesh
+
 </a>
 
 </div>
@@ -1455,15 +2901,19 @@ House SE(D), Crystal Palace, Gulshan Avenue, Road 22, Dhaka-1212, Bangladesh
 
 
 <!-- GOOGLE MAP -->
+
 <a
 class="map-link"
 href="https://www.google.com/maps/search/?api=1&query=House%20SE%28D%29%2C%20Crystal%20Palace%2C%20Gulshan%20Avenue%2C%20Road%2022%2C%20Dhaka-1212%2C%20Bangladesh"
 target="_blank"
-rel="noopener"
->
+rel="noopener">
+
 <i class="fa-solid fa-map-location-dot"></i>
+
 OPEN OFFICE LOCATION IN GOOGLE MAPS
+
 </a>
+
 
 </div>
 
@@ -1472,56 +2922,89 @@ OPEN OFFICE LOCATION IN GOOGLE MAPS
 </section>
 
 
-<!-- ===== FOOTER ===== -->
+<!-- =========================================================
+     ===== FOOTER =====
+     ========================================================= -->
 
 <footer>
+
 
 <div class="footer-address">
 
 <strong>
+
 <i class="fa-solid fa-location-dot"></i>
+
 OFFICE ADDRESS
+
 </strong>
 
+
 <br>
+
 
 <a
 href="https://www.google.com/maps/search/?api=1&query=House%20SE%28D%29%2C%20Crystal%20Palace%2C%20Gulshan%20Avenue%2C%20Road%2022%2C%20Dhaka-1212%2C%20Bangladesh"
 target="_blank"
-rel="noopener"
->
-House SE(D), Crystal Palace, Gulshan Avenue, Road 22, Dhaka-1212, Bangladesh
+rel="noopener">
+
+House SE(D), Crystal Palace,
+Gulshan Avenue, Road 22,
+Dhaka-1212, Bangladesh
+
 </a>
 
 </div>
 
+
 <p>
-<strong>AR Security and Service (Pvt) Ltd.</strong>
+
+<strong>
+AR Security and Service (Pvt) Ltd.
+</strong>
+
 </p>
+
 
 <p>
 Your Safety, Our Responsibility
 </p>
 
+
 <p>
 © 2026 AR Security and Service. All Rights Reserved.
 </p>
 
+
 </footer>
 
 
-<!-- ===== JAVASCRIPT ===== -->
+<!-- =========================================================
+     ===== JAVASCRIPT =====
+     ========================================================= -->
 
 <script>
+
 
 /* ===== MOBILE MENU ===== */
 
 function openMenu(){
-document.getElementById("mobileMenu").classList.add("open");
+
+document
+.getElementById("mobileMenu")
+.classList
+.add("open");
+
 }
 
+
 function closeMenu(){
-document.getElementById("mobileMenu").classList.remove("open");
+
+document
+.getElementById("mobileMenu")
+.classList
+.remove("open");
+
 }
 
 
@@ -1529,60 +3012,136 @@ document.getElementById("mobileMenu").classList.remove("open");
 
 function toggleQuick(){
 
-const menu=document.getElementById("quickMenu");
+const menu=
+document.getElementById("quickMenu");
 
 menu.classList.toggle("show");
 
 }
 
 
-/* ===== CLOSE QUICK MENU WHEN CLICKING OUTSIDE ===== */
+/* ===== CLOSE QUICK MENU OUTSIDE ===== */
 
 document.addEventListener("click",function(event){
 
-const menu=document.getElementById("quickMenu");
-const button=document.querySelector(".quick-btn");
+const menu=
+document.getElementById("quickMenu");
+
+const button=
+document.querySelector(".quick-btn");
+
 
 if(
 menu.classList.contains("show") &&
 !menu.contains(event.target) &&
 !button.contains(event.target)
 ){
+
 menu.classList.remove("show");
+
 }
 
 });
+
+
+/* ===== JOIN / HIRE FORM ===== */
+
+function showRecruitForm(formId){
+
+document
+.getElementById("guardForm")
+.classList
+.remove("show");
+
+
+document
+.getElementById("hireForm")
+.classList
+.remove("show");
+
+
+const form=
+document.getElementById(formId);
+
+
+form.classList.add("show");
+
+
+form.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+
+}
+
+
+function closeRecruitForms(){
+
+document
+.getElementById("guardForm")
+.classList
+.remove("show");
+
+
+document
+.getElementById("hireForm")
+.classList
+.remove("show");
+
+}
 
 
 /* ===== SLIDER ===== */
 
 let currentSlide=0;
 
-const slides=document.querySelectorAll(".slide");
-const dots=document.querySelectorAll(".dot");
+
+const slides=
+document.querySelectorAll(".slide");
+
+
+const dots=
+document.querySelectorAll(".dot");
+
 
 function showSlide(index){
 
 if(index>=slides.length){
+
 index=0;
+
 }
+
 
 if(index<0){
+
 index=slides.length-1;
+
 }
 
+
 slides.forEach(function(slide){
+
 slide.classList.remove("active");
+
 });
+
 
 dots.forEach(function(dot){
+
 dot.classList.remove("active");
+
 });
 
+
 slides[index].classList.add("active");
+
+
 dots[index].classList.add("active");
 
+
 currentSlide=index;
+
 }
 
 
@@ -1612,34 +3171,59 @@ showSlide(currentSlide+1);
 /* ===== SWIPE SUPPORT ===== */
 
 let touchStartX=0;
+
 let touchEndX=0;
 
-const hero=document.querySelector(".hero");
 
-hero.addEventListener("touchstart",function(event){
-
-touchStartX=event.changedTouches[0].screenX;
-
-},{passive:true});
+const hero=
+document.querySelector(".hero");
 
 
-hero.addEventListener("touchend",function(event){
+hero.addEventListener(
+"touchstart",
+function(event){
 
-touchEndX=event.changedTouches[0].screenX;
+touchStartX=
+event.changedTouches[0].screenX;
 
-if(touchEndX<touchStartX-50){
+},
+{
+passive:true
+});
+
+
+hero.addEventListener(
+"touchend",
+function(event){
+
+touchEndX=
+event.changedTouches[0].screenX;
+
+
+if(
+touchEndX<
+touchStartX-50
+){
 
 changeSlide(1);
 
 }
 
-if(touchEndX>touchStartX+50){
+
+if(
+touchEndX>
+touchStartX+50
+){
 
 changeSlide(-1);
 
 }
 
-},{passive:true});
+},
+{
+passive:true
+});
+
 
 </script>
 
