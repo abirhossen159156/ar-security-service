@@ -2,719 +2,943 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Google Search Console Verification -->
 <meta name="google-site-verification" content="-OlOhcAekKVzXF6X494mley37-r1pzD9wf0jLFTHAf0" />
 
 <title>AR Security and Service (Pvt) Ltd.</title>
 
+<!-- Font Awesome -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:#f7f3f0;
-color:#241b1d;
-line-height:1.6
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
-header{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-z-index:1000;
-padding:15px 5%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(67,15,28,.88);
-backdrop-filter:blur(8px)
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f8f5f0;
+color:#222;
+line-height:1.6;
 }
+
+a{
+text-decoration:none;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:#681c2e;
+box-shadow:0 4px 15px rgba(0,0,0,.25);
+}
+
+.navbar{
+max-width:1200px;
+margin:auto;
+padding:10px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+/* =========================
+   LOGO
+========================= */
 
 .logo-area{
 display:flex;
 align-items:center;
-gap:12px
+gap:13px;
 }
 
+/* BIG LOGO */
 .logo-shield{
-width:68px;
-height:80px;
+width:76px;
+height:88px;
 background:linear-gradient(145deg,#f5d36a,#b88619);
-clip-path:polygon(50% 0%,92% 13%,92% 56%,82% 73%,67% 88%,50% 100%,33% 88%,18% 73%,8% 56%,8% 13%);
+clip-path:polygon(
+50% 0%,
+92% 13%,
+92% 56%,
+82% 73%,
+67% 88%,
+50% 100%,
+33% 88%,
+18% 73%,
+8% 56%,
+8% 13%
+);
 display:flex;
 align-items:center;
 justify-content:center;
-box-shadow:0 7px 22px rgba(0,0,0,.35)
+box-shadow:0 7px 22px rgba(0,0,0,.35);
+flex-shrink:0;
 }
 
 .logo-inner{
-width:58px;
-height:70px;
+width:65px;
+height:77px;
 background:#681c2e;
-clip-path:polygon(50% 0%,92% 13%,92% 56%,82% 73%,67% 88%,50% 100%,33% 88%,18% 73%,8% 56%,8% 13%);
+clip-path:polygon(
+50% 0%,
+92% 13%,
+92% 56%,
+82% 73%,
+67% 88%,
+50% 100%,
+33% 88%,
+18% 73%,
+8% 56%,
+8% 13%
+);
 display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
-color:#f5d36a
+color:#f5d36a;
 }
 
 .logo-ar{
-font-size:25px;
+font-size:29px;
 font-weight:900;
-letter-spacing:1px
+letter-spacing:1px;
 }
 
 .logo-small{
-font-size:7px;
+font-size:8px;
 font-weight:bold;
-letter-spacing:.5px
+letter-spacing:.7px;
 }
 
-.brand-text strong{
-display:block;
-color:#f5d36a;
-font-size:16px
-}
-
-.brand-text span{
+.brand-text{
 color:white;
-font-size:10px
 }
+
+.brand-text h1{
+font-size:20px;
+font-weight:900;
+letter-spacing:.5px;
+}
+
+.brand-text p{
+font-size:12px;
+color:#f5d36a;
+font-weight:bold;
+margin-top:2px;
+}
+
+/* =========================
+   DESKTOP NAV
+========================= */
 
 nav{
 display:flex;
-align-items:center
+align-items:center;
+gap:20px;
 }
 
 nav a{
 color:white;
-text-decoration:none;
-margin-left:22px;
 font-size:14px;
-font-weight:bold
+font-weight:bold;
+transition:.3s;
 }
 
 nav a:hover{
-color:#f5d36a
+color:#f5d36a;
 }
+
+/* =========================
+   MOBILE BUTTON
+========================= */
 
 .menu-btn{
 display:none;
-background:#681c2e;
+background:none;
+border:2px solid #f5d36a;
 color:#f5d36a;
-border:1px solid #f5d36a;
+font-size:23px;
 width:44px;
 height:44px;
 border-radius:8px;
-font-size:22px;
-cursor:pointer
+cursor:pointer;
 }
+
+/* =========================
+   MOBILE MENU
+========================= */
 
 .mobile-menu{
 position:fixed;
 top:0;
-right:-310px;
-width:290px;
+right:-100%;
+width:300px;
 height:100vh;
 background:#681c2e;
 z-index:2000;
-padding:25px;
-transition:.35s ease;
-box-shadow:-8px 0 30px rgba(0,0,0,.35);
-overflow-y:auto
+padding:70px 25px 30px;
+box-shadow:-5px 0 20px rgba(0,0,0,.4);
+transition:.4s;
+overflow-y:auto;
 }
 
-.mobile-menu.open{
-right:0
-}
-
-.mobile-menu .close-btn{
-background:none;
-border:0;
-color:#f5d36a;
-font-size:28px;
-float:right;
-cursor:pointer
+.mobile-menu.show{
+right:0;
 }
 
 .mobile-menu h3{
-clear:both;
 color:#f5d36a;
-padding:30px 0 18px;
-border-bottom:1px solid rgba(255,255,255,.2)
+margin-bottom:20px;
+font-size:20px;
 }
 
 .mobile-menu a{
 display:block;
-color:white;
-text-decoration:none;
 padding:13px 5px;
-border-bottom:1px solid rgba(255,255,255,.1)
+border-bottom:1px solid rgba(245,211,106,.25);
+color:white;
+font-weight:bold;
 }
 
 .mobile-menu a i{
 width:28px;
-color:#f5d36a
-}
-
-.quick-btn{
-position:fixed;
-right:18px;
-bottom:20px;
-z-index:1500;
-width:52px;
-height:52px;
-border-radius:50%;
-border:2px solid #f5d36a;
-background:#681c2e;
 color:#f5d36a;
-font-size:21px;
-cursor:pointer;
-box-shadow:0 6px 20px rgba(0,0,0,.3)
 }
 
-.quick-menu{
-position:fixed;
+.close-btn{
+position:absolute;
 right:18px;
-bottom:82px;
-z-index:1499;
-display:none;
-flex-direction:column;
-gap:9px
+top:18px;
+background:none;
+border:none;
+color:#f5d36a;
+font-size:28px;
+cursor:pointer;
 }
 
-.quick-menu.show{
-display:flex
-}
-
-.quick-menu a{
-width:45px;
-height:45px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-text-decoration:none;
-font-size:20px;
-background:#681c2e;
-border:1px solid #f5d36a;
-box-shadow:0 4px 15px rgba(0,0,0,.25)
-}
+/* =========================
+   HERO
+========================= */
 
 .hero{
+min-height:650px;
 position:relative;
-height:100vh;
-min-height:620px;
 overflow:hidden;
-background:#350a14
+background:#300d17;
+}
+
+.slides{
+width:100%;
+height:650px;
+position:relative;
 }
 
 .slide{
 position:absolute;
 inset:0;
 opacity:0;
-transition:opacity 1s ease
+transition:opacity 1s;
+background-size:cover;
+background-position:center;
 }
 
 .slide.active{
-opacity:1
+opacity:1;
 }
 
-.slide img{
-width:100%;
-height:100%;
-object-fit:cover
-}
-
-.slide:after{
+.slide::after{
 content:"";
 position:absolute;
 inset:0;
-background:linear-gradient(90deg,rgba(38,5,12,.82),rgba(38,5,12,.35),rgba(38,5,12,.45))
+background:linear-gradient(
+rgba(0,0,0,.45),
+rgba(0,0,0,.72)
+);
+}
+
+.slide-content{
+position:absolute;
+z-index:5;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+width:90%;
+color:white;
 }
 
 .hero-logo{
-position:absolute;
-z-index:10;
-top:120px;
-left:50%;
-transform:translateX(-50%)
+display:flex;
+justify-content:center;
+margin-bottom:20px;
 }
 
-.hero-content{
-position:absolute;
-z-index:10;
-top:52%;
-left:7%;
-transform:translateY(-50%);
-max-width:720px;
-color:white
+.hero-logo .logo-shield{
+width:110px;
+height:128px;
 }
 
-.hero-content .mini{
+.hero-logo .logo-inner{
+width:94px;
+height:112px;
+}
+
+.hero-logo .logo-ar{
+font-size:39px;
+}
+
+.hero-logo .logo-small{
+font-size:11px;
+}
+
+.slide-content h2{
+font-size:42px;
+margin-bottom:10px;
 color:#f5d36a;
-font-size:14px;
+font-weight:900;
+}
+
+.slide-content p{
+font-size:18px;
+max-width:750px;
+margin:auto;
+}
+
+.hero-buttons{
+margin-top:25px;
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+border-radius:30px;
 font-weight:bold;
-letter-spacing:3px;
-margin-bottom:14px
 }
 
-.hero-content h1{
-font-size:clamp(42px,6vw,76px);
-line-height:1.05;
-margin-bottom:22px
+.btn-gold{
+background:#f5d36a;
+color:#681c2e;
 }
 
-.hero-content h1 span{
-color:#f5d36a
-}
-
-.hero-content p{
-font-size:19px;
-max-width:650px
+.btn-outline{
+border:2px solid #f5d36a;
+color:#f5d36a;
 }
 
 .slider-arrow{
 position:absolute;
-z-index:20;
 top:50%;
 transform:translateY(-50%);
-width:52px;
-height:52px;
-border:1px solid white;
-background:rgba(104,28,46,.7);
-color:#f5d36a;
+z-index:20;
+width:45px;
+height:45px;
+border:none;
 border-radius:50%;
+background:rgba(104,28,46,.8);
+color:#f5d36a;
+font-size:22px;
 cursor:pointer;
-font-size:20px
 }
 
-.prev{left:25px}
-.next{right:25px}
+.prev{
+left:20px;
+}
+
+.next{
+right:20px;
+}
 
 .dots{
 position:absolute;
-z-index:30;
-bottom:35px;
+bottom:25px;
 left:50%;
 transform:translateX(-50%);
+z-index:20;
 display:flex;
-gap:9px
+gap:8px;
 }
 
 .dot{
 width:11px;
 height:11px;
 border-radius:50%;
-border:1px solid white;
-background:transparent;
-cursor:pointer
+border:1px solid #f5d36a;
+cursor:pointer;
 }
 
 .dot.active{
-background:#f5d36a
+background:#f5d36a;
 }
 
+/* =========================
+   SECTIONS
+========================= */
+
 section{
-padding:90px 7%
+padding:75px 20px;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
 }
 
 .section-title{
 text-align:center;
-max-width:800px;
-margin:0 auto 50px
-}
-
-.section-title span{
-color:#a77b18;
-font-weight:bold;
-letter-spacing:3px;
-font-size:13px
+margin-bottom:45px;
 }
 
 .section-title h2{
-font-size:42px;
+font-size:32px;
 color:#681c2e;
-margin:10px 0 15px
+font-weight:900;
 }
 
-.section-title p{
-color:#5f5557
+.section-title span{
+display:block;
+width:70px;
+height:4px;
+background:#f5d36a;
+margin:12px auto;
 }
 
-.feature{
-display:grid;
-grid-template-columns:1fr 1fr;
-min-height:480px;
-align-items:center;
-gap:60px;
-margin-bottom:80px
-}
+/* =========================
+   FEATURES
+========================= */
 
-.feature.reverse{
-direction:rtl
-}
-
-.feature.reverse>*{
-direction:ltr
-}
-
-.feature-image{
-height:470px;
-overflow:hidden;
-border-radius:18px;
-box-shadow:0 18px 45px rgba(80,25,35,.18)
-}
-
-.feature-image img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:.7s
-}
-
-.feature-image:hover img{
-transform:scale(1.05)
-}
-
-.feature-text span{
-color:#a77b18;
-font-weight:bold;
-letter-spacing:2px
-}
-
-.feature-text h2{
-color:#681c2e;
-font-size:42px;
-line-height:1.15;
-margin:15px 0 20px
-}
-
-.feature-text p{
-color:#51484a;
-font-size:17px;
-margin-bottom:18px
-}
-
-.about{
-background:#681c2e;
-color:white
-}
-
-.about .section-title h2{
-color:#f5d36a
-}
-
-.about .section-title p{
-color:#f4e8e9
-}
-
-.services{
-background:#f7f3f0
-}
-
-.service-grid{
+.features{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:25px
+gap:25px;
+}
+
+.feature-card{
+background:white;
+padding:30px;
+text-align:center;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.feature-card i{
+font-size:40px;
+color:#681c2e;
+margin-bottom:15px;
+}
+
+.feature-card h3{
+color:#681c2e;
+margin-bottom:8px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+background:white;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about-box{
+background:#681c2e;
+color:white;
+padding:35px;
+border-radius:15px;
+}
+
+.about-box h3{
+color:#f5d36a;
+font-size:26px;
+margin-bottom:15px;
+}
+
+.about-list{
+list-style:none;
+margin-top:20px;
+}
+
+.about-list li{
+margin-bottom:10px;
+}
+
+.about-list i{
+color:#f5d36a;
+margin-right:8px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
 }
 
 .service-card{
 background:white;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 10px 30px rgba(50,20,25,.1);
-transition:.3s
+border-radius:12px;
+padding:30px;
+box-shadow:0 5px 18px rgba(0,0,0,.1);
+border-top:4px solid #681c2e;
+transition:.3s;
 }
 
 .service-card:hover{
-transform:translateY(-8px)
+transform:translateY(-5px);
 }
 
-.service-card img{
-width:100%;
-height:220px;
-object-fit:cover
-}
-
-.service-card-content{
-padding:25px
+.service-card i{
+font-size:38px;
+color:#681c2e;
+margin-bottom:15px;
 }
 
 .service-card h3{
 color:#681c2e;
-margin-bottom:10px
+margin-bottom:10px;
 }
 
-.service-card p{
-color:#62595b
-}
+/* =========================
+   STATEMENT
+========================= */
 
 .statement{
-background:
-linear-gradient(rgba(70,12,25,.87),rgba(70,12,25,.87)),
-url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1800&q=90")
-center/cover;
+background:#681c2e;
 color:white;
 text-align:center;
-padding:120px 7%
 }
 
 .statement h2{
+font-size:34px;
 color:#f5d36a;
-font-size:48px;
-margin-bottom:20px
+margin-bottom:15px;
 }
 
 .statement p{
-max-width:850px;
+max-width:800px;
 margin:auto;
-font-size:20px
+font-size:17px;
+}
+
+/* =========================
+   WHY US
+========================= */
+
+.why{
+background:#f2ece3;
 }
 
 .why-grid{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px
+grid-template-columns:repeat(4,1fr);
+gap:20px;
 }
 
-.why-box{
-background:white;
-padding:35px 25px;
-border-radius:15px;
+.why-card{
 text-align:center;
-box-shadow:0 8px 25px rgba(50,20,25,.08)
+background:white;
+padding:25px 15px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
 }
 
-.why-box i{
-font-size:38px;
-color:#b78b25;
-margin-bottom:15px
-}
-
-.why-box h3{
+.why-card i{
+font-size:35px;
 color:#681c2e;
-margin-bottom:10px
+margin-bottom:12px;
 }
+
+.why-card h3{
+font-size:18px;
+color:#681c2e;
+}
+
+/* =========================
+   CONTACT
+========================= */
 
 .contact{
-background:#681c2e;
-color:white
+background:white;
 }
 
 .contact-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center
+gap:35px;
 }
 
-.contact h2{
-font-size:44px;
+.contact-box{
+background:#681c2e;
+padding:35px;
+border-radius:15px;
+color:white;
+}
+
+.contact-box h3{
+font-size:25px;
 color:#f5d36a;
-margin-bottom:20px
-}
-
-.contact p{
-color:#f3e6e8
+margin-bottom:20px;
 }
 
 .contact-item{
 display:flex;
 align-items:center;
-gap:17px;
-background:rgba(255,255,255,.08);
-border:1px solid rgba(255,255,255,.12);
-padding:18px;
-margin-bottom:13px;
-border-radius:12px
+gap:15px;
+padding:13px 0;
+border-bottom:1px solid rgba(255,255,255,.15);
 }
 
 .contact-item i{
-width:45px;
-text-align:center;
-font-size:27px;
-color:#f5d36a
+width:35px;
+height:35px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:#f5d36a;
+color:#681c2e;
 }
 
-.contact-item strong{
-display:block;
-font-size:13px;
-color:#e7c96b
-}
-
-.contact-item a,
-.contact-item span{
+.contact-item a{
 color:white;
-text-decoration:none;
-font-size:17px
+font-weight:bold;
 }
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-background:#26070f;
-color:#d9cdd0;
+background:#3b101b;
+color:white;
 text-align:center;
-padding:28px 15px;
-font-size:13px
+padding:30px 20px;
 }
 
 footer strong{
-color:#f5d36a
+color:#f5d36a;
 }
+
+/* =========================
+   QUICK THREE DOT BUTTON
+========================= */
+
+.quick-btn{
+position:fixed;
+right:18px;
+bottom:20px;
+z-index:1500;
+
+width:58px;
+height:58px;
+
+border-radius:50%;
+border:2px solid #f5d36a;
+
+background:#681c2e;
+color:#f5d36a;
+
+font-size:25px;
+cursor:pointer;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+box-shadow:0 6px 20px rgba(0,0,0,.4);
+}
+
+.quick-menu{
+position:fixed;
+right:18px;
+bottom:88px;
+z-index:1499;
+
+display:none;
+flex-direction:column;
+gap:10px;
+}
+
+.quick-menu.show{
+display:flex;
+}
+
+.quick-menu a{
+width:48px;
+height:48px;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+color:white;
+text-decoration:none;
+
+font-size:21px;
+
+background:#681c2e;
+border:2px solid #f5d36a;
+
+box-shadow:0 4px 15px rgba(0,0,0,.3);
+
+transition:.2s;
+}
+
+.quick-menu a:hover{
+transform:scale(1.1);
+background:#f5d36a;
+color:#681c2e;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width:900px){
 
-header{
-padding:11px 4%
-}
-
-nav{
-display:none
-}
-
-.menu-btn{
-display:block
-}
-
-.brand-text strong{
-font-size:12px
-}
-
-.brand-text span{
-font-size:8px
+.navbar{
+padding:8px 12px;
 }
 
 .logo-shield{
-width:57px;
-height:68px
+width:68px;
+height:80px;
 }
 
 .logo-inner{
-width:48px;
-height:58px
+width:58px;
+height:70px;
 }
 
 .logo-ar{
-font-size:19px
+font-size:25px;
 }
 
-.hero{
-min-height:650px
+.logo-small{
+font-size:7px;
 }
 
-.hero-content{
-left:6%;
-right:6%
+.brand-text h1{
+font-size:16px;
 }
 
-.hero-content h1{
-font-size:43px
+.brand-text p{
+font-size:10px;
 }
 
-.hero-content p{
-font-size:16px
+nav{
+display:none;
 }
 
-.feature,
-.feature.reverse{
+.menu-btn{
+display:block;
+}
+
+.hero,
+.slides{
+height:600px;
+min-height:600px;
+}
+
+.slide-content h2{
+font-size:32px;
+}
+
+.features{
 grid-template-columns:1fr;
-direction:ltr;
-gap:30px
 }
 
-.feature-image{
-height:360px
+.about-grid{
+grid-template-columns:1fr;
 }
 
-.feature-text h2{
-font-size:34px
+.services-grid{
+grid-template-columns:1fr 1fr;
 }
 
-.service-grid,
 .why-grid{
-grid-template-columns:1fr
+grid-template-columns:1fr 1fr;
 }
 
 .contact-grid{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
-.statement h2{
-font-size:35px
+}
+
+@media(max-width:600px){
+
+.logo-area{
+gap:8px;
+}
+
+.logo-shield{
+width:70px;
+height:82px;
+}
+
+.logo-inner{
+width:59px;
+height:72px;
+}
+
+.brand-text h1{
+font-size:14px;
+line-height:1.2;
+}
+
+.brand-text p{
+font-size:9px;
+}
+
+.hero,
+.slides{
+height:560px;
+min-height:560px;
+}
+
+.hero-logo .logo-shield{
+width:100px;
+height:118px;
+}
+
+.hero-logo .logo-inner{
+width:85px;
+height:103px;
+}
+
+.slide-content h2{
+font-size:27px;
+}
+
+.slide-content p{
+font-size:15px;
+}
+
+.services-grid{
+grid-template-columns:1fr;
+}
+
+.why-grid{
+grid-template-columns:1fr 1fr;
 }
 
 section{
-padding:70px 5%
-}
-}
-
-@media(max-width:500px){
-
-.hero-logo{
-top:92px
+padding:55px 15px;
 }
 
-.hero-content h1{
-font-size:35px
+.section-title h2{
+font-size:27px;
 }
 
-.slider-arrow{
-width:42px;
-height:42px
+.quick-btn{
+width:56px;
+height:56px;
+right:15px;
+bottom:18px;
 }
 
-.prev{
-left:12px
+.quick-menu{
+right:15px;
+bottom:83px;
 }
 
-.next{
-right:12px
 }
-}
+
+/* =========================
+   END CSS
+========================= */
+
 </style>
 </head>
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
+
+<div class="navbar">
 
 <div class="logo-area">
 
 <div class="logo-shield">
+
 <div class="logo-inner">
 <div class="logo-ar">AR</div>
 <div class="logo-small">SECURITY</div>
 </div>
+
 </div>
 
 <div class="brand-text">
-<strong>AR (ABIR) SECURITY SERVICE</strong>
-<span>AR Security and Service (Pvt) Ltd.</span>
+
+<h1>AR SECURITY SERVICE</h1>
+
+<p>AR Security and Service (Pvt) Ltd.</p>
+
 </div>
 
 </div>
 
 <nav>
+
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#gallery">Gallery</a>
 <a href="#why">Why Us</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 <button class="menu-btn" onclick="openMenu()">
 <i class="fa-solid fa-bars"></i>
 </button>
 
+</div>
+
 </header>
+
+
+<!-- =========================
+     MOBILE MENU
+========================= -->
 
 <div class="mobile-menu" id="mobileMenu">
 
@@ -749,106 +973,152 @@ right:12px
 </a>
 
 <a href="tel:+8801575053421">
-<i class="fa-solid fa-phone"></i> Teletalk: +880 1575053421
+<i class="fa-solid fa-phone"></i>
+Teletalk: +880 1575053421
 </a>
 
 <a href="tel:+8801980440825">
-<i class="fa-solid fa-phone"></i> Banglalink: +880 1980440825
+<i class="fa-solid fa-phone"></i>
+Banglalink: +880 1980440825
 </a>
 
 <a href="https://wa.me/8801980440825" target="_blank">
-<i class="fa-brands fa-whatsapp"></i> WhatsApp
+<i class="fa-brands fa-whatsapp"></i>
+WhatsApp
 </a>
 
 <a href="https://t.me/+8801980440825" target="_blank">
-<i class="fa-brands fa-telegram"></i> Telegram
+<i class="fa-brands fa-telegram"></i>
+Telegram
 </a>
 
 <a href="viber://chat?number=%2B8801980440825">
-<i class="fa-brands fa-viber"></i> Viber
-</a>
-
-</div>
-
-<button class="quick-btn" onclick="toggleQuick()">
-<i class="fa-solid fa-ellipsis-vertical"></i>
-</button>
-
-<div class="quick-menu" id="quickMenu">
-
-<a href="tel:+8801575053421" title="Teletalk">
-<i class="fa-solid fa-phone"></i>
-</a>
-
-<a href="tel:+8801980440825" title="Banglalink">
-<i class="fa-solid fa-phone"></i>
-</a>
-
-<a href="https://wa.me/8801980440825" target="_blank" title="WhatsApp">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
-
-<a href="https://t.me/+8801980440825" target="_blank" title="Telegram">
-<i class="fa-brands fa-telegram"></i>
-</a>
-
-<a href="viber://chat?number=%2B8801980440825" title="Viber">
 <i class="fa-brands fa-viber"></i>
+Viber
 </a>
 
 </div>
+
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
-<div class="slide active">
-<img src="https://images.pexels.com/photos/35562107/pexels-photo-35562107.jpeg?auto=compress&cs=tinysrgb&w=1800">
-</div>
+<div class="slides">
 
-<div class="slide">
-<img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2000&q=90">
-</div>
+<div class="slide active"
+style="background-image:url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1600&q=80');">
 
-<div class="slide">
-<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2000&q=90">
-</div>
-
-<div class="slide">
-<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2000&q=90">
-</div>
-
-<div class="slide">
-<img src="https://images.pexels.com/photos/31282368/pexels-photo-31282368.jpeg?auto=compress&cs=tinysrgb&w=1800">
-</div>
+<div class="slide-content">
 
 <div class="hero-logo">
 
-<div class="logo-shield" style="width:95px;height:110px">
+<div class="logo-shield">
 
-<div class="logo-inner" style="width:82px;height:96px">
+<div class="logo-inner">
 
-<div class="logo-ar" style="font-size:32px">AR</div>
-<div class="logo-small" style="font-size:9px">SECURITY</div>
+<div class="logo-ar">AR</div>
+<div class="logo-small">SECURITY</div>
 
 </div>
+
 </div>
+
 </div>
 
-<div class="hero-content">
-
-<div class="mini">AR SECURITY AND SERVICE</div>
-
-<h1>
-YOUR SAFETY,<br>
-<span>OUR RESPONSIBILITY</span>
-</h1>
+<h2>Professional Security Service</h2>
 
 <p>
-Professional security support for people, property,
-businesses and valuable places — with discipline,
-responsibility and care.
+Reliable security solutions for residential,
+commercial and industrial clients.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#contact" class="btn btn-gold">
+Contact Us
+</a>
+
+<a href="#services" class="btn btn-outline">
+Our Services
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="slide"
+style="background-image:url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1600&q=80');">
+
+<div class="slide-content">
+
+<h2>Trained Security Personnel</h2>
+
+<p>
+Professional and disciplined security personnel
+for your valuable property and organization.
 </p>
 
 </div>
+
+</div>
+
+
+<div class="slide"
+style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80');">
+
+<div class="slide-content">
+
+<h2>Corporate Security Solutions</h2>
+
+<p>
+Complete security management for offices,
+factories, institutions and businesses.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="slide"
+style="background-image:url('https://images.unsplash.com/photo-1557862921-37829c790f19?auto=format&fit=crop&w=1600&q=80');">
+
+<div class="slide-content">
+
+<h2>Safety & Protection</h2>
+
+<p>
+Your safety and protection are our priority.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="slide"
+style="background-image:url('https://images.unsplash.com/photo-1504306660847-8a7a0d7f1c8d?auto=format&fit=crop&w=1600&q=80');">
+
+<div class="slide-content">
+
+<h2>24/7 Security Support</h2>
+
+<p>
+Dedicated security support for peace of mind.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 
 <button class="slider-arrow prev" onclick="changeSlide(-1)">
 <i class="fa-solid fa-chevron-left"></i>
@@ -858,213 +1128,226 @@ responsibility and care.
 <i class="fa-solid fa-chevron-right"></i>
 </button>
 
+
 <div class="dots">
 
-<span class="dot active" onclick="goToSlide(0)"></span>
-<span class="dot" onclick="goToSlide(1)"></span>
-<span class="dot" onclick="goToSlide(2)"></span>
-<span class="dot" onclick="goToSlide(3)"></span>
-<span class="dot" onclick="goToSlide(4)"></span>
+<span class="dot active" onclick="goSlide(0)"></span>
+<span class="dot" onclick="goSlide(1)"></span>
+<span class="dot" onclick="goSlide(2)"></span>
+<span class="dot" onclick="goSlide(3)"></span>
+<span class="dot" onclick="goSlide(4)"></span>
 
 </div>
 
 </section>
 
-<section id="gallery">
 
-<div class="feature">
+<!-- =========================
+     FEATURES
+========================= -->
 
-<div class="feature-image">
-<img src="https://images.pexels.com/photos/12304330/pexels-photo-12304330.jpeg?auto=compress&cs=tinysrgb&w=1400">
-</div>
+<section>
 
-<div class="feature-text">
+<div class="container">
 
-<span>PROFESSIONAL PROTECTION</span>
+<div class="section-title">
 
-<h2>Protection That You Can Trust</h2>
-
-<p>
-Security is more than simply watching a place. It is about
-discipline, responsibility, awareness and protecting what
-matters to our clients.
-</p>
-
-<p>
-AR Security and Service is committed to providing
-professional and dependable security support for
-organizations, businesses, residential properties and
-important places.
-</p>
+<h2>Our Commitment</h2>
+<span></span>
 
 </div>
-</div>
 
-<div class="feature reverse">
 
-<div class="feature-image">
-<img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=90">
-</div>
+<div class="features">
 
-<div class="feature-text">
+<div class="feature-card">
 
-<span>PROTECTING VALUABLE PLACES</span>
+<i class="fa-solid fa-shield-halved"></i>
 
-<h2>Every Property Deserves Professional Protection</h2>
+<h3>Security First</h3>
 
 <p>
-From large commercial spaces to industrial facilities
-and residential properties, every place deserves a
-responsible security approach.
-</p>
-
-<p>
-Our focus is to help create a secure environment where
-people can work, live and operate with greater confidence.
+We focus on protecting people,
+property and business assets.
 </p>
 
 </div>
-</div>
 
-<div class="feature">
 
-<div class="feature-image">
-<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=90">
-</div>
+<div class="feature-card">
 
-<div class="feature-text">
+<i class="fa-solid fa-user-shield"></i>
 
-<span>SAFETY • RESPONSIBILITY • CARE</span>
-
-<h2>We Protect What Matters</h2>
+<h3>Professional Guards</h3>
 
 <p>
-A safe environment gives people confidence. Our services
-are built around responsible protection, professional
-discipline and careful attention to the places entrusted
-to us.
+Disciplined and responsible security
+personnel for different environments.
 </p>
 
 </div>
+
+
+<div class="feature-card">
+
+<i class="fa-solid fa-clock"></i>
+
+<h3>24/7 Support</h3>
+
+<p>
+Security support designed to provide
+continuous protection.
+</p>
+
+</div>
+
+</div>
+
 </div>
 
 </section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section class="about" id="about">
 
+<div class="container">
+
 <div class="section-title">
 
-<span>ABOUT OUR COMPANY</span>
+<h2>About Us</h2>
+<span></span>
 
-<h2>Security With Responsibility</h2>
+</div>
+
+
+<div class="about-grid">
+
+<div>
+
+<h3 style="color:#681c2e;font-size:30px;margin-bottom:15px;">
+AR Security and Service
+</h3>
 
 <p>
-AR Security and Service (Pvt) Ltd. is committed to providing
-professional security support with discipline, responsibility
-and respect for every client and every property.
+AR Security and Service (Pvt) Ltd. is committed
+to providing professional and reliable security
+services for individuals, businesses, institutions
+and organizations.
 </p>
+
+<p style="margin-top:15px;">
+Our goal is to provide disciplined security
+personnel and practical security solutions
+according to our clients' requirements.
+</p>
+
+</div>
+
+
+<div class="about-box">
+
+<h3>Our Mission</h3>
+
+<p>
+To provide dependable security services with
+discipline, responsibility, professionalism and
+respect for our clients.
+</p>
+
+<ul class="about-list">
+
+<li>
+<i class="fa-solid fa-check"></i>
+Professional service
+</li>
+
+<li>
+<i class="fa-solid fa-check"></i>
+Responsible personnel
+</li>
+
+<li>
+<i class="fa-solid fa-check"></i>
+Client-focused solutions
+</li>
+
+<li>
+<i class="fa-solid fa-check"></i>
+Security awareness
+</li>
+
+</ul>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<section class="services" id="services">
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section id="gallery">
+
+<div class="container">
 
 <div class="section-title">
 
-<span>OUR SERVICES</span>
+<h2>Security Services</h2>
+<span></span>
 
-<h2>Professional Security Services</h2>
+</div>
+
+
+<div class="features">
+
+<div class="feature-card">
+
+<i class="fa-solid fa-building-shield"></i>
+
+<h3>Building Security</h3>
 
 <p>
-Reliable security support designed for different types
-of properties, organizations and events.
+Security services for residential
+and commercial buildings.
 </p>
 
 </div>
 
-<div class="service-grid">
 
-<div class="service-card">
+<div class="feature-card">
 
-<img src="https://images.pexels.com/photos/8285775/pexels-photo-8285775.jpeg?auto=compress&cs=tinysrgb&w=1000">
+<i class="fa-solid fa-industry"></i>
 
-<div class="service-card-content">
-<h3>Security Guard Service</h3>
+<h3>Industrial Security</h3>
+
 <p>
-Professional security personnel for protecting people,
-property and important premises.
+Security support for factories,
+warehouses and industrial sites.
 </p>
-</div>
 
 </div>
 
-<div class="service-card">
 
-<img src="https://images.pexels.com/photos/38702227/pexels-photo-38702227.jpeg?auto=compress&cs=tinysrgb&w=1000">
+<div class="feature-card">
 
-<div class="service-card-content">
+<i class="fa-solid fa-business-time"></i>
+
 <h3>Corporate Security</h3>
+
 <p>
-Security support for offices, organizations and corporate
-facilities.
+Security solutions for offices,
+organizations and businesses.
 </p>
-</div>
 
-</div>
-
-<div class="service-card">
-
-<img src="https://images.pexels.com/photos/31516776/pexels-photo-31516776.jpeg?auto=compress&cs=tinysrgb&w=1000">
-
-<div class="service-card-content">
-<h3>Residential Security</h3>
-<p>
-Responsible security support for residential properties
-and communities.
-</p>
-</div>
-
-</div>
-
-<div class="service-card">
-
-<img src="https://images.pexels.com/photos/15482700/pexels-photo-15482700.jpeg?auto=compress&cs=tinysrgb&w=1000">
-
-<div class="service-card-content">
-<h3>Access Control</h3>
-<p>
-Helping maintain controlled and organized access to
-important premises.
-</p>
-</div>
-
-</div>
-
-<div class="service-card">
-
-<img src="https://images.pexels.com/photos/31282368/pexels-photo-31282368.jpeg?auto=compress&cs=tinysrgb&w=1000">
-
-<div class="service-card-content">
-<h3>Event Security</h3>
-<p>
-Security support for events, gatherings and important
-occasions.
-</p>
-</div>
-
-</div>
-
-<div class="service-card">
-
-<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=90">
-
-<div class="service-card-content">
-<h3>Security Support</h3>
-<p>
-Flexible security support based on the needs of each
-client and property.
-</p>
 </div>
 
 </div>
@@ -1072,139 +1355,305 @@ client and property.
 </div>
 
 </section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services" style="background:#f2ece3;">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Our Services</h2>
+<span></span>
+
+</div>
+
+
+<div class="services-grid">
+
+
+<div class="service-card">
+
+<i class="fa-solid fa-user-shield"></i>
+
+<h3>Security Guard</h3>
+
+<p>
+Professional security guards for
+offices, homes, factories and businesses.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<i class="fa-solid fa-building-shield"></i>
+
+<h3>Corporate Security</h3>
+
+<p>
+Security personnel and solutions
+for corporate environments.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<i class="fa-solid fa-industry"></i>
+
+<h3>Industrial Security</h3>
+
+<p>
+Security support for industrial
+facilities and factories.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<i class="fa-solid fa-house"></i>
+
+<h3>Residential Security</h3>
+
+<p>
+Security solutions for residential
+buildings and communities.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+<h3>Event Security</h3>
+
+<p>
+Security support for events,
+programs and special occasions.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<i class="fa-solid fa-shield"></i>
+
+<h3>Customized Security</h3>
+
+<p>
+Security solutions according to
+specific client requirements.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     STATEMENT
+========================= -->
 
 <section class="statement">
 
-<h2>WE PROTECT WHAT MATTERS</h2>
+<div class="container">
+
+<h2>Your Safety. Our Responsibility.</h2>
 
 <p>
-Safety is not just a service. It is a responsibility.
-Our goal is to help create secure, disciplined and
-professional environments for people, businesses and
-properties.
+We believe that professional security is built
+on discipline, responsibility and trust.
 </p>
+
+</div>
 
 </section>
 
-<section id="why">
+
+<!-- =========================
+     WHY US
+========================= -->
+
+<section class="why" id="why">
+
+<div class="container">
 
 <div class="section-title">
 
-<span>WHY AR SECURITY</span>
-
-<h2>Built Around Responsibility</h2>
+<h2>Why Choose Us</h2>
+<span></span>
 
 </div>
+
 
 <div class="why-grid">
 
-<div class="why-box">
+
+<div class="why-card">
+
+<i class="fa-solid fa-user-tie"></i>
+
+<h3>Professional</h3>
+
+</div>
+
+
+<div class="why-card">
+
+<i class="fa-solid fa-clock"></i>
+
+<h3>Reliable</h3>
+
+</div>
+
+
+<div class="why-card">
+
 <i class="fa-solid fa-shield-halved"></i>
-<h3>Professional Approach</h3>
-<p>
-A disciplined and responsible approach to security service.
-</p>
+
+<h3>Security Focused</h3>
+
 </div>
 
-<div class="why-box">
-<i class="fa-solid fa-user-shield"></i>
-<h3>Responsible Service</h3>
-<p>
-We understand the importance of protecting people and property.
-</p>
+
+<div class="why-card">
+
+<i class="fa-solid fa-handshake"></i>
+
+<h3>Client Care</h3>
+
 </div>
 
-<div class="why-box">
-<i class="fa-solid fa-building-shield"></i>
-<h3>Property Protection</h3>
-<p>
-Security support for different types of valuable premises
-and facilities.
-</p>
+
 </div>
 
 </div>
 
 </section>
 
+
+<!-- =========================
+     CONTACT
+========================= -->
+
 <section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Contact Us</h2>
+<span></span>
+
+</div>
+
 
 <div class="contact-grid">
 
-<div>
 
-<h2>Let's Talk About Your Security Needs</h2>
+<div class="contact-box">
 
-<p>
-If you need professional security support for your
-organization, business, property or event, contact
-AR Security and Service today.
-</p>
-
-</div>
-
-<div>
+<h3>Get In Touch</h3>
 
 <div class="contact-item">
 
 <i class="fa-solid fa-phone"></i>
 
-<div>
-<strong>TELETAK</strong>
-<a href="tel:+8801575053421">+880 1575053421</a>
-</div>
+<a href="tel:+8801575053421">
++880 1575053421
+</a>
 
 </div>
+
 
 <div class="contact-item">
 
 <i class="fa-solid fa-phone"></i>
 
-<div>
-<strong>BANGLALINK</strong>
-<a href="tel:+8801980440825">+880 1980440825</a>
-</div>
+<a href="tel:+8801980440825">
++880 1980440825
+</a>
 
 </div>
+
 
 <div class="contact-item">
 
 <i class="fa-brands fa-whatsapp"></i>
 
-<div>
-<strong>WHATSAPP</strong>
 <a href="https://wa.me/8801980440825" target="_blank">
-+880 1980440825
+WhatsApp
 </a>
-</div>
 
 </div>
+
 
 <div class="contact-item">
 
 <i class="fa-brands fa-telegram"></i>
 
-<div>
-<strong>TELEGRAM</strong>
 <a href="https://t.me/+8801980440825" target="_blank">
-+880 1980440825
+Telegram
 </a>
-</div>
 
 </div>
+
 
 <div class="contact-item">
 
 <i class="fa-brands fa-viber"></i>
 
-<div>
-<strong>VIBER</strong>
 <a href="viber://chat?number=%2B8801980440825">
-+880 1980440825
+Viber
 </a>
+
 </div>
 
 </div>
+
+
+<div>
+
+<h3 style="color:#681c2e;font-size:27px;margin-bottom:15px;">
+AR Security and Service (Pvt) Ltd.
+</h3>
+
+<p>
+For security service requirements,
+please contact us using the phone numbers
+or messaging services provided.
+</p>
+
+<div style="margin-top:25px;">
+
+<a href="tel:+8801575053421"
+class="btn btn-gold"
+style="background:#681c2e;color:#f5d36a;">
+<i class="fa-solid fa-phone"></i>
+Call Now
+</a>
+
+</div>
+
+</div>
+
 
 </div>
 
@@ -1212,67 +1661,179 @@ AR Security and Service today.
 
 </section>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-<strong>AR Security and Service (Pvt) Ltd.</strong><br>
-Professional Security Support • Responsibility • Care<br>
-© 2026 AR Security and Service. All Rights Reserved.
+<p>
+© 2026 <strong>AR Security and Service (Pvt) Ltd.</strong>
+</p>
+
+<p style="margin-top:5px;font-size:13px;">
+Professional Security Service
+</p>
 
 </footer>
 
+
+<!-- =========================
+     QUICK THREE DOT BUTTON
+========================= -->
+
+<button class="quick-btn" onclick="toggleQuick()">
+
+<i class="fa-solid fa-ellipsis-vertical"></i>
+
+</button>
+
+
+<div class="quick-menu" id="quickMenu">
+
+<a href="tel:+8801575053421"
+title="Teletalk">
+
+<i class="fa-solid fa-phone"></i>
+
+</a>
+
+
+<a href="tel:+8801980440825"
+title="Banglalink">
+
+<i class="fa-solid fa-phone"></i>
+
+</a>
+
+
+<a href="https://wa.me/8801980440825"
+target="_blank"
+title="WhatsApp">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+<a href="https://t.me/+8801980440825"
+target="_blank"
+title="Telegram">
+
+<i class="fa-brands fa-telegram"></i>
+
+</a>
+
+
+<a href="viber://chat?number=%2B8801980440825"
+title="Viber">
+
+<i class="fa-brands fa-viber"></i>
+
+</a>
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
 
+/* MOBILE MENU */
+
+function openMenu(){
+
+document.getElementById("mobileMenu")
+.classList.add("show");
+
+}
+
+function closeMenu(){
+
+document.getElementById("mobileMenu")
+.classList.remove("show");
+
+}
+
+
+/* QUICK MENU */
+
+function toggleQuick(){
+
+document.getElementById("quickMenu")
+.classList.toggle("show");
+
+}
+
+
+/* SLIDER */
+
 let currentSlide = 0;
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
+
+const slides =
+document.querySelectorAll(".slide");
+
+const dots =
+document.querySelectorAll(".dot");
+
 
 function showSlide(index){
 
 if(index >= slides.length){
-index = 0;
+currentSlide = 0;
 }
 
-if(index < 0){
-index = slides.length - 1;
+else if(index < 0){
+currentSlide = slides.length - 1;
 }
 
-slides.forEach(slide => {
-slide.classList.remove("active");
-});
-
-dots.forEach(dot => {
-dot.classList.remove("active");
-});
-
-slides[index].classList.add("active");
-dots[index].classList.add("active");
-
+else{
 currentSlide = index;
 }
 
-function changeSlide(direction){
-showSlide(currentSlide + direction);
+
+slides.forEach(function(slide){
+slide.classList.remove("active");
+});
+
+dots.forEach(function(dot){
+dot.classList.remove("active");
+});
+
+
+slides[currentSlide]
+.classList.add("active");
+
+dots[currentSlide]
+.classList.add("active");
+
 }
 
-function goToSlide(index){
-showSlide(index);
+
+function changeSlide(direction){
+
+showSlide(currentSlide + direction);
+
 }
+
+
+function goSlide(index){
+
+showSlide(index);
+
+}
+
+
+/* AUTO SLIDER */
 
 setInterval(function(){
+
 changeSlide(1);
+
 },5000);
-
-function openMenu(){
-document.getElementById("mobileMenu").classList.add("open");
-}
-
-function closeMenu(){
-document.getElementById("mobileMenu").classList.remove("open");
-}
-
-function toggleQuick(){
-document.getElementById("quickMenu").classList.toggle("show");
-}
 
 </script>
 
