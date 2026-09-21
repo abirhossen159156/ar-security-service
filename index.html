@@ -6,745 +6,802 @@
 
 <title>AR Security and Service (Pvt) Ltd.</title>
 
-<!-- Font Awesome Icons -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f7f3f0;
-    color:#241b1d;
-    line-height:1.6;
+font-family:Arial,Helvetica,sans-serif;
+background:#f7f3f0;
+color:#241b1d;
+line-height:1.6
 }
 
-/* ================= HEADER ================= */
-
+/* ===== HEADER ===== */
 header{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    padding:18px 5%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(53,10,20,0.82);
-    backdrop-filter:blur(8px);
+position:absolute;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+padding:15px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(67,15,28,.88);
+backdrop-filter:blur(8px)
 }
-
-/* ================= LOGO ================= */
 
 .logo-area{
-    display:flex;
-    align-items:center;
-    gap:14px;
+display:flex;
+align-items:center;
+gap:12px
 }
 
 .logo-shield{
-    width:72px;
-    height:84px;
-    background:linear-gradient(145deg,#f5d36a,#c99b25);
-    clip-path:polygon(
-        50% 0%,
-        92% 13%,
-        92% 56%,
-        82% 73%,
-        67% 88%,
-        50% 100%,
-        33% 88%,
-        18% 73%,
-        8% 56%,
-        8% 13%
-    );
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:0 8px 25px rgba(0,0,0,.35);
-    flex-shrink:0;
+width:68px;
+height:80px;
+background:linear-gradient(145deg,#f5d36a,#b88619);
+clip-path:polygon(50% 0%,92% 13%,92% 56%,82% 73%,67% 88%,50% 100%,33% 88%,18% 73%,8% 56%,8% 13%);
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 7px 22px rgba(0,0,0,.35)
 }
 
 .logo-inner{
-    width:62px;
-    height:73px;
-    background:#671c2d;
-    clip-path:polygon(
-        50% 0%,
-        92% 13%,
-        92% 56%,
-        82% 73%,
-        67% 88%,
-        50% 100%,
-        33% 88%,
-        18% 73%,
-        8% 56%,
-        8% 13%
-    );
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    color:#f5d36a;
+width:58px;
+height:70px;
+background:#681c2e;
+clip-path:polygon(50% 0%,92% 13%,92% 56%,82% 73%,67% 88%,50% 100%,33% 88%,18% 73%,8% 56%,8% 13%);
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+color:#f5d36a
 }
 
 .logo-ar{
-    font-size:25px;
-    font-weight:900;
-    letter-spacing:1px;
+font-size:25px;
+font-weight:900;
+letter-spacing:1px
 }
 
 .logo-small{
-    font-size:7px;
-    font-weight:bold;
-    letter-spacing:.5px;
-}
-
-.brand-text{
-    color:white;
+font-size:7px;
+font-weight:bold;
+letter-spacing:.5px
 }
 
 .brand-text strong{
-    display:block;
-    color:#f5d36a;
-    font-size:17px;
-    letter-spacing:.5px;
+display:block;
+color:#f5d36a;
+font-size:16px
 }
 
 .brand-text span{
-    font-size:11px;
-    color:#fff;
+color:white;
+font-size:10px
 }
 
-/* ================= NAV ================= */
+/* ===== DESKTOP MENU ===== */
+nav{
+display:flex;
+align-items:center
+}
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:24px;
-    font-size:14px;
-    font-weight:bold;
+color:white;
+text-decoration:none;
+margin-left:22px;
+font-size:14px;
+font-weight:bold
 }
 
 nav a:hover{
-    color:#f5d36a;
+color:#f5d36a
 }
 
-/* ================= HERO SLIDER ================= */
+/* ===== MOBILE MENU BUTTON ===== */
+.menu-btn{
+display:none;
+background:#681c2e;
+color:#f5d36a;
+border:1px solid #f5d36a;
+width:44px;
+height:44px;
+border-radius:8px;
+font-size:22px;
+cursor:pointer
+}
 
+/* ===== MOBILE MENU ===== */
+.mobile-menu{
+position:fixed;
+top:0;
+right:-310px;
+width:290px;
+height:100vh;
+background:#681c2e;
+z-index:2000;
+padding:25px;
+transition:.35s ease;
+box-shadow:-8px 0 30px rgba(0,0,0,.35)
+}
+
+.mobile-menu.open{
+right:0
+}
+
+.mobile-menu .close-btn{
+background:none;
+border:0;
+color:#f5d36a;
+font-size:28px;
+float:right;
+cursor:pointer
+}
+
+.mobile-menu h3{
+clear:both;
+color:#f5d36a;
+padding:30px 0 18px;
+border-bottom:1px solid rgba(255,255,255,.2)
+}
+
+.mobile-menu a{
+display:block;
+color:white;
+text-decoration:none;
+padding:13px 5px;
+border-bottom:1px solid rgba(255,255,255,.1)
+}
+
+.mobile-menu a i{
+width:28px;
+color:#f5d36a
+}
+
+/* ===== QUICK MENU ===== */
+.quick-btn{
+position:fixed;
+right:18px;
+bottom:20px;
+z-index:1500;
+width:52px;
+height:52px;
+border-radius:50%;
+border:2px solid #f5d36a;
+background:#681c2e;
+color:#f5d36a;
+font-size:21px;
+cursor:pointer;
+box-shadow:0 6px 20px rgba(0,0,0,.3)
+}
+
+.quick-menu{
+position:fixed;
+right:18px;
+bottom:82px;
+z-index:1499;
+display:none;
+flex-direction:column;
+gap:9px
+}
+
+.quick-menu.show{
+display:flex
+}
+
+.quick-menu a{
+width:45px;
+height:45px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+text-decoration:none;
+font-size:20px;
+background:#681c2e;
+border:1px solid #f5d36a;
+box-shadow:0 4px 15px rgba(0,0,0,.25)
+}
+
+/* ===== HERO ===== */
 .hero{
-    position:relative;
-    height:100vh;
-    min-height:620px;
-    overflow:hidden;
-    background:#350a14;
+position:relative;
+height:100vh;
+min-height:620px;
+overflow:hidden;
+background:#350a14
 }
 
 .slide{
-    position:absolute;
-    inset:0;
-    opacity:0;
-    transition:opacity 1s ease;
-    pointer-events:none;
+position:absolute;
+inset:0;
+opacity:0;
+transition:opacity 1s ease
 }
 
-.slide.active{
-    opacity:1;
-    pointer-events:auto;
-}
+.slide.active{opacity:1}
 
 .slide img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+width:100%;
+height:100%;
+object-fit:cover
 }
 
-.slide::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(38,5,12,.82),
-            rgba(38,5,12,.35),
-            rgba(38,5,12,.45)
-        );
-}
-
-.hero-content{
-    position:absolute;
-    z-index:5;
-    top:50%;
-    left:7%;
-    transform:translateY(-50%);
-    max-width:720px;
-    color:white;
-}
-
-.hero-content .mini{
-    color:#f5d36a;
-    font-size:15px;
-    font-weight:bold;
-    letter-spacing:3px;
-    margin-bottom:15px;
-}
-
-.hero-content h1{
-    font-size:clamp(42px,6vw,78px);
-    line-height:1.05;
-    margin-bottom:22px;
-}
-
-.hero-content h1 span{
-    color:#f5d36a;
-}
-
-.hero-content p{
-    font-size:19px;
-    max-width:650px;
-    color:#f7eeee;
+.slide:after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(90deg,rgba(38,5,12,.82),rgba(38,5,12,.35),rgba(38,5,12,.45))
 }
 
 .hero-logo{
-    position:absolute;
-    z-index:10;
-    top:125px;
-    left:50%;
-    transform:translateX(-50%);
+position:absolute;
+z-index:10;
+top:120px;
+left:50%;
+transform:translateX(-50%)
 }
 
-/* arrows */
+.hero-content{
+position:absolute;
+z-index:10;
+top:52%;
+left:7%;
+transform:translateY(-50%);
+max-width:720px;
+color:white
+}
+
+.hero-content .mini{
+color:#f5d36a;
+font-size:14px;
+font-weight:bold;
+letter-spacing:3px;
+margin-bottom:14px
+}
+
+.hero-content h1{
+font-size:clamp(42px,6vw,76px);
+line-height:1.05;
+margin-bottom:22px
+}
+
+.hero-content h1 span{
+color:#f5d36a
+}
+
+.hero-content p{
+font-size:19px;
+max-width:650px
+}
 
 .slider-arrow{
-    position:absolute;
-    z-index:20;
-    top:50%;
-    transform:translateY(-50%);
-    width:52px;
-    height:52px;
-    border:1px solid rgba(255,255,255,.5);
-    background:rgba(103,28,45,.65);
-    color:#f5d36a;
-    border-radius:50%;
-    cursor:pointer;
-    font-size:20px;
+position:absolute;
+z-index:20;
+top:50%;
+transform:translateY(-50%);
+width:52px;
+height:52px;
+border:1px solid white;
+background:rgba(104,28,46,.7);
+color:#f5d36a;
+border-radius:50%;
+cursor:pointer;
+font-size:20px
 }
 
-.slider-arrow:hover{
-    background:#f5d36a;
-    color:#671c2d;
-}
-
-.prev{
-    left:25px;
-}
-
-.next{
-    right:25px;
-}
-
-/* dots */
+.prev{left:25px}
+.next{right:25px}
 
 .dots{
-    position:absolute;
-    z-index:30;
-    bottom:35px;
-    left:50%;
-    transform:translateX(-50%);
-    display:flex;
-    gap:9px;
+position:absolute;
+z-index:30;
+bottom:35px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:9px
 }
 
 .dot{
-    width:11px;
-    height:11px;
-    border-radius:50%;
-    border:1px solid white;
-    background:transparent;
-    cursor:pointer;
+width:11px;
+height:11px;
+border-radius:50%;
+border:1px solid white;
+background:transparent;
+cursor:pointer
 }
 
-.dot.active{
-    background:#f5d36a;
-}
+.dot.active{background:#f5d36a}
 
-/* ================= COMMON ================= */
-
-section{
-    padding:90px 7%;
-}
+/* ===== SECTIONS ===== */
+section{padding:90px 7%}
 
 .section-title{
-    text-align:center;
-    max-width:800px;
-    margin:0 auto 50px;
+text-align:center;
+max-width:800px;
+margin:0 auto 50px
 }
 
 .section-title span{
-    color:#a77b18;
-    font-weight:bold;
-    letter-spacing:3px;
-    font-size:13px;
+color:#a77b18;
+font-weight:bold;
+letter-spacing:3px;
+font-size:13px
 }
 
 .section-title h2{
-    font-size:42px;
-    color:#671c2d;
-    margin:10px 0 15px;
+font-size:42px;
+color:#681c2e;
+margin:10px 0 15px
 }
 
-.section-title p{
-    color:#5f5557;
-}
+.section-title p{color:#5f5557}
 
-/* ================= IMAGE TEXT ================= */
-
+/* ===== FEATURES ===== */
 .feature{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    min-height:500px;
-    align-items:center;
-    gap:60px;
-    margin-bottom:80px;
+display:grid;
+grid-template-columns:1fr 1fr;
+min-height:480px;
+align-items:center;
+gap:60px;
+margin-bottom:80px
 }
 
 .feature.reverse{
-    direction:rtl;
+direction:rtl
 }
 
-.feature.reverse > *{
-    direction:ltr;
+.feature.reverse>*{
+direction:ltr
 }
 
 .feature-image{
-    height:480px;
-    overflow:hidden;
-    border-radius:18px;
-    box-shadow:0 18px 45px rgba(80,25,35,.18);
+height:470px;
+overflow:hidden;
+border-radius:18px;
+box-shadow:0 18px 45px rgba(80,25,35,.18)
 }
 
 .feature-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:transform .7s ease;
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.7s
 }
 
 .feature-image:hover img{
-    transform:scale(1.05);
+transform:scale(1.05)
 }
 
 .feature-text span{
-    color:#a77b18;
-    font-weight:bold;
-    letter-spacing:2px;
+color:#a77b18;
+font-weight:bold;
+letter-spacing:2px
 }
 
 .feature-text h2{
-    color:#671c2d;
-    font-size:42px;
-    line-height:1.15;
-    margin:15px 0 20px;
+color:#681c2e;
+font-size:42px;
+line-height:1.15;
+margin:15px 0 20px
 }
 
 .feature-text p{
-    color:#51484a;
-    font-size:17px;
-    margin-bottom:18px;
+color:#51484a;
+font-size:17px;
+margin-bottom:18px
 }
 
-/* ================= ABOUT ================= */
-
+/* ===== ABOUT ===== */
 .about{
-    background:#671c2d;
-    color:white;
+background:#681c2e;
+color:white
 }
 
-.about .section-title h2{
-    color:#f5d36a;
-}
+.about .section-title h2{color:#f5d36a}
+.about .section-title p{color:#f4e8e9}
 
-.about .section-title p{
-    color:#f4e8e9;
-}
-
-/* ================= SERVICES ================= */
-
-.services{
-    background:#f7f3f0;
-}
+/* ===== SERVICES ===== */
+.services{background:#f7f3f0}
 
 .service-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px
 }
 
 .service-card{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 10px 30px rgba(50,20,25,.1);
-    transition:.3s;
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(50,20,25,.1);
+transition:.3s
 }
 
-.service-card:hover{
-    transform:translateY(-8px);
-}
+.service-card:hover{transform:translateY(-8px)}
 
 .service-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
+width:100%;
+height:220px;
+object-fit:cover
 }
 
-.service-card-content{
-    padding:25px;
-}
+.service-card-content{padding:25px}
 
 .service-card h3{
-    color:#671c2d;
-    margin-bottom:10px;
+color:#681c2e;
+margin-bottom:10px
 }
 
-.service-card p{
-    color:#62595b;
-}
+.service-card p{color:#62595b}
 
-/* ================= STATEMENT ================= */
-
+/* ===== STATEMENT ===== */
 .statement{
-    background:
-    linear-gradient(rgba(70,12,25,.87),rgba(70,12,25,.87)),
-    url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1800&q=85")
-    center/cover;
-    color:white;
-    text-align:center;
-    padding:120px 7%;
+background:
+linear-gradient(rgba(70,12,25,.87),rgba(70,12,25,.87)),
+url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1800&q=90")
+center/cover;
+color:white;
+text-align:center;
+padding:120px 7%
 }
 
 .statement h2{
-    color:#f5d36a;
-    font-size:48px;
-    margin-bottom:20px;
+color:#f5d36a;
+font-size:48px;
+margin-bottom:20px
 }
 
 .statement p{
-    max-width:850px;
-    margin:auto;
-    font-size:20px;
+max-width:850px;
+margin:auto;
+font-size:20px
 }
 
-/* ================= WHY US ================= */
-
+/* ===== WHY ===== */
 .why-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px
 }
 
 .why-box{
-    background:white;
-    padding:35px 25px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 8px 25px rgba(50,20,25,.08);
+background:white;
+padding:35px 25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 8px 25px rgba(50,20,25,.08)
 }
 
 .why-box i{
-    font-size:38px;
-    color:#b78b25;
-    margin-bottom:15px;
+font-size:38px;
+color:#b78b25;
+margin-bottom:15px
 }
 
 .why-box h3{
-    color:#671c2d;
-    margin-bottom:10px;
+color:#681c2e;
+margin-bottom:10px
 }
 
-/* ================= CONTACT ================= */
-
+/* ===== CONTACT ===== */
 .contact{
-    background:#671c2d;
-    color:white;
+background:#681c2e;
+color:white
 }
 
 .contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center
 }
 
 .contact h2{
-    font-size:44px;
-    color:#f5d36a;
-    margin-bottom:20px;
+font-size:44px;
+color:#f5d36a;
+margin-bottom:20px
 }
 
-.contact p{
-    color:#f3e6e8;
-}
+.contact p{color:#f3e6e8}
 
 .contact-item{
-    display:flex;
-    align-items:center;
-    gap:17px;
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.12);
-    padding:18px;
-    margin-bottom:13px;
-    border-radius:12px;
+display:flex;
+align-items:center;
+gap:17px;
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.12);
+padding:18px;
+margin-bottom:13px;
+border-radius:12px
 }
 
 .contact-item i{
-    width:45px;
-    text-align:center;
-    font-size:27px;
-    color:#f5d36a;
+width:45px;
+text-align:center;
+font-size:27px;
+color:#f5d36a
 }
 
 .contact-item strong{
-    display:block;
-    font-size:13px;
-    color:#e7c96b;
+display:block;
+font-size:13px;
+color:#e7c96b
 }
 
 .contact-item a,
 .contact-item span{
-    color:white;
-    text-decoration:none;
-    font-size:17px;
+color:white;
+text-decoration:none;
+font-size:17px
 }
 
-/* ================= FOOTER ================= */
-
+/* ===== FOOTER ===== */
 footer{
-    background:#26070f;
-    color:#d9cdd0;
-    text-align:center;
-    padding:28px 15px;
-    font-size:13px;
+background:#26070f;
+color:#d9cdd0;
+text-align:center;
+padding:28px 15px;
+font-size:13px
 }
 
-footer strong{
-    color:#f5d36a;
-}
+footer strong{color:#f5d36a}
 
-/* ================= RESPONSIVE ================= */
-
+/* ===== RESPONSIVE ===== */
 @media(max-width:900px){
 
-    header{
-        padding:12px 4%;
-    }
+header{
+padding:11px 4%
+}
 
-    nav{
-        display:none;
-    }
+nav{display:none}
 
-    .hero{
-        min-height:650px;
-    }
+.menu-btn{
+display:block
+}
 
-    .hero-logo{
-        top:100px;
-    }
+.brand-text strong{font-size:12px}
+.brand-text span{font-size:8px}
 
-    .hero-content{
-        left:6%;
-        right:6%;
-    }
+.logo-shield{
+width:57px;
+height:68px
+}
 
-    .hero-content h1{
-        font-size:43px;
-    }
+.logo-inner{
+width:48px;
+height:58px
+}
 
-    .hero-content p{
-        font-size:16px;
-    }
+.logo-ar{font-size:19px}
 
-    .feature,
-    .feature.reverse{
-        grid-template-columns:1fr;
-        direction:ltr;
-        gap:30px;
-    }
+.hero{
+min-height:650px
+}
 
-    .feature-image{
-        height:360px;
-    }
+.hero-content{
+left:6%;
+right:6%
+}
 
-    .feature-text h2{
-        font-size:34px;
-    }
+.hero-content h1{
+font-size:43px
+}
 
-    .service-grid,
-    .why-grid{
-        grid-template-columns:1fr;
-    }
+.hero-content p{
+font-size:16px
+}
 
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
+.feature,
+.feature.reverse{
+grid-template-columns:1fr;
+direction:ltr;
+gap:30px
+}
 
-    .statement h2{
-        font-size:35px;
-    }
+.feature-image{height:360px}
 
-    section{
-        padding:70px 5%;
-    }
+.feature-text h2{font-size:34px}
 
+.service-grid,
+.why-grid{
+grid-template-columns:1fr
+}
+
+.contact-grid{
+grid-template-columns:1fr
+}
+
+.statement h2{font-size:35px}
+
+section{
+padding:70px 5%
+}
 }
 
 @media(max-width:500px){
 
-    .logo-shield{
-        width:57px;
-        height:68px;
-    }
+.hero-logo{top:92px}
 
-    .logo-inner{
-        width:49px;
-        height:59px;
-    }
-
-    .logo-ar{
-        font-size:19px;
-    }
-
-    .brand-text strong{
-        font-size:13px;
-    }
-
-    .brand-text span{
-        font-size:8px;
-    }
-
-    .hero-logo{
-        top:95px;
-    }
-
-    .slider-arrow{
-        width:42px;
-        height:42px;
-    }
-
-    .prev{
-        left:12px;
-    }
-
-    .next{
-        right:12px;
-    }
-
-    .hero-content h1{
-        font-size:36px;
-    }
-
-    .hero-content .mini{
-        font-size:11px;
-    }
-
+.hero-content h1{
+font-size:35px
 }
 
+.slider-arrow{
+width:42px;
+height:42px
+}
+
+.prev{left:12px}
+.next{right:12px}
+}
 </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
+<!-- ===== HEADER ===== -->
 <header>
 
 <div class="logo-area">
 
 <div class="logo-shield">
-    <div class="logo-inner">
-        <div class="logo-ar">AR</div>
-        <div class="logo-small">SECURITY</div>
-    </div>
+<div class="logo-inner">
+<div class="logo-ar">AR</div>
+<div class="logo-small">SECURITY</div>
+</div>
 </div>
 
 <div class="brand-text">
-    <strong>AR (ABIR) SECURITY SERVICE</strong>
-    <span>AR Security and Service (Pvt) Ltd.</span>
+<strong>AR (ABIR) SECURITY SERVICE</strong>
+<span>AR Security and Service (Pvt) Ltd.</span>
 </div>
 
 </div>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#why">Why Us</a>
+<a href="#contact">Contact</a>
 </nav>
+
+<button class="menu-btn" onclick="openMenu()">
+<i class="fa-solid fa-bars"></i>
+</button>
 
 </header>
 
 
-<!-- ================= HERO SLIDER ================= -->
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-menu" id="mobileMenu">
+
+<button class="close-btn" onclick="closeMenu()">
+<i class="fa-solid fa-xmark"></i>
+</button>
+
+<h3>AR SECURITY MENU</h3>
+
+<a href="#home" onclick="closeMenu()">
+<i class="fa-solid fa-house"></i> Home
+</a>
+
+<a href="#about" onclick="closeMenu()">
+<i class="fa-solid fa-building"></i> About Us
+</a>
+
+<a href="#services" onclick="closeMenu()">
+<i class="fa-solid fa-shield-halved"></i> Services
+</a>
+
+<a href="#gallery" onclick="closeMenu()">
+<i class="fa-solid fa-images"></i> Gallery
+</a>
+
+<a href="#why" onclick="closeMenu()">
+<i class="fa-solid fa-star"></i> Why Choose Us
+</a>
+
+<a href="#contact" onclick="closeMenu()">
+<i class="fa-solid fa-address-book"></i> Contact
+</a>
+
+<a href="tel:+8801980440825">
+<i class="fa-solid fa-phone"></i> Call
+</a>
+
+<a href="https://wa.me/8801980440825" target="_blank">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp
+</a>
+
+<a href="#contact" onclick="closeMenu()">
+<i class="fa-brands fa-telegram"></i> Telegram
+</a>
+
+<a href="#contact" onclick="closeMenu()">
+<i class="fa-brands fa-viber"></i> Viber
+</a>
+
+</div>
+
+
+<!-- ===== QUICK THREE-DOT BUTTON ===== -->
+
+<button class="quick-btn" onclick="toggleQuick()">
+<i class="fa-solid fa-ellipsis-vertical"></i>
+</button>
+
+<div class="quick-menu" id="quickMenu">
+
+<a href="tel:+8801980440825" title="Call">
+<i class="fa-solid fa-phone"></i>
+</a>
+
+<a href="https://wa.me/8801980440825" target="_blank" title="WhatsApp">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<a href="#contact" title="Telegram">
+<i class="fa-brands fa-telegram"></i>
+</a>
+
+<a href="#contact" title="Viber">
+<i class="fa-brands fa-viber"></i>
+</a>
+
+</div>
+
+
+<!-- ===== HERO SLIDER ===== -->
 
 <section class="hero" id="home">
 
-<!-- Slide 1 -->
 <div class="slide active">
 <img src="https://images.pexels.com/photos/35562107/pexels-photo-35562107.jpeg?auto=compress&cs=tinysrgb&w=1800">
 </div>
 
-<!-- Slide 2 -->
 <div class="slide">
 <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2000&q=90">
 </div>
 
-<!-- Slide 3 -->
 <div class="slide">
 <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2000&q=90">
 </div>
 
-<!-- Slide 4 -->
 <div class="slide">
 <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2000&q=90">
 </div>
 
-<!-- Slide 5 -->
 <div class="slide">
 <img src="https://images.pexels.com/photos/31282368/pexels-photo-31282368.jpeg?auto=compress&cs=tinysrgb&w=1800">
 </div>
 
-
-<!-- Logo on image -->
-
 <div class="hero-logo">
-    <div class="logo-shield" style="width:95px;height:110px;">
-        <div class="logo-inner" style="width:82px;height:96px;">
-            <div class="logo-ar" style="font-size:32px;">AR</div>
-            <div class="logo-small" style="font-size:9px;">SECURITY</div>
-        </div>
-    </div>
+
+<div class="logo-shield" style="width:95px;height:110px">
+
+<div class="logo-inner" style="width:82px;height:96px">
+
+<div class="logo-ar" style="font-size:32px">AR</div>
+<div class="logo-small" style="font-size:9px">SECURITY</div>
+
 </div>
-
-
-<!-- Hero text -->
+</div>
+</div>
 
 <div class="hero-content">
 
-<div class="mini">
-AR SECURITY AND SERVICE
-</div>
+<div class="mini">AR SECURITY AND SERVICE</div>
 
 <h1>
 YOUR SAFETY,<br>
@@ -759,19 +816,13 @@ responsibility and care.
 
 </div>
 
-
-<!-- Arrows -->
-
 <button class="slider-arrow prev" onclick="changeSlide(-1)">
-    <i class="fa-solid fa-chevron-left"></i>
+<i class="fa-solid fa-chevron-left"></i>
 </button>
 
 <button class="slider-arrow next" onclick="changeSlide(1)">
-    <i class="fa-solid fa-chevron-right"></i>
+<i class="fa-solid fa-chevron-right"></i>
 </button>
-
-
-<!-- Dots -->
 
 <div class="dots">
 
@@ -786,9 +837,9 @@ responsibility and care.
 </section>
 
 
-<!-- ================= FEATURE 1 ================= -->
+<!-- ===== FEATURES / GALLERY ===== -->
 
-<section>
+<section id="gallery">
 
 <div class="feature">
 
@@ -800,9 +851,7 @@ responsibility and care.
 
 <span>PROFESSIONAL PROTECTION</span>
 
-<h2>
-Protection That You Can Trust
-</h2>
+<h2>Protection That You Can Trust</h2>
 
 <p>
 Security is more than simply watching a place. It is about
@@ -818,11 +867,8 @@ important places.
 </p>
 
 </div>
-
 </div>
 
-
-<!-- ================= FEATURE 2 ================= -->
 
 <div class="feature reverse">
 
@@ -834,14 +880,12 @@ important places.
 
 <span>PROTECTING VALUABLE PLACES</span>
 
-<h2>
-Every Property Deserves Professional Protection
-</h2>
+<h2>Every Property Deserves Professional Protection</h2>
 
 <p>
-From large commercial spaces to industrial facilities and
-residential properties, every place deserves a responsible
-security approach.
+From large commercial spaces to industrial facilities
+and residential properties, every place deserves a
+responsible security approach.
 </p>
 
 <p>
@@ -850,11 +894,8 @@ people can work, live and operate with greater confidence.
 </p>
 
 </div>
-
 </div>
 
-
-<!-- ================= FEATURE 3 ================= -->
 
 <div class="feature">
 
@@ -866,9 +907,7 @@ people can work, live and operate with greater confidence.
 
 <span>SAFETY • RESPONSIBILITY • CARE</span>
 
-<h2>
-We Protect What Matters
-</h2>
+<h2>We Protect What Matters</h2>
 
 <p>
 A safe environment gives people confidence. Our services
@@ -878,13 +917,12 @@ to us.
 </p>
 
 </div>
-
 </div>
 
 </section>
 
 
-<!-- ================= ABOUT ================= -->
+<!-- ===== ABOUT ===== -->
 
 <section class="about" id="about">
 
@@ -892,9 +930,7 @@ to us.
 
 <span>ABOUT OUR COMPANY</span>
 
-<h2>
-Security With Responsibility
-</h2>
+<h2>Security With Responsibility</h2>
 
 <p>
 AR Security and Service (Pvt) Ltd. is committed to providing
@@ -907,7 +943,7 @@ and respect for every client and every property.
 </section>
 
 
-<!-- ================= SERVICES ================= -->
+<!-- ===== SERVICES ===== -->
 
 <section class="services" id="services">
 
@@ -915,17 +951,14 @@ and respect for every client and every property.
 
 <span>OUR SERVICES</span>
 
-<h2>
-Professional Security Services
-</h2>
+<h2>Professional Security Services</h2>
 
 <p>
-Reliable security support designed for different types of
-properties, organizations and events.
+Reliable security support designed for different types
+of properties, organizations and events.
 </p>
 
 </div>
-
 
 <div class="service-grid">
 
@@ -934,15 +967,13 @@ properties, organizations and events.
 <img src="https://images.pexels.com/photos/8285775/pexels-photo-8285775.jpeg?auto=compress&cs=tinysrgb&w=1000">
 
 <div class="service-card-content">
-
 <h3>Security Guard Service</h3>
-
 <p>
 Professional security personnel for protecting people,
 property and important premises.
 </p>
-
 </div>
+
 </div>
 
 
@@ -951,15 +982,13 @@ property and important premises.
 <img src="https://images.pexels.com/photos/38702227/pexels-photo-38702227.jpeg?auto=compress&cs=tinysrgb&w=1000">
 
 <div class="service-card-content">
-
 <h3>Corporate Security</h3>
-
 <p>
 Security support for offices, organizations and corporate
 facilities.
 </p>
-
 </div>
+
 </div>
 
 
@@ -968,15 +997,13 @@ facilities.
 <img src="https://images.pexels.com/photos/31516776/pexels-photo-31516776.jpeg?auto=compress&cs=tinysrgb&w=1000">
 
 <div class="service-card-content">
-
 <h3>Residential Security</h3>
-
 <p>
 Responsible security support for residential properties
 and communities.
 </p>
-
 </div>
+
 </div>
 
 
@@ -985,15 +1012,13 @@ and communities.
 <img src="https://images.pexels.com/photos/15482700/pexels-photo-15482700.jpeg?auto=compress&cs=tinysrgb&w=1000">
 
 <div class="service-card-content">
-
 <h3>Access Control</h3>
-
 <p>
 Helping maintain controlled and organized access to
 important premises.
 </p>
-
 </div>
+
 </div>
 
 
@@ -1002,15 +1027,13 @@ important premises.
 <img src="https://images.pexels.com/photos/31282368/pexels-photo-31282368.jpeg?auto=compress&cs=tinysrgb&w=1000">
 
 <div class="service-card-content">
-
 <h3>Event Security</h3>
-
 <p>
 Security support for events, gatherings and important
 occasions.
 </p>
-
 </div>
+
 </div>
 
 
@@ -1019,15 +1042,13 @@ occasions.
 <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=90">
 
 <div class="service-card-content">
-
 <h3>Security Support</h3>
-
 <p>
 Flexible security support based on the needs of each
 client and property.
 </p>
-
 </div>
+
 </div>
 
 </div>
@@ -1035,13 +1056,11 @@ client and property.
 </section>
 
 
-<!-- ================= STATEMENT ================= -->
+<!-- ===== STATEMENT ===== -->
 
 <section class="statement">
 
-<h2>
-WE PROTECT WHAT MATTERS
-</h2>
+<h2>WE PROTECT WHAT MATTERS</h2>
 
 <p>
 Safety is not just a service. It is a responsibility.
@@ -1053,62 +1072,43 @@ properties.
 </section>
 
 
-<!-- ================= WHY US ================= -->
+<!-- ===== WHY US ===== -->
 
-<section>
+<section id="why">
 
 <div class="section-title">
 
 <span>WHY AR SECURITY</span>
 
-<h2>
-Built Around Responsibility
-</h2>
+<h2>Built Around Responsibility</h2>
 
 </div>
-
 
 <div class="why-grid">
 
 <div class="why-box">
-
 <i class="fa-solid fa-shield-halved"></i>
-
 <h3>Professional Approach</h3>
-
 <p>
-A disciplined and responsible approach to security
-service.
+A disciplined and responsible approach to security service.
 </p>
-
 </div>
 
-
 <div class="why-box">
-
 <i class="fa-solid fa-user-shield"></i>
-
 <h3>Responsible Service</h3>
-
 <p>
-We understand the importance of protecting people
-and property.
+We understand the importance of protecting people and property.
 </p>
-
 </div>
 
-
 <div class="why-box">
-
 <i class="fa-solid fa-building-shield"></i>
-
 <h3>Property Protection</h3>
-
 <p>
-Security support for different types of valuable
-premises and facilities.
+Security support for different types of valuable premises
+and facilities.
 </p>
-
 </div>
 
 </div>
@@ -1116,7 +1116,7 @@ premises and facilities.
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- ===== CONTACT ===== -->
 
 <section class="contact" id="contact">
 
@@ -1124,9 +1124,7 @@ premises and facilities.
 
 <div>
 
-<h2>
-Let's Talk About Your Security Needs
-</h2>
+<h2>Let's Talk About Your Security Needs</h2>
 
 <p>
 If you need professional security support for your
@@ -1139,108 +1137,76 @@ AR Security and Service today.
 
 <div>
 
-<!-- PHONE -->
-
 <div class="contact-item">
 
 <i class="fa-solid fa-phone"></i>
 
 <div>
-
 <strong>PHONE</strong>
-
-<a href="tel:+8801980440825">
-+880 1980440825
-</a>
-
+<a href="tel:+8801980440825">+880 1980440825</a>
 </div>
 
 </div>
 
-
-<!-- WHATSAPP -->
 
 <div class="contact-item">
 
 <i class="fa-brands fa-whatsapp"></i>
 
 <div>
-
 <strong>WHATSAPP</strong>
-
 <a href="https://wa.me/8801980440825" target="_blank">
 +880 1980440825
 </a>
-
 </div>
 
 </div>
 
-
-<!-- TELEGRAM -->
 
 <div class="contact-item">
 
 <i class="fa-brands fa-telegram"></i>
 
 <div>
-
 <strong>TELEGRAM</strong>
-
-<span>
-+880 1980440825
-</span>
-
+<span>+880 1980440825</span>
 </div>
 
 </div>
 
-
-<!-- VIBER -->
 
 <div class="contact-item">
 
 <i class="fa-brands fa-viber"></i>
 
 <div>
-
 <strong>VIBER</strong>
-
-<span>
-+880 1980440825
-</span>
-
+<span>+880 1980440825</span>
 </div>
 
 </div>
 
-
-<!-- EMAIL -->
 
 <div class="contact-item">
 
 <i class="fa-solid fa-envelope"></i>
 
 <div>
-
 <strong>EMAIL</strong>
-
 <a href="mailto:abirhossen159156@gmail.com">
 abirhossen159156@gmail.com
 </a>
-
 </div>
 
 </div>
 
 </div>
-
 </div>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- ===== FOOTER ===== -->
 
 <footer>
 
@@ -1257,81 +1223,97 @@ Your Safety, Our Responsibility
 </footer>
 
 
-<!-- ================= SLIDER SCRIPT ================= -->
-
 <script>
 
-let currentSlide = 0;
+/* ===== MOBILE MENU ===== */
 
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
+function openMenu(){
+document.getElementById("mobileMenu").classList.add("open");
+}
+
+function closeMenu(){
+document.getElementById("mobileMenu").classList.remove("open");
+}
+
+
+/* ===== QUICK THREE-DOT MENU ===== */
+
+function toggleQuick(){
+document.getElementById("quickMenu").classList.toggle("show");
+}
+
+
+/* ===== SLIDER ===== */
+
+let currentSlide=0;
+
+const slides=document.querySelectorAll(".slide");
+const dots=document.querySelectorAll(".dot");
 
 function showSlide(index){
 
-    if(index >= slides.length){
-        currentSlide = 0;
-    }
-
-    else if(index < 0){
-        currentSlide = slides.length - 1;
-    }
-
-    else{
-        currentSlide = index;
-    }
-
-    slides.forEach((slide)=>{
-        slide.classList.remove("active");
-    });
-
-    dots.forEach((dot)=>{
-        dot.classList.remove("active");
-    });
-
-    slides[currentSlide].classList.add("active");
-    dots[currentSlide].classList.add("active");
+if(index>=slides.length){
+currentSlide=0;
 }
 
+else if(index<0){
+currentSlide=slides.length-1;
+}
+
+else{
+currentSlide=index;
+}
+
+slides.forEach(slide=>{
+slide.classList.remove("active");
+});
+
+dots.forEach(dot=>{
+dot.classList.remove("active");
+});
+
+slides[currentSlide].classList.add("active");
+dots[currentSlide].classList.add("active");
+}
 
 function changeSlide(direction){
-    showSlide(currentSlide + direction);
+showSlide(currentSlide+direction);
 }
-
 
 function goToSlide(index){
-    showSlide(index);
+showSlide(index);
 }
 
 
-/* Auto change every 5 seconds */
+/* AUTO SLIDER */
 
 setInterval(function(){
-    changeSlide(1);
+changeSlide(1);
 },5000);
 
 
-/* Mobile swipe */
+/* ===== MOBILE SWIPE ===== */
 
-let touchStartX = 0;
-let touchEndX = 0;
+let touchStartX=0;
+let touchEndX=0;
 
-const hero = document.querySelector(".hero");
+const hero=document.querySelector(".hero");
 
-hero.addEventListener("touchstart", function(e){
-    touchStartX = e.changedTouches[0].screenX;
+hero.addEventListener("touchstart",function(e){
+touchStartX=e.changedTouches[0].screenX;
 });
 
-hero.addEventListener("touchend", function(e){
+hero.addEventListener("touchend",function(e){
 
-    touchEndX = e.changedTouches[0].screenX;
+touchEndX=e.changedTouches[0].screenX;
 
-    if(touchEndX < touchStartX - 50){
-        changeSlide(1);
-    }
+if(touchEndX<touchStartX-50){
+changeSlide(1);
+}
 
-    if(touchEndX > touchStartX + 50){
-        changeSlide(-1);
-    }
+if(touchEndX>touchStartX+50){
+changeSlide(-1);
+}
 
 });
 
