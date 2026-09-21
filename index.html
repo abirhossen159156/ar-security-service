@@ -25,9 +25,9 @@ header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:#07111f;
+    background:rgba(4,12,23,.97);
     border-bottom:1px solid #1d3957;
-    padding:15px 7%;
+    padding:14px 6%;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -40,37 +40,36 @@ header{
 }
 
 .logo-icon{
-    width:52px;
-    height:58px;
-    background:linear-gradient(145deg,#0d6efd,#00b7ff);
+    width:50px;
+    height:56px;
+    background:linear-gradient(145deg,#087ff5,#00c6ff);
     clip-path:polygon(50% 0%,90% 15%,90% 58%,50% 100%,10% 58%,10% 15%);
     display:flex;
     justify-content:center;
     align-items:center;
     font-weight:bold;
-    font-size:19px;
-    color:white;
+    font-size:18px;
 }
 
 .logo-text{
-    font-weight:bold;
-    line-height:1.15;
+    line-height:1.1;
 }
 
 .logo-text .ar{
-    font-size:21px;
+    font-size:20px;
     color:#00b7ff;
+    font-weight:bold;
 }
 
 .logo-text .small{
-    font-size:12px;
-    color:#fff;
+    font-size:11px;
+    font-weight:bold;
 }
 
 nav a{
-    color:white;
+    color:#fff;
     text-decoration:none;
-    margin-left:20px;
+    margin-left:18px;
     font-weight:bold;
 }
 
@@ -78,16 +77,18 @@ nav a:hover{
     color:#00b7ff;
 }
 
+/* HERO */
+
 .hero{
-    min-height:90vh;
+    min-height:88vh;
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    gap:40px;
-    padding:70px 7%;
+    gap:45px;
+    padding:65px 7%;
     background:
-    radial-gradient(circle at 80% 30%,rgba(0,183,255,.18),transparent 35%),
-    linear-gradient(135deg,#07111f,#0a2037);
+    linear-gradient(90deg,rgba(4,12,23,.97) 20%,rgba(4,12,23,.72) 55%,rgba(4,12,23,.25)),
+    url("https://images.pexels.com/photos/35562107/pexels-photo-35562107.jpeg?auto=compress&cs=tinysrgb&w=1600")
+    center/cover no-repeat;
 }
 
 .hero-content{
@@ -105,8 +106,8 @@ nav a:hover{
 }
 
 .hero h1{
-    font-size:48px;
-    line-height:1.1;
+    font-size:52px;
+    line-height:1.08;
     margin-bottom:20px;
 }
 
@@ -116,15 +117,14 @@ nav a:hover{
 
 .hero p{
     font-size:18px;
-    color:#c7d4df;
-    margin-bottom:30px;
+    color:#d2dce5;
+    margin-bottom:28px;
 }
 
 .buttons a{
     display:inline-block;
     padding:13px 22px;
-    margin-right:10px;
-    margin-bottom:10px;
+    margin-right:8px;
     border-radius:7px;
     text-decoration:none;
     font-weight:bold;
@@ -140,38 +140,55 @@ nav a:hover{
     color:white;
 }
 
-.security-visual{
-    width:360px;
-    height:360px;
-    border-radius:50%;
-    background:radial-gradient(circle,#123c61,#07111f 68%);
-    border:2px solid #176a9c;
-    display:flex;
-    justify-content:center;
+/* SECURITY HIGHLIGHT */
+
+.highlight{
+    padding:80px 7%;
+    background:#091827;
+}
+
+.highlight-box{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
     align-items:center;
-    box-shadow:0 0 60px rgba(0,183,255,.18);
 }
 
-.big-shield{
-    width:220px;
-    height:255px;
-    background:linear-gradient(145deg,#0d6efd,#00b7ff);
-    clip-path:polygon(50% 0%,91% 15%,86% 65%,50% 100%,14% 65%,9% 15%);
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+.highlight-img{
+    width:100%;
+    height:430px;
+    object-fit:cover;
+    border-radius:15px;
+    border:1px solid #244968;
+    box-shadow:0 15px 45px rgba(0,0,0,.4);
 }
 
-.big-shield strong{
-    font-size:55px;
+.highlight-text h2{
+    font-size:38px;
+    margin-bottom:18px;
 }
 
-.big-shield span{
-    font-size:15px;
+.highlight-text h2 span{
+    color:#00b7ff;
+}
+
+.highlight-text p{
+    color:#bac8d5;
+    font-size:17px;
+}
+
+.highlight-list{
+    margin-top:22px;
+}
+
+.highlight-list div{
+    margin:10px 0;
     font-weight:bold;
 }
+
+/* SECTION */
 
 section{
     padding:75px 7%;
@@ -183,16 +200,18 @@ section{
 }
 
 .section-title h2{
-    font-size:35px;
-    margin-bottom:10px;
+    font-size:36px;
+    margin-bottom:8px;
 }
 
 .section-title p{
     color:#aebdca;
 }
 
+/* ABOUT */
+
 .about{
-    background:#0a1828;
+    background:#07111f;
 }
 
 .about-box{
@@ -203,8 +222,10 @@ section{
     font-size:17px;
 }
 
+/* SERVICES */
+
 .services{
-    background:#07111f;
+    background:#0a1828;
 }
 
 .service-grid{
@@ -216,45 +237,82 @@ section{
 .service-card{
     background:#0d1d2e;
     border:1px solid #1b3a57;
-    padding:30px 22px;
-    border-radius:12px;
+    border-radius:13px;
+    overflow:hidden;
     transition:.3s;
 }
 
 .service-card:hover{
-    transform:translateY(-6px);
+    transform:translateY(-7px);
     border-color:#00b7ff;
 }
 
-.service-icon{
-    font-size:40px;
-    margin-bottom:15px;
+.service-card img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
 }
 
-.service-card h3{
+.service-content{
+    padding:22px;
+}
+
+.service-content h3{
     color:#00b7ff;
-    margin-bottom:10px;
+    margin-bottom:9px;
 }
 
-.service-card p{
+.service-content p{
     color:#b9c8d5;
 }
 
+/* BANNER */
+
+.banner{
+    min-height:330px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 7%;
+    background:
+    linear-gradient(rgba(3,12,22,.72),rgba(3,12,22,.82)),
+    url("https://images.pexels.com/photos/8285775/pexels-photo-8285775.jpeg?auto=compress&cs=tinysrgb&w=1600")
+    center/cover no-repeat;
+}
+
+.banner h2{
+    font-size:42px;
+}
+
+.banner p{
+    color:#d1dce5;
+    margin-top:10px;
+    font-size:18px;
+}
+
+/* WHY */
+
 .why{
-    background:#0a1828;
+    background:#091827;
 }
 
 .why-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
-    text-align:center;
 }
 
 .why-box{
-    padding:25px;
+    padding:28px;
+    text-align:center;
     background:#0d1d2e;
-    border-radius:10px;
+    border:1px solid #1b3a57;
+    border-radius:12px;
+}
+
+.why-box .icon{
+    font-size:38px;
 }
 
 .why-box h3{
@@ -262,12 +320,14 @@ section{
     margin:10px 0;
 }
 
+/* CONTACT */
+
 .contact{
     background:linear-gradient(135deg,#07111f,#0b2944);
 }
 
 .contact-grid{
-    max-width:950px;
+    max-width:1000px;
     margin:auto;
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -284,12 +344,11 @@ section{
 
 .contact-card .icon{
     font-size:35px;
-    margin-bottom:12px;
 }
 
 .contact-card h3{
     color:#00b7ff;
-    margin-bottom:8px;
+    margin:8px 0;
 }
 
 .contact-card a{
@@ -298,6 +357,8 @@ section{
     word-break:break-word;
 }
 
+/* FOOTER */
+
 footer{
     text-align:center;
     padding:25px;
@@ -305,45 +366,50 @@ footer{
     color:#94a5b5;
 }
 
+/* MOBILE */
+
 @media(max-width:850px){
+
     header{
         flex-direction:column;
         gap:12px;
     }
 
     nav a{
-        margin:0 7px;
+        margin:0 6px;
         font-size:13px;
     }
 
     .hero{
-        flex-direction:column;
+        min-height:80vh;
         text-align:center;
-        padding-top:55px;
+        padding:55px 6%;
+        background:
+        linear-gradient(rgba(4,12,23,.78),rgba(4,12,23,.92)),
+        url("https://images.pexels.com/photos/35562107/pexels-photo-35562107.jpeg?auto=compress&cs=tinysrgb&w=1000")
+        center/cover no-repeat;
     }
 
     .hero h1{
-        font-size:36px;
+        font-size:38px;
     }
 
-    .security-visual{
-        width:280px;
-        height:280px;
+    .highlight-box{
+        grid-template-columns:1fr;
     }
 
-    .big-shield{
-        width:170px;
-        height:200px;
-    }
-
-    .big-shield strong{
-        font-size:42px;
+    .highlight-img{
+        height:300px;
     }
 
     .service-grid,
     .why-grid,
     .contact-grid{
         grid-template-columns:1fr;
+    }
+
+    .banner h2{
+        font-size:31px;
     }
 }
 </style>
@@ -354,19 +420,23 @@ footer{
 <header>
 
 <div class="logo">
-    <div class="logo-icon">AR</div>
 
-    <div class="logo-text">
-        <div class="ar">AR (ABIR)</div>
-        <div class="small">SECURITY SERVICE</div>
-    </div>
+<div class="logo-icon">
+AR
+</div>
+
+<div class="logo-text">
+<div class="ar">AR (ABIR)</div>
+<div class="small">SECURITY SERVICE</div>
+</div>
+
 </div>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
 </nav>
 
 </header>
@@ -378,7 +448,9 @@ footer{
 
 <div class="hero-content">
 
-<div class="badge">PROFESSIONAL SECURITY & SERVICE</div>
+<div class="badge">
+PROFESSIONAL SECURITY & SERVICE
+</div>
 
 <h1>
 Your Safety,<br>
@@ -407,17 +479,42 @@ WhatsApp Us
 
 </div>
 
+</section>
 
-<!-- Security Visual -->
 
-<div class="security-visual">
+<!-- SECURITY HIGHLIGHT -->
 
-<div class="big-shield">
+<section class="highlight">
 
-<strong>AR</strong>
-<span>(ABIR)</span>
-<span>SECURITY</span>
-<span>SERVICE</span>
+<div class="highlight-box">
+
+<img
+class="highlight-img"
+src="https://images.pexels.com/photos/31282368/pexels-photo-31282368.jpeg?auto=compress&cs=tinysrgb&w=1200"
+alt="Professional Security Guard">
+
+<div class="highlight-text">
+
+<h2>
+Professional <span>Security</span>
+You Can Trust
+</h2>
+
+<p>
+We believe professional security starts with
+discipline, responsibility and dependable service.
+Our team-focused approach is designed to help
+protect people, property and organizations.
+</p>
+
+<div class="highlight-list">
+
+<div>✓ Professional Service</div>
+<div>✓ Responsible Personnel</div>
+<div>✓ Reliable Security Support</div>
+<div>✓ Customer-Focused Approach</div>
+
+</div>
 
 </div>
 
@@ -442,9 +539,9 @@ WhatsApp Us
 
 <p>
 <strong>AR Security and Service (Pvt) Ltd.</strong>
-is committed to providing dependable security and
-support services with professionalism, discipline
-and responsibility.
+is committed to providing dependable security
+and support services with professionalism,
+discipline and responsibility.
 </p>
 
 <br>
@@ -468,16 +565,21 @@ and professional service solutions.
 
 <h2>Our Services</h2>
 
-<p>Security solutions for different needs</p>
+<p>Professional security solutions for different needs</p>
 
 </div>
 
 
 <div class="service-grid">
 
+
 <div class="service-card">
 
-<div class="service-icon">🛡️</div>
+<img
+src="https://images.pexels.com/photos/35562107/pexels-photo-35562107.jpeg?auto=compress&cs=tinysrgb&w=900"
+alt="Security Guard Service">
+
+<div class="service-content">
 
 <h3>Security Guard Service</h3>
 
@@ -488,10 +590,16 @@ commercial properties, buildings and organizations.
 
 </div>
 
+</div>
+
 
 <div class="service-card">
 
-<div class="service-icon">🏢</div>
+<img
+src="https://images.pexels.com/photos/12304330/pexels-photo-12304330.jpeg?auto=compress&cs=tinysrgb&w=900"
+alt="Corporate Security">
+
+<div class="service-content">
 
 <h3>Corporate Security</h3>
 
@@ -502,10 +610,16 @@ business establishments and commercial facilities.
 
 </div>
 
+</div>
+
 
 <div class="service-card">
 
-<div class="service-icon">🏠</div>
+<img
+src="https://images.pexels.com/photos/8285775/pexels-photo-8285775.jpeg?auto=compress&cs=tinysrgb&w=900"
+alt="Security Personnel">
+
+<div class="service-content">
 
 <h3>Residential Security</h3>
 
@@ -516,10 +630,16 @@ properties and private premises.
 
 </div>
 
+</div>
+
 
 <div class="service-card">
 
-<div class="service-icon">🚪</div>
+<img
+src="https://images.pexels.com/photos/38702227/pexels-photo-38702227.jpeg?auto=compress&cs=tinysrgb&w=900"
+alt="Professional Security">
+
+<div class="service-content">
 
 <h3>Access Control</h3>
 
@@ -530,24 +650,16 @@ visitors and authorized access.
 
 </div>
 
-
-<div class="service-card">
-
-<div class="service-icon">📹</div>
-
-<h3>Security Monitoring</h3>
-
-<p>
-Support for security monitoring and
-property protection systems.
-</p>
-
 </div>
 
 
 <div class="service-card">
 
-<div class="service-icon">🎯</div>
+<img
+src="https://images.pexels.com/photos/31516776/pexels-photo-31516776.jpeg?auto=compress&cs=tinysrgb&w=900"
+alt="Event Security">
+
+<div class="service-content">
 
 <h3>Event Security</h3>
 
@@ -557,6 +669,47 @@ programs and special occasions.
 </p>
 
 </div>
+
+</div>
+
+
+<div class="service-card">
+
+<img
+src="https://images.pexels.com/photos/15482700/pexels-photo-15482700.jpeg?auto=compress&cs=tinysrgb&w=900"
+alt="Security Service">
+
+<div class="service-content">
+
+<h3>Security Support</h3>
+
+<p>
+Professional support designed around
+safety, discipline and responsibility.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LARGE SECURITY BANNER -->
+
+<section class="banner">
+
+<div>
+
+<h2>
+SECURITY • DISCIPLINE • RESPONSIBILITY
+</h2>
+
+<p>
+Professional people. Reliable service. Strong commitment.
+</p>
 
 </div>
 
@@ -575,12 +728,11 @@ programs and special occasions.
 
 </div>
 
-
 <div class="why-grid">
 
 <div class="why-box">
 
-<div style="font-size:40px;">✓</div>
+<div class="icon">✓</div>
 
 <h3>Professional</h3>
 
@@ -593,7 +745,7 @@ We focus on disciplined and professional service.
 
 <div class="why-box">
 
-<div style="font-size:40px;">★</div>
+<div class="icon">★</div>
 
 <h3>Reliable</h3>
 
@@ -606,7 +758,7 @@ We value reliability, responsibility and trust.
 
 <div class="why-box">
 
-<div style="font-size:40px;">🔒</div>
+<div class="icon">🛡️</div>
 
 <h3>Safety Focused</h3>
 
@@ -632,7 +784,6 @@ Your safety and property protection are our priority.
 <p>Get in touch with AR Security and Service</p>
 
 </div>
-
 
 <div class="contact-grid">
 
@@ -683,7 +834,6 @@ abirhossen159156@gmail.com
 
 </div>
 
-
 </div>
 
 </section>
@@ -700,7 +850,6 @@ AR (ABIR) SECURITY SERVICE
 </p>
 
 </footer>
-
 
 </body>
 </html>
