@@ -724,11 +724,13 @@ height:42px
 <i class="fa-brands fa-whatsapp"></i> WhatsApp
 </a>
 
-<a href="#contact" onclick="closeMenu()">
+<!-- TELEGRAM FIXED -->
+<a href="https://t.me/+8801980440825" target="_blank">
 <i class="fa-brands fa-telegram"></i> Telegram
 </a>
 
-<a href="#contact" onclick="closeMenu()">
+<!-- VIBER FIXED -->
+<a href="viber://chat?number=%2B8801980440825">
 <i class="fa-brands fa-viber"></i> Viber
 </a>
 
@@ -751,11 +753,13 @@ height:42px
 <i class="fa-brands fa-whatsapp"></i>
 </a>
 
-<a href="#contact" title="Telegram">
+<!-- TELEGRAM FIXED -->
+<a href="https://t.me/+8801980440825" target="_blank" title="Telegram">
 <i class="fa-brands fa-telegram"></i>
 </a>
 
-<a href="#contact" title="Viber">
+<!-- VIBER FIXED -->
+<a href="viber://chat?number=%2B8801980440825" title="Viber">
 <i class="fa-brands fa-viber"></i>
 </a>
 
@@ -1163,25 +1167,31 @@ AR Security and Service today.
 </div>
 
 
+<!-- TELEGRAM FIXED -->
 <div class="contact-item">
 
 <i class="fa-brands fa-telegram"></i>
 
 <div>
 <strong>TELEGRAM</strong>
-<span>+880 1980440825</span>
+<a href="https://t.me/+8801980440825" target="_blank">
++880 1980440825
+</a>
 </div>
 
 </div>
 
 
+<!-- VIBER FIXED -->
 <div class="contact-item">
 
 <i class="fa-brands fa-viber"></i>
 
 <div>
 <strong>VIBER</strong>
-<span>+880 1980440825</span>
+<a href="viber://chat?number=%2B8801980440825">
++880 1980440825
+</a>
 </div>
 
 </div>
@@ -1236,7 +1246,7 @@ document.getElementById("mobileMenu").classList.remove("open");
 }
 
 
-/* ===== QUICK THREE-DOT MENU ===== */
+/* ===== QUICK MENU ===== */
 
 function toggleQuick(){
 document.getElementById("quickMenu").classList.toggle("show");
@@ -1245,39 +1255,33 @@ document.getElementById("quickMenu").classList.toggle("show");
 
 /* ===== SLIDER ===== */
 
-let currentSlide=0;
-
-const slides=document.querySelectorAll(".slide");
-const dots=document.querySelectorAll(".dot");
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
 
 function showSlide(index){
 
-if(index>=slides.length){
-currentSlide=0;
+if(index >= slides.length){
+index = 0;
 }
 
-else if(index<0){
-currentSlide=slides.length-1;
+if(index < 0){
+index = slides.length - 1;
 }
 
-else{
-currentSlide=index;
-}
-
-slides.forEach(slide=>{
-slide.classList.remove("active");
+slides.forEach((slide,i)=>{
+slide.classList.toggle("active",i === index);
 });
 
-dots.forEach(dot=>{
-dot.classList.remove("active");
+dots.forEach((dot,i)=>{
+dot.classList.toggle("active",i === index);
 });
 
-slides[currentSlide].classList.add("active");
-dots[currentSlide].classList.add("active");
+currentSlide = index;
 }
 
 function changeSlide(direction){
-showSlide(currentSlide+direction);
+showSlide(currentSlide + direction);
 }
 
 function goToSlide(index){
@@ -1285,36 +1289,34 @@ showSlide(index);
 }
 
 
-/* AUTO SLIDER */
+/* ===== AUTO SLIDER ===== */
 
-setInterval(function(){
+setInterval(()=>{
 changeSlide(1);
 },5000);
 
 
 /* ===== MOBILE SWIPE ===== */
 
-let touchStartX=0;
-let touchEndX=0;
+let touchStartX = 0;
+let touchEndX = 0;
 
-const hero=document.querySelector(".hero");
+const hero = document.querySelector(".hero");
 
-hero.addEventListener("touchstart",function(e){
-touchStartX=e.changedTouches[0].screenX;
+hero.addEventListener("touchstart",(e)=>{
+touchStartX = e.changedTouches[0].screenX;
 });
 
-hero.addEventListener("touchend",function(e){
+hero.addEventListener("touchend",(e)=>{
+touchEndX = e.changedTouches[0].screenX;
 
-touchEndX=e.changedTouches[0].screenX;
-
-if(touchEndX<touchStartX-50){
+if(touchEndX < touchStartX - 50){
 changeSlide(1);
 }
 
-if(touchEndX>touchStartX+50){
+if(touchEndX > touchStartX + 50){
 changeSlide(-1);
 }
-
 });
 
 </script>
